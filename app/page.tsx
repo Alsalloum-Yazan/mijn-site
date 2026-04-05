@@ -25,28 +25,10 @@ export default function Home() {
           }
         }
         
-        /* Sticky Header simulatie (als je een nav hebt, anders is dit de placeholder) */
-        .sticky-nav {
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          background: rgba(5, 5, 5, 0.8);
-          backdrop-filter: blur(12px);
-          border-bottom: 1px solid rgba(167, 139, 250, 0.1);
-          padding: 20px 0;
-        }
+
       `}</style>
 
-      {/* STICKY MENU BAR */}
-      <nav className="sticky-nav">
-        <div className="container" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <div style={{ fontWeight: 800, fontSize: "1.2rem" }} className="g-text">Dian.</div>
-          <div style={{ display: "flex", gap: "24px", fontSize: "14px", fontWeight: 500 }}>
-             <a href="#over-mij" style={{ color: "inherit", textDecoration: "none" }}>Over mij</a>
-             <a href="/jaar-4" style={{ color: "inherit", textDecoration: "none" }}>Portfolio</a>
-          </div>
-        </div>
-      </nav>
+
 
       {/* CV MODAL */}
       {cvOpen && (
@@ -200,13 +182,30 @@ export default function Home() {
           </div>
 
           <div className="responsive-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", marginBottom: "40px" }}>
-             {/* Je post items... */}
-             {[1,2,3].map(i => (
-                 <div key={i} className="glow-card" style={{padding: '20px'}}>
-                     <div style={{height: '150px', background: 'rgba(167,139,250,0.1)', borderRadius: '12px', marginBottom: '15px'}}></div>
-                     <h3>Project Item {i}</h3>
-                     <p style={{fontSize: '13px', opacity: 0.7}}>Beschrijving van je opdracht...</p>
-                 </div>
+             {[
+               {
+                 title: "Profileringskit",
+                 desc: "Een overzicht van mijn professionele profiel en competenties.",
+                 url: "/jaar-4/profileringskit"
+               },
+               {
+                 title: "Het thuisblijfprogramma",
+                 desc: "Verdieping in conceptontwikkeling en strategische keuzes.",
+                 url: "/jaar-4/thuisblijfprogramma"
+               },
+               {
+                 title: "AI-protocol",
+                 desc: "Onderzoek en ontwikkeling van een verantwoord AI-gebruiksprotocol.",
+                 url: "/jaar-4/ai-protocol"
+               }
+             ].map((post, i) => (
+                 <a key={i} href={post.url} className="glow-card card-hover" style={{padding: '20px', textDecoration: 'none', color: 'inherit', display: 'block'}}>
+                     <div style={{height: '150px', background: 'linear-gradient(135deg, rgba(167,139,250,0.15), rgba(124,58,237,0.05))', border: '1px solid rgba(167,139,250,0.08)', borderRadius: '12px', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                         <span style={{fontSize: '32px', opacity: 0.5}}>📁</span>
+                     </div>
+                     <h3 style={{marginBottom: '8px'}}>{post.title}</h3>
+                     <p style={{fontSize: '13px', opacity: 0.7, margin: 0, lineHeight: 1.6}}>{post.desc}</p>
+                 </a>
              ))}
           </div>
         </div>
