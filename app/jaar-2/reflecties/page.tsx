@@ -104,8 +104,7 @@ export default function ReflectiePage() {
 }
 
 // Sub-component voor de STARR kaarten
-function StarrCard({ title, s, t, a, r, reflect }) {
-  const [isOpen, setIsOpen] = useState(false);
+function StarrCard({ title, s, t, a, r, reflect }: { title: string, s: string, t: string, a: string, r: string, reflect: string }) {  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div 
