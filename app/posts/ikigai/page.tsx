@@ -2,7 +2,7 @@ import PostLayout from "../../PostLayout";
 
 export default function Page() {
   return (
-    <PostLayout slug="ikigai" title="Wat vind je leuk? — Ikigai — CV van de toekomst" date="23 sep 2024" readTime="6 minuten" img="/posten/CV over 1 jaar.webp" likes={0} comments={0}>
+    <PostLayout slug="ikigai" title="Wat vind je leuk? — Ikigai — CV van de toekomst" date="23 sep 2024" readTime="6 minuten" img="/posten/Wat vind je leuk.webp" likes={0} comments={0}>
       {[
         { title: "Wat vind je leuk?", items: [
           { q: "Wanneer vergat je de tijd?", a: "Op vakantie aan het strand. Daar kan ik de gehele dag vertoeven en vliegt de tijd voorbij." },

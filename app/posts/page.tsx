@@ -1,5 +1,5 @@
 const posts = [
-  { slug: "persoonlijke-ontwikkeling", title: "Persoonlijke ontwikkeling stage jaar 3", date: "27 jun 2025", time: "3 minuten", img: "/home/levenslijn.png", likes: 1, comments: 2 },
+  { slug: "persoonlijke-ontwikkeling", title: "Persoonlijke ontwikkeling stage jaar 3", date: "27 jun 2025", time: "3 minuten", img: null, likes: 1, comments: 2 },
   { slug: "logboek-energie", title: "Logboek - energie", date: "8 jan 2025", time: "1 minuten", img: "/home/energie.png", likes: 1, comments: 0 },
   { slug: "levenslijn", title: "Levenslijn oefening", date: "2 okt 2024", time: "1 minuten", img: "/home/levenslijn.png", likes: 2, comments: 2 },
   { slug: "toekomstdroom", title: "Toekomstdroom", date: "2 okt 2024", time: "3 minuten", img: null, likes: 0, comments: 0 },

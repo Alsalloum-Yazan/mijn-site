@@ -184,25 +184,38 @@ export default function Home() {
           <div className="responsive-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", marginBottom: "40px" }}>
              {[
                {
-                 title: "Profileringskit",
-                 desc: "Een overzicht van mijn professionele profiel en competenties.",
-                 url: "/jaar-4/profileringskit"
+                 title: "Persoonlijke ontwikkeling stage jaar 3",
+                //  desc: "Een overzicht van mijn professionele profiel en competenties.",
+                img:"",
+                 url: "/posts/persoonlijke-ontwikkeling"
                },
                {
-                 title: "Het thuisblijfprogramma",
-                 desc: "Verdieping in conceptontwikkeling en strategische keuzes.",
-                 url: "/jaar-4/thuisblijfprogramma"
+                 title: "Logboek - energie",
+                //  desc: "Verdieping in conceptontwikkeling en strategische keuzes.",
+                 img:"/home/energie.png",
+                 url: "/posts/logboek-energie/"
                },
                {
-                 title: "AI-protocol",
-                 desc: "Onderzoek en ontwikkeling van een verantwoord AI-gebruiksprotocol.",
-                 url: "/jaar-4/ai-protocol"
+                 title: "Levenslijn oefening",
+                //  desc: "Onderzoek en ontwikkeling van een verantwoord AI-gebruiksprotocol.",
+                 img:"/home/levenslijn.png",
+                 url: "/posts/levenslijn"
                }
              ].map((post, i) => (
                  <a key={i} href={post.url} className="glow-card card-hover" style={{padding: '20px', textDecoration: 'none', color: 'inherit', display: 'block'}}>
-                     <div style={{height: '150px', background: 'linear-gradient(135deg, rgba(167,139,250,0.15), rgba(124,58,237,0.05))', border: '1px solid rgba(167,139,250,0.08)', borderRadius: '12px', marginBottom: '15px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                         <span style={{fontSize: '32px', opacity: 0.5}}>📁</span>
-                     </div>
+              <div style={{
+                height: '150px', 
+                background: post.img ? `url(${post.img}) center/cover no-repeat` : 'linear-gradient(135deg, rgba(167,139,250,0.15), rgba(124,58,237,0.05))', 
+                border: '1px solid rgba(167,139,250,0.08)', 
+                borderRadius: '12px', 
+                marginBottom: '15px', 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                overflow: 'hidden'
+              }}>
+                {!post.img && <span style={{fontSize: '32px', opacity: 0.5}}>📁</span>}
+              </div>
                      <h3 style={{marginBottom: '8px'}}>{post.title}</h3>
                      <p style={{fontSize: '13px', opacity: 0.7, margin: 0, lineHeight: 1.6}}>{post.desc}</p>
                  </a>
@@ -212,9 +225,109 @@ export default function Home() {
       </section>
 
       {/* ===== FOOTER ===== */}
-      <footer style={{ position: "relative", zIndex: 1, textAlign: "center", padding: "60px 24px" }}>
-        <h3 className="g-text" style={{ marginBottom: "16px", fontSize: "1.5rem" }}>Dian van Noort</h3>
-        <p style={{ fontSize: "13px", color: "#4040a0" }}>Bedankt voor het lezen! :)</p>
+      <div className="glow-line" />
+
+      {/* ===== FOOTER ===== */}
+      <footer style={{ position: "relative", zIndex: 1, padding: "80px 24px 40px" }}>
+        <div className="container">
+          
+          <div className="responsive-grid" style={{ display: "grid", gridTemplateColumns: "1.2fr 0.8fr 1fr", gap: "60px", alignItems: "start", marginBottom: "60px" }}>
+            
+            {/* Kolom 1: Info & Socials */}
+            <div>
+              <h3 className="g-text" style={{ marginBottom: "16px", fontSize: "1.5rem" }}>Dian van Noort</h3>
+              <p style={{ fontSize: "14px", color: "#6060a0", lineHeight: "1.8", maxWidth: "300px", marginBottom: "24px" }}>
+                Student Commerciële Economie aan de Avans Hogeschool Breda. Altijd bezig met groei en nieuwe uitdagingen.
+              </p>
+              <div style={{ display: "flex", gap: "12px" }}>
+                <a href="https://linkedin.com/in/jouw-profiel" target="_blank" rel="noreferrer" className="glow-card" style={{ width: "40px", height: "40px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "18px", transition: "transform 0.2s" }}>
+                  in
+                </a>
+                <a href="mailto:dian.vannoort@example.nl" className="glow-card" style={{ width: "40px", height: "40px", borderRadius: "12px", display: "flex", alignItems: "center", justifyContent: "center", textDecoration: "none", fontSize: "18px", transition: "transform 0.2s" }}>
+                  ✉
+                </a>
+              </div>
+            </div>
+
+            {/* Kolom 2: Navigatie (Gebaseerd op layout.tsx) */}
+            <div>
+              <h4 style={{ fontSize: "12px", fontWeight: 700, color: "#a78bfa", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>Navigatie</h4>
+              <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+                {[
+                  { label: "Home", url: "/" },
+                  { label: "Over mij", url: "#over-mij" },
+                  { label: "Opdrachten", url: "/posts" },
+                  { label: "Jaar 2", url: "/jaar-2" },
+                  { label: "Jaar 3 | Stage", url: "/jaar-3" },
+                  { label: "Jaar 4", url: "/jaar-4" },
+                  { label: "Afstuderen", url: "/Afstuderen" }
+                ].map((link, i) => (
+                  <a 
+                    key={i} 
+                    href={link.url} 
+                    style={{ 
+                      fontSize: "14px", 
+                      color: "#8080a0", 
+                      textDecoration: "none", 
+                      transition: "color 0.3s, transform 0.2s",
+                      display: "inline-block"
+                    }}
+                    onMouseEnter={e => { e.target.style.color = "#fff"; e.target.style.transform = "translateX(4px)"; }}
+                    onMouseLeave={e => { e.target.style.color = "#8080a0"; e.target.style.transform = "translateX(0)"; }}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Kolom 3: Snelle Acties & Contact */}
+            <div>
+              <h4 style={{ fontSize: "12px", fontWeight: 700, color: "#a78bfa", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>Snelle Acties</h4>
+              <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+                
+                {/* CV Knop */}
+                <button 
+                  onClick={() => setCvOpen(true)} 
+                  style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: "12px", padding: "12px 20px", color: "#a78bfa", fontSize: "14px", fontWeight: 600, cursor: "pointer", transition: "all 0.3s", width: "100%", textAlign: "left" }}
+                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(167,139,250,0.2)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = "rgba(167,139,250,0.1)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                >
+                  📄 Bekijk mijn CV
+                </button>
+
+                {/* Contact Info */}
+                <div>
+                  <p style={{ fontSize: "12px", color: "#4040a0", marginBottom: "4px" }}>E-mail</p>
+                  <a href="mailto:dian.vannoort@example.nl" style={{ fontSize: "14px", color: "#e2e2f0", textDecoration: "none" }} onMouseEnter={e => e.target.style.color = "#a78bfa"} onMouseLeave={e => e.target.style.color = "#e2e2f0"}>
+                    dian.vannoort@example.nl
+                  </a>
+                </div>
+                <div>
+                  <p style={{ fontSize: "12px", color: "#4040a0", marginBottom: "4px" }}>Opleiding</p>
+                  <p style={{ fontSize: "14px", color: "#e2e2f0", margin: 0 }}>Commerciële Economie</p>
+                </div>
+                <div>
+                  <p style={{ fontSize: "12px", color: "#4040a0", marginBottom: "4px" }}>Locatie</p>
+                  <p style={{ fontSize: "14px", color: "#e2e2f0", margin: 0 }}>Avans Hogeschool, Breda</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          {/* Copyright Balk */}
+          <div className="divider" style={{ marginBottom: "24px", opacity: 0.3 }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+            <p style={{ fontSize: "12px", color: "#4040a0", margin: 0 }}>
+              © {new Date().getFullYear()} Dian van Noort. Alle rechten voorbehouden.
+            </p>
+            <p style={{ fontSize: "12px", color: "#4040a0", margin: 0 }}>
+              Gebouwd door <span style={{ color: "#a78bfa" }}>Yazan</span> ☕
+            </p>
+          </div>
+        </div>
       </footer>
 
     </main>
