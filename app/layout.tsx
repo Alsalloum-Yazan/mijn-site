@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientScripts from "./ClientScripts";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Dian | Commerciële Economie — Avans",
@@ -93,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {children}
         <ClientScripts />
+        <SpeedInsights />
       </body>
     </html>
   );
