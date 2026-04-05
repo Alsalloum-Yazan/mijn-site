@@ -1,5 +1,72 @@
 "use client";
 
+const LogboekCard = ({ situatie, datum, tekst }: { situatie: string, datum: string, tekst: string }) => (
+  <div
+    className="glow-card card-hover"
+    style={{
+      padding: "28px 32px",
+      borderRadius: "20px",
+      border: "1px solid rgba(167,139,250,0.15)",
+      position: "relative",
+      overflow: "hidden",
+    }}
+  >
+    <div
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "3px",
+        height: "100%",
+        background: "linear-gradient(180deg, #7c3aed, #4f46e5)",
+        borderRadius: "20px 0 0 20px",
+      }}
+    />
+    <div style={{ paddingLeft: "8px" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: "8px",
+          marginBottom: "12px",
+        }}
+      >
+        <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#e2e2f0", margin: 0 }}>
+          {situatie}
+        </h3>
+        <span
+          style={{
+            fontSize: "12px",
+            color: "#a78bfa",
+            background: "rgba(167,139,250,0.1)",
+            border: "1px solid rgba(167,139,250,0.2)",
+            padding: "3px 10px",
+            borderRadius: "20px",
+            fontWeight: 600,
+          }}
+        >
+          {datum}
+        </span>
+      </div>
+      <p style={{ fontSize: "14px", lineHeight: "1.8", color: "#b0b0cc", margin: 0 }}>
+        {tekst}
+      </p>
+    </div>
+  </div>
+);
+
+const SectionDivider = ({ label }: { label: string }) => (
+  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
+    <div style={{ height: "1px", flex: 1, background: "linear-gradient(90deg, rgba(167,139,250,0.3), transparent)" }} />
+    <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", color: "#a78bfa", textTransform: "uppercase", whiteSpace: "nowrap" }}>
+      {label}
+    </span>
+    <div style={{ height: "1px", flex: 1, background: "linear-gradient(270deg, rgba(167,139,250,0.3), transparent)" }} />
+  </div>
+);
+
 export default function ActiesPage() {
   const logboekDeel1 = [
     {
@@ -57,74 +124,6 @@ export default function ActiesPage() {
         "Ik had een afspraak met een dokter en kreeg een advies waar ik vragen over had. In plaats van het klakkeloos aan te nemen, vroeg ik door: \"Kunt u uitleggen waarom dit de beste optie is? Zijn er alternatieven?\" Dat gaf me een beter begrip en meer vertrouwen in de beslissing.",
     },
   ];
-
-const LogboekCard = ({ situatie, datum, tekst }: { situatie: string, datum: string, tekst: string }) => (
-  
-  <div
-      className="glow-card card-hover"
-      style={{
-        padding: "28px 32px",
-        borderRadius: "20px",
-        border: "1px solid rgba(167,139,250,0.15)",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "3px",
-          height: "100%",
-          background: "linear-gradient(180deg, #7c3aed, #4f46e5)",
-          borderRadius: "20px 0 0 20px",
-        }}
-      />
-      <div style={{ paddingLeft: "8px" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: "8px",
-            marginBottom: "12px",
-          }}
-        >
-          <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#e2e2f0", margin: 0 }}>
-            {situatie}
-          </h3>
-          <span
-            style={{
-              fontSize: "12px",
-              color: "#a78bfa",
-              background: "rgba(167,139,250,0.1)",
-              border: "1px solid rgba(167,139,250,0.2)",
-              padding: "3px 10px",
-              borderRadius: "20px",
-              fontWeight: 600,
-            }}
-          >
-            {datum}
-          </span>
-        </div>
-        <p style={{ fontSize: "14px", lineHeight: "1.8", color: "#b0b0cc", margin: 0 }}>
-          {tekst}
-        </p>
-      </div>
-    </div>
-  );
-
-const SectionDivider = ({ label }: { label: string }) => (
-      <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-      <div style={{ height: "1px", flex: 1, background: "linear-gradient(90deg, rgba(167,139,250,0.3), transparent)" }} />
-      <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", color: "#a78bfa", textTransform: "uppercase", whiteSpace: "nowrap" }}>
-        {label}
-      </span>
-      <div style={{ height: "1px", flex: 1, background: "linear-gradient(270deg, rgba(167,139,250,0.3), transparent)" }} />
-    </div>
-  );
 
   return (
     <main>
