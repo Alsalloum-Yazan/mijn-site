@@ -202,4 +202,4 @@ p  { font-size: 1rem; line-height: 1.8; color: var(--text-muted); }
   .sub-grid { grid-template-columns: 1fr 1fr; padding: 0 16px 48px; gap: 12px; }
   h1 { font-size: clamp(2rem, 9vw, 3rem); letter-spacing: -1.5px; }
   .btn, .btn-ghost { padding: 11px 20px; font-size: 13px; width: 100%; justify-content: center; }
-}
+}s
