@@ -116,8 +116,8 @@ const LogboekCard = ({ situatie, datum, tekst }: { situatie: string, datum: stri
     </div>
   );
 
-  const SectionDivider = ({ label }) => (
-    <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
+const SectionDivider = ({ label }: { label: string }) => (
+      <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
       <div style={{ height: "1px", flex: 1, background: "linear-gradient(90deg, rgba(167,139,250,0.3), transparent)" }} />
       <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", color: "#a78bfa", textTransform: "uppercase", whiteSpace: "nowrap" }}>
         {label}
