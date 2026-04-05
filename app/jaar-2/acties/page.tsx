@@ -58,8 +58,9 @@ export default function ActiesPage() {
     },
   ];
 
-  const LogboekCard = ({ situatie, datum, tekst }) => (
-    <div
+const LogboekCard = ({ situatie, datum, tekst }: { situatie: string, datum: string, tekst: string }) => (
+  
+  <div
       className="glow-card card-hover"
       style={{
         padding: "28px 32px",
