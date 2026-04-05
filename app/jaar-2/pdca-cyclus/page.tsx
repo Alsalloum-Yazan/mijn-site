@@ -224,7 +224,7 @@ export default function PDCAPage() {
 
                     {/* Items */}
                     <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: "12px", position: "relative", zIndex: 1 }}>
-                      {doel.pdca[letter].items.map((item, j) => (
+                     {doel.pdca[letter as keyof typeof doel.pdca].items.map((item, j) => (
                         <li key={j} style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
                           <div style={{
                             width: "20px", height: "20px", borderRadius: "6px", flexShrink: 0, marginTop: "1px",
