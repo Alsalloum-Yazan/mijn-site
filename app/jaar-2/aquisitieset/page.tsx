@@ -21,7 +21,7 @@ export default function AquisitiesetPage() {
       accent: "#4f46e5",
       accentLight: "rgba(79,70,229,0.12)",
       accentBorder: "rgba(79,70,229,0.25)",
-      src: "/jaar2/Aquisitieset/motivatie.png",
+      src: "/jaar2/aquisitieset/motivatie.png",
       beschrijving: "Mijn motivatiebrief gericht aan een potentieel stagebedrijf.",
     },
     {
@@ -32,7 +32,7 @@ export default function AquisitiesetPage() {
       accent: "#6d28d9",
       accentLight: "rgba(109,40,217,0.12)",
       accentBorder: "rgba(109,40,217,0.25)",
-      src: "/jaar2/Aquisitieset/linkedin.png",
+      src: "/jaar2/aquisitieset/linkedin.png",
       beschrijving: "Mijn LinkedIn profiel als onderdeel van mijn online aanwezigheid.",
     },
   ];
