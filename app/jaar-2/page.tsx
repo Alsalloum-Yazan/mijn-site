@@ -28,7 +28,7 @@ export default function Jaar2() {
             Jaar <span className="g-text">2</span>
           </h1>
           <p style={{ maxWidth: "600px", margin: "0 auto 24px", fontSize: "1.1rem" }}>
-            Ingestroomd september 2024 — gericht op assertiviteit en het zoeken naar een passende stage richting
+            Ingestroomd september 2025 — gericht op assertiviteit en het zoeken naar een passende stage richting
           </p>
           <div className="divider" style={{ margin: "0 auto" }} />
         </div>
@@ -40,7 +40,7 @@ export default function Jaar2() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", marginBottom: "64px" }}>
           {[
             { num: String(pages.length), label: "Pagina's" },
-            { num: "2024", label: "Studiejaar" },
+            { num: "2025", label: "Studiejaar" },
             { num: "PL", label: "Behaald" },
           ].map((s, i) => (
             <div key={i} className="glow-card reveal" style={{ padding: "24px", textAlign: "center", transitionDelay: String(i * 80) + "ms" }}>

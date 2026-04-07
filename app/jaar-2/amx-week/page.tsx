@@ -6,7 +6,7 @@ export default function AmxWeekPage() {
       <article className="content-page">
         <div className="reveal">
           <a
-            href="/jaar-4"
+            href="/jaar-2"
             style={{
               fontSize: "13px",
               color: "#a78bfa",
@@ -17,11 +17,11 @@ export default function AmxWeekPage() {
               marginBottom: "32px",
             }}
           >
-            ← Terug naar Jaar 4
+            ← Terug naar Jaar 2
           </a>
           <div className="badge" style={{ marginBottom: "24px" }}>
             <span className="badge-dot" />
-            Jaar 4
+            Jaar 2
           </div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
             Mijn <span className="g-text">AMX week</span>
@@ -117,8 +117,8 @@ export default function AmxWeekPage() {
             borderTop: "1px solid rgba(167,139,250,0.1)",
           }}
         >
-          <a href="/jaar-4" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>
-            ← Terug naar Jaar 4
+          <a href="/jaar-2" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>
+            ← Terug naar Jaar 2
           </a>
           <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>
             Terug naar home →

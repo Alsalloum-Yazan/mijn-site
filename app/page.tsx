@@ -63,7 +63,8 @@ export default function Home() {
         .swiper-button-next, .swiper-button-prev { color: #a78bfa !important; transform: scale(0.6); }
         .swiper-pagination-bullet { background: rgba(167,139,250,0.3) !important; }
         .swiper-pagination-bullet-active { background: #a78bfa !important; }
-      `}</style>
+      `}
+      </style>
 
       {/* CV MODAL */}
       {cvOpen && (
@@ -106,7 +107,7 @@ export default function Home() {
                 <div className="divider" style={{ margin: "0 auto 24px" }} />
                 {[
                   { label: "Studentnummer", value: "2207443" },
-                  { label: "Leerjaar", value: "2, klas 3" },
+                  { label: "Leerjaar", value: "Leerjaar 4, kring 270-CE4AF325" },
                   { label: "School", value: "Avans Hogeschool" },
                   { label: "Locatie", value: "Breda" },
                 ].map((item, i) => (
@@ -128,10 +129,10 @@ export default function Home() {
         <div className="container">
           <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "20px" }}>
             {[
-              { num: "3", label: "Jaar studie" },
+              { num: "4", label: "Jaar studie" },
               { num: "20+", label: "Pagina's" },
               { num: "4", label: "Stages" },
-              { num: "2024", label: "Afstuderen" },
+              { num: "2026", label: "Afstuderen" },
             ].map((s, i) => (
               <div key={i} className="glow-card reveal" style={{ padding: "28px 24px", textAlign: "center" }}>
                 <div className="stat-num g-text">{s.num}</div>

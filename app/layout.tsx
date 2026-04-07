@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             {/* Desktop nav */}
             <div className="nav-links">
               <a href="/" className="nav-parent" style={{ fontWeight: 600 }}>Home</a>
-              <a href="/posts" className="nav-parent">Opdrachten</a>
+              {/* <a href="/posts" className="nav-parent">Opdrachten</a> */}
 
               <div className="nav-group">
                 <a href="/jaar-2" className="nav-parent">Jaar 2 <span className="nav-arrow">▼</span></a>
@@ -47,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <a href="/jaar-2/acties">Acties</a>
                   <a href="/jaar-2/reflecties">Reflecties</a>
                   <a href="/jaar-2/feedback">Feedback</a>
+                  <a href="/posts">Opdrachten</a>
                 </div>
               </div>
 

@@ -10,7 +10,7 @@ export default function AquisitiesetPage() {
       accent: "#7c3aed",
       accentLight: "rgba(124,58,237,0.12)",
       accentBorder: "rgba(124,58,237,0.25)",
-      src: "/jaar2/Aquisitieset/cv.png",
+      src: "/jaar2/aquisitieset/cv.png",
       beschrijving: "Een overzicht van mijn opleiding, werkervaring en vaardigheden.",
     },
     {

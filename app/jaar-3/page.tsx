@@ -37,7 +37,7 @@ export default function Jaar3() {
           {[
             { num: String(pages.length), label: "Pagina's" },
             { num: "2025", label: "Stagejaar" },
-            { num: "5", label: "Stages totaal" },
+            { num: "Feb  - Juli", label: "Stage Periode " },
           ].map((s, i) => (
             <div key={i} className="glow-card reveal" style={{ padding: "24px", textAlign: "center", transitionDelay: String(i * 80) + "ms" }}>
               <div className="stat-num g-text">{s.num}</div>

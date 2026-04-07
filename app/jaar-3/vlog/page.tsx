@@ -14,8 +14,8 @@ export default function VlogPage() {
     <main>
       <article className="content-page">
         <div className="reveal">
-          <a href="/jaar-4" style={{ fontSize: "13px", color: "#a78bfa", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px" }}>
-            ← Terug naar Jaar 4
+          <a href="/jaar-3" style={{ fontSize: "13px", color: "#a78bfa", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px" }}>
+            ← Terug naar Jaar 3
           </a>
           <div className="badge" style={{ marginBottom: "24px" }}>
             <span className="badge-dot" />
@@ -87,7 +87,7 @@ export default function VlogPage() {
 
         {/* Footer Navigatie */}
         <div style={{ display: "flex", gap: "12px", justifyContent: "space-between", marginTop: "64px", paddingTop: "32px", borderTop: "1px solid rgba(167,139,250,0.1)" }}>
-          <a href="/jaar-4" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Terug naar Jaar 4</a>
+          <a href="/jaar-3" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Terug naar Jaar 3</a>
           <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>Naar Home →</a>
         </div>
       </article>
