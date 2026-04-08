@@ -274,7 +274,7 @@ export default function Home() {
               <button onClick={openCv} style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: "12px", padding: "12px 20px", color: "#a78bfa", cursor: "pointer", width: "100%", textAlign: "left", marginBottom: "15px" }}>
                 📄 Bekijk mijn CV
               </button>
-              <p style={{ fontSize: "14px", color: "#e2e2f0" }}>dian.vannoort@example.nl</p>
+              <p style={{ fontSize: "14px", color: "#e2e2f0" }}>dcym.vannoort@student.avans.nl</p>
             </div>
           </div>
           <div className="divider" style={{ marginBottom: "24px", opacity: 0.3 }} />
