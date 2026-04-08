@@ -1,18 +1,16 @@
 "use client";
-import { useState } from "react";
-// 1. استيراد مكونات Swiper
+import { useRef } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-
-// استيراد تنسيقات Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export default function Home() {
-  const [cvOpen, setCvOpen] = useState(false);
+  const cvDialogRef = useRef<HTMLDialogElement>(null);
+  const openCv = () => cvDialogRef.current?.showModal();
+  const closeCv = () => cvDialogRef.current?.close();
 
-  // بيانات الأعمال - أضفت 'desc' لكل عنصر لتجنب خطأ Build
   const myPosts = [
     {
       title: "Persoonlijke ontwikkeling stage jaar 3",
@@ -24,7 +22,7 @@ export default function Home() {
       title: "Logboek - energie",
       desc: "Verdieping in conceptontwikkeling en strategische keuzes.",
       img: "/home/energie.png",
-      url: "/posts/logboek-energie/"
+      url: "/posts/logboek-energie"
     },
     {
       title: "Levenslijn oefening",
@@ -32,22 +30,24 @@ export default function Home() {
       img: "/home/levenslijn.png",
       url: "/posts/levenslijn"
     },
-    {
-      title: "Toekomstige Opdracht",
-      desc: "Binnenkort meer informatie over mijn nieuwe projecten.",
-      img: "",
-      url: "#"
-    }
+  ];
+
+  const footerLinks = [
+    { label: "Home", href: "/" },
+    { label: "Over mij", href: "#over-mij" },
+    { label: "Opdrachten", href: "/posts" },
+    { label: "Jaar 2", href: "/jaar-2" },
+    { label: "Jaar 3 | Stage", href: "/jaar-3" },
+    { label: "Jaar 4", href: "/jaar-4" },
   ];
 
   return (
     <main style={{ background: "#050505", color: "#fff", minHeight: "100vh" }}>
-      {/* RESPONSIVE & STICKY CSS */}
       <style jsx global>{`
         @media (max-width: 991px) {
-          .responsive-grid { 
-            grid-template-columns: 1fr !important; 
-            gap: 40px !important; 
+          .responsive-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
           }
           .stats-grid {
             grid-template-columns: repeat(2, 1fr) !important;
@@ -59,22 +59,37 @@ export default function Home() {
             display: none !important;
           }
         }
-        /* Swiper Custom Styles */
         .swiper-button-next, .swiper-button-prev { color: #a78bfa !important; transform: scale(0.6); }
         .swiper-pagination-bullet { background: rgba(167,139,250,0.3) !important; }
         .swiper-pagination-bullet-active { background: #a78bfa !important; }
-      `}
-      </style>
+        dialog.cv-modal-dialog::backdrop {
+          background: rgba(0,0,0,0.9);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+        }
+      `}</style>
 
       {/* CV MODAL */}
-      {cvOpen && (
-        <div onClick={() => setCvOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.9)", backdropFilter: "blur(12px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px" }}>
-          <div onClick={e => e.stopPropagation()} style={{ position: "relative", maxWidth: "800px", width: "100%" }}>
-            <button onClick={() => setCvOpen(false)} style={{ position: "absolute", top: "-48px", right: "0", background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)", borderRadius: "50%", width: "36px", height: "36px", color: "#a78bfa", fontSize: "18px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>×</button>
+      <dialog
+        ref={cvDialogRef}
+        className="cv-modal-dialog"
+        onClick={closeCv}
+        onCancel={closeCv}
+        style={{
+          border: "none", padding: 0, margin: "auto",
+          background: "transparent",
+          width: "100vw", height: "100dvh",
+          maxWidth: "100vw", maxHeight: "100dvh",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <div onClick={e => e.stopPropagation()} style={{ position: "relative", maxWidth: "800px", width: "90%" }}>
+            <button onClick={closeCv} style={{ position: "absolute", top: "-48px", right: "0", background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)", borderRadius: "50%", width: "36px", height: "36px", color: "#a78bfa", fontSize: "18px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>×</button>
             <img src="/home/cv.png" alt="CV Dian van Noort" style={{ width: "100%", borderRadius: "16px", boxShadow: "0 32px 80px rgba(0,0,0,0.6)" }} />
           </div>
         </div>
-      )}
+      </dialog>
 
       {/* ===== HERO ===== */}
       <section className="section hero-section" style={{ minHeight: "100vh", paddingTop: "120px" }}>
@@ -162,7 +177,7 @@ export default function Home() {
               </p>
 
               <h3 style={{ marginBottom: "16px", fontSize: "1rem", color: "#a78bfa" }}>Huidig CV</h3>
-              <div style={{ position: "relative", cursor: "pointer", marginBottom: "8px" }} onClick={() => setCvOpen(true)}>
+              <div style={{ position: "relative", cursor: "pointer", marginBottom: "8px" }} onClick={openCv}>
                 <img src="/home/cv.png" alt="CV Dian van Noort" style={{ width: "100%", borderRadius: "16px", boxShadow: "0 8px 32px rgba(109,40,217,0.2)", border: "1px solid var(--border)", display: "block" }} />
                 <div className="hide-mobile"
                   style={{ position: "absolute", inset: 0, background: "rgba(124,58,237,0.5)", borderRadius: "16px", display: "flex", alignItems: "center", justifyContent: "center", opacity: 0, transition: "opacity 0.3s" }}
@@ -189,7 +204,7 @@ export default function Home() {
 
       <div className="glow-line" />
 
-      {/* ===== POSTS SECTION (NOW WITH SLIDER) ===== */}
+      {/* ===== POSTS SLIDER ===== */}
       <section className="section">
         <div className="container">
           <div className="reveal" style={{ textAlign: "center", marginBottom: "64px" }}>
@@ -249,14 +264,14 @@ export default function Home() {
             <div>
               <h4 style={{ fontSize: "12px", fontWeight: 700, color: "#a78bfa", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>Navigatie</h4>
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                {["Home", "Over mij", "Opdrachten", "Jaar 2", "Jaar 3 | Stage", "Jaar 4"].map((label, i) => (
-                  <a key={i} href="#" style={{ fontSize: "14px", color: "#8080a0", textDecoration: "none" }}>{label}</a>
+                {footerLinks.map((item, i) => (
+                  <a key={i} href={item.href} style={{ fontSize: "14px", color: "#8080a0", textDecoration: "none" }}>{item.label}</a>
                 ))}
               </div>
             </div>
             <div>
               <h4 style={{ fontSize: "12px", fontWeight: 700, color: "#a78bfa", textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "24px" }}>Contact</h4>
-              <button onClick={() => setCvOpen(true)} style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: "12px", padding: "12px 20px", color: "#a78bfa", cursor: "pointer", width: "100%", textAlign: "left", marginBottom: "15px" }}>
+              <button onClick={openCv} style={{ background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: "12px", padding: "12px 20px", color: "#a78bfa", cursor: "pointer", width: "100%", textAlign: "left", marginBottom: "15px" }}>
                 📄 Bekijk mijn CV
               </button>
               <p style={{ fontSize: "14px", color: "#e2e2f0" }}>dian.vannoort@example.nl</p>

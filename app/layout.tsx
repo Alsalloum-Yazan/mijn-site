@@ -131,6 +131,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/jaar-4/profileringskit">Profileringskit</a>
                 <a href="/jaar-4/eindreflectie">Eindreflectie</a>
                 <a href="/jaar-4/persoonlijk-profiel">Persoonlijk profiel</a>
+                <a href="/jaar-4/reflectie-persoonlijk">Reflectie Persoonlijk doel</a>
+                <a href="/jaar-4/reflectie-vakinhoudelijk">Reflectie Vakinhoudelijk doel</a>
+                <a href="/jaar-4/persoonlijk-doel-1">Persoonlijk doel actie 1</a>
+                <a href="/jaar-4/persoonlijk-doel-2">Persoonlijk doel actie 2</a>
+                <a href="/jaar-4/vakinhoudelijk-1">Vakinhoudelijk doel actie 1</a>
+                <a href="/jaar-4/vakinhoudelijk-2">Vakinhoudelijk doel actie 2</a>
                 <a href="/jaar-4/ai-protocol">AI-protocol</a>
                 <a href="/jaar-4/thuisblijfprogramma">Thuisblijfprogramma</a>
                 <a href="/jaar-4/9-stappen">9 stappen</a>

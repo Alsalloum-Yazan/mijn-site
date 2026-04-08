@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import ImageModal from "@/app/components/ImageModal";
 
 export default function BewijslastenVakinhoudelijk() {
   const [openImg, setOpenImg] = useState<string | null>(null);
@@ -29,14 +30,7 @@ export default function BewijslastenVakinhoudelijk() {
 
   return (
     <main>
-      {openImg && (
-        <div onClick={() => setOpenImg(null)} style={{ position: "fixed", inset: 0, zIndex: 9999, background: "rgba(0,0,0,0.92)", backdropFilter: "blur(16px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "24px", cursor: "zoom-out" }}>
-          <div onClick={e => e.stopPropagation()} style={{ position: "relative", maxWidth: "900px", width: "100%" }}>
-            <button onClick={() => setOpenImg(null)} style={{ position: "absolute", top: "-48px", right: "0", background: "rgba(167,139,250,0.15)", border: "1px solid rgba(167,139,250,0.3)", borderRadius: "50%", width: "36px", height: "36px", color: "#a78bfa", fontSize: "18px", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" }}>×</button>
-            <img src={openImg} alt="Vergroot" style={{ width: "100%", borderRadius: "16px", boxShadow: "0 32px 80px rgba(0,0,0,0.6)" }} />
-          </div>
-        </div>
-      )}
+      <ImageModal src={openImg} onClose={() => setOpenImg(null)} />
 
       <article className="content-page">
         <div className="reveal">
