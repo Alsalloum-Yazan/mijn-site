@@ -280,8 +280,12 @@ export default function Home() {
           <div className="divider" style={{ marginBottom: "24px", opacity: 0.3 }} />
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
             <p style={{ fontSize: "12px", color: "#4040a0", margin: 0 }}>© {new Date().getFullYear()} Dian van Noort.</p>
-            <p style={{ fontSize: "12px", color: "#4040a0", margin: 0 }}>Gebouwd door <span style={{ color: "#a78bfa" }}>Yazan</span> ☕</p>
-          </div>
+<p style={{ fontSize: "12px", color: "#4040a0", margin: 0 }}>
+  Gebouwd door{" "}
+  <a href="https://webbreda.nl" target="_blank" rel="noopener noreferrer" style={{ color: "#a78bfa", textDecoration: "none" }}>
+    Yazan
+  </a>{" "}☕
+</p>          </div>
         </div>
       </footer>
     </main>
