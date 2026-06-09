@@ -104,16 +104,15 @@
           <div className="divider divider-mb32" />
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "64px" }}>
+        <div className="pdca3-section-list">
           {persoonlijk.map((item, i) => (
             <div key={i} className="reveal glow-card intro-card-lg" style={{ transitionDelay: String(i * 80) + "ms" }}>
-              <h3 style={{ marginBottom: "24px", fontSize: "1.05rem", color: "#a78bfa" }}>{item.title}</h3>
+              <h3 className="pdca3-card-title">{item.title}</h3>
               <div className="grid-2col-gap16">
                 {item.items.map((step, j) => (
                   <div key={j} className="pdca3-step-item">
                     <div className="pdca3-fase-badge">
-                      {/* Dynamic background from faseColors */}
-                      <div style={{ width: "28px", height: "28px", background: faseColors[step.fase], borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 800, color: "white" }}>
+                      <div className={`pdca3-fase-icon pdca3-fase-icon-${step.fase.toLowerCase()}`}>
                         {step.fase.charAt(0)}
                       </div>
                       <span className="pdca3-fase-text">{step.fase}</span>
@@ -134,15 +133,15 @@
           <div className="divider divider-mb32" />
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "40px" }}>
+        <div className="pdca3-section-list-mb40">
           {vakinhoudelijk.map((item, i) => (
             <div key={i} className="reveal glow-card intro-card-lg" style={{ transitionDelay: String(i * 80) + "ms" }}>
-              <h3 style={{ marginBottom: "24px", fontSize: "1.05rem", color: "#a78bfa" }}>{item.title}</h3>
+              <h3 className="pdca3-card-title">{item.title}</h3>
               <div className="grid-2col-gap16">
                 {item.items.map((step, j) => (
                   <div key={j} className="pdca3-step-item">
                     <div className="pdca3-fase-badge">
-                      <div style={{ width: "28px", height: "28px", background: faseColors[step.fase], borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 800, color: "white" }}>
+                      <div className={`pdca3-fase-icon pdca3-fase-icon-${step.fase.toLowerCase()}`}>
                         {step.fase.charAt(0)}
                       </div>
                       <span className="pdca3-fase-text">{step.fase}</span>

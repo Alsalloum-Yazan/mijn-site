@@ -39,7 +39,7 @@
               Persoonlijk doel 1
             </div>
             <h3 className="h3-card-mb16">Presenteren</h3>
-            <p style={{ fontSize: "14px" }}>Aan het einde van mijn afstudeerperiode presenteer ik helder en overtuigend, aangetoond met drie presentaties en feedback van minstens drie personen.</p>
+            <p className="p-sm-14">Aan het einde van mijn afstudeerperiode presenteer ik helder en overtuigend, aangetoond met drie presentaties en feedback van minstens drie personen.</p>
           </div>
 
           <div className="glow-card reveal intro-card-lg">
@@ -48,16 +48,16 @@
               Persoonlijk doel 2
             </div>
             <h3 className="h3-card-mb16">Spaans leren</h3>
-            <p style={{ fontSize: "14px" }}>Aan het einde van mijn afstudeerperiode beheers ik Spaans op A1-niveau, aangetoond met een 100-daagse streak op Duolingo.</p>
+            <p className="p-sm-14">Aan het einde van mijn afstudeerperiode beheers ik Spaans op A1-niveau, aangetoond met een 100-daagse streak op Duolingo.</p>
           </div>
 
-          <div className="glow-card reveal intro-card-lg" style={{ gridColumn: "1 / -1" }}>
+          <div className="glow-card reveal intro-card-lg intro-card-full-col">
             <div className="badge badge-mb20">
               <span className="badge-dot" />
               Vakinhoudelijk doel
             </div>
             <h3 className="h3-card-mb16">SEO blogs schrijven</h3>
-            <p style={{ fontSize: "14px" }}>Ik wil mij gedurende 17 weken ontwikkelen in het schrijven van geoptimaliseerde SEO blogs voor AllSens en Pure by Zalati.</p>
+            <p className="p-sm-14">Ik wil mij gedurende 17 weken ontwikkelen in het schrijven van geoptimaliseerde SEO blogs voor AllSens en Pure by Zalati.</p>
           </div>
         </div>
 

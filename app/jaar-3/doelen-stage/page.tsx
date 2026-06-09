@@ -37,12 +37,12 @@ export default function DoelenStage() {
           <div className="divider divider-mb32" />
         </div>
 
-        <div className="img-grid-2" style={{ marginBottom: "32px" }}>
+        <div className="img-grid-2 img-grid-2-mb32">
 
           {/* PERSOONLIJK DOEL */}
           <div className="reveal glow-card img-card">
             <div onClick={() => setOpenImg("/jaar3/doelen-stage/persoonlijk doel.png")} className="img-card-image-wrap">
-              <img src="/jaar3/doelen-stage/persoonlijk doel.png" alt="Persoonlijk doel" className="img-card-img-contain" style={{ height: "220px" }} />
+              <img src="/jaar3/doelen-stage/persoonlijk doel.png" alt="Persoonlijk doel" className="img-card-img-contain img-card-img-h220" />
               <div
                 className="img-card-overlay"
                 onMouseEnter={e => {
@@ -74,7 +74,7 @@ export default function DoelenStage() {
           {/* VAKINHOUDELIJK DOEL */}
           <div className="reveal glow-card img-card">
             <div onClick={() => setOpenImg("/jaar3/doelen-stage/vakinhoud.png")} className="img-card-image-wrap">
-              <img src="/jaar3/doelen-stage/vakinhoud.png" alt="Vakinhoudelijk doel" className="img-card-img-contain" style={{ height: "220px" }} />
+              <img src="/jaar3/doelen-stage/vakinhoud.png" alt="Vakinhoudelijk doel" className="img-card-img-contain img-card-img-h220" />
               <div
                 className="img-card-overlay"
                 onMouseEnter={e => {
@@ -111,17 +111,17 @@ export default function DoelenStage() {
             <span className="badge-dot" />
             Reden doelen
           </div>
-          <h2 style={{ fontSize: "1.4rem", marginBottom: "20px" }}>
+          <h2 className="h2-sub-lg-mb20">
             Waarom deze <span className="g-text">doelen?</span>
           </h2>
           <div className="divider divider-mb24" />
-          <p style={{ fontSize: "14px", lineHeight: "1.9", marginBottom: "16px" }}>
+          <p className="p-sm-mb16">
             Ik heb deze doelen gekozen, omdat ik mezelf wil uitdagen om minder chaotisch te zijn en mij te richten op het website gedeelte van marketing.
           </p>
-          <p style={{ fontSize: "14px", lineHeight: "1.9", marginBottom: "16px" }}>
+          <p className="p-sm-mb16">
             Vaak heb ik wel een goed idee in mijn hoofd, maar vind ik het lastig om daar meteen iets concreets van te maken. Door hiermee te oefenen, wil ik sterker worden in het bedenken en uitvoeren van concepten.
           </p>
-          <p style={{ fontSize: "14px", lineHeight: "1.9" }}>
+          <p className="p-sm-line18">
             Het vakinhoudelijke doel past daar goed bij. Shopify is een platform waar ik meer mee wil kunnen, vooral omdat het veel wordt gebruikt in e-commerce.
           </p>
         </div>

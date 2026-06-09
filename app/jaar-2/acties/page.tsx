@@ -105,7 +105,7 @@ export default function ActiesPage() {
         </div>
 
         {/* Doel 1: Assertiviteit */}
-        <div className="reveal" style={{ transitionDelay: "60ms", marginBottom: "72px" }}>
+        <div className="reveal reveal-mb72" style={{ transitionDelay: "60ms" }}>
           <div className="doel-header">
             <div className="doel-num-icon doel-num-icon-1">01</div>
             <div>
@@ -153,7 +153,7 @@ export default function ActiesPage() {
         </div>
 
         {/* Doel 2: Stage */}
-        <div className="reveal" style={{ transitionDelay: "120ms", marginBottom: "72px" }}>
+        <div className="reveal reveal-mb72" style={{ transitionDelay: "120ms" }}>
           <div className="doel-header">
             <div className="doel-num-icon doel-num-icon-2">02</div>
             <div>

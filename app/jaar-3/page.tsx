@@ -82,7 +82,7 @@
             <p className="p-sm-mb16">
               In de periode van 3 februari 2025 tot en met 27 juni 2025 heb ik gewerkt aan het versterken van mijn vermogen om innerlijke rust te behouden in situaties van mijn eigen gecreëerde chaos.
             </p>
-            <p style={{ fontSize: "14px" }}>
+            <p className="p-sm-14">
               Door dit doel verder te ontwikkelen wil ik ervoor zorgen dat ik mij beter kan focussen op dingen die er toe doen.
             </p>
           </div>
@@ -96,7 +96,7 @@
             <p className="p-sm-mb16">
               Van 3 februari 2025 tot 27 juni 2025 verdiep ik mijn kennis van Shopify door mij te richten op de mogelijkheden binnen Shopify, Wix en B2B.
             </p>
-            <p style={{ fontSize: "14px" }}>
+            <p className="p-sm-14">
               Mijn hoofdtaak ligt deze stage bij het uitvoeren en opzetten van een B2B website. Wat marketing betreft houd ik mij erg graag bezig met de usability van een website.
             </p>
           </div>
@@ -108,7 +108,7 @@
             <span className="badge-dot" />
             Wanneer is het doel bereikt?
           </div>
-          <div className="goals-3-grid" style={{ marginTop: "8px" }}>
+          <div className="goals-3-grid goals-3-grid-mt8">
             {[
               { num: "1", title: "Noteren", text: "Het noteren van gemaakte stappen en dingen die ik moet doen." },
               { num: "2", title: "Delen", text: "Het delen met anderen zodra taken zijn die een ander moet oppakken." },

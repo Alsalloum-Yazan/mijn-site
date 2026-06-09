@@ -38,7 +38,7 @@ export default function FeedbackPage() {
         </div>
 
         {/* Klasgenoten Feedback */}
-        <div className="reveal" style={{ transitionDelay: "100ms", marginBottom: "64px" }}>
+        <div className="reveal reveal-mb64" style={{ transitionDelay: "100ms" }}>
           <h2 className="h2-section">Feedback <span className="g-text">klasgenoten</span></h2>
           <div className="flex-col-gap20">
             {klasgenotenFeedback.map((item, i) => (

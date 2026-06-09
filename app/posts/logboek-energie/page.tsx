@@ -24,7 +24,7 @@ export default function Page() {
               ].map((row, i) => (
                 <tr key={i}>
                   {row.map((cell, j) => (
-                    <td key={j} className="logboek-td" style={{ color: j === 0 ? "#c0c0e0" : cell === "Hoog" ? "#a78bfa" : "#6366f1", fontWeight: j > 0 ? 600 : 400 }}>{cell}</td>
+                    <td key={j} className={`logboek-td ${j === 0 ? "logboek-td-text" : cell === "Hoog" ? "logboek-td-hoog" : "logboek-td-laag"}`}>{cell}</td>
                   ))}
                 </tr>
               ))}

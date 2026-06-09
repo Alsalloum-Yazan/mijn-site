@@ -1057,6 +1057,30 @@ dialog.cv-modal-dialog::backdrop {
 /* PDCA check positives/improvements margin wrapper */
 .pdca-check-wrap { margin-top: 16px; }
 
+/* Inline style replacements */
+.p-sm-14 { font-size: 14px; }
+.h2-sub-lg-mb20 { font-size: 1.4rem; margin-bottom: 20px; }
+.intro-card-full-col { grid-column: 1 / -1; }
+.reveal-mb72 { margin-bottom: 72px; }
+.reveal-mb64 { margin-bottom: 64px; }
+.img-grid-2-mb32 { margin-bottom: 32px; }
+.img-card-img-h220 { height: 220px; }
+.goals-3-grid-mt8 { margin-top: 8px; }
+.pdca3-section-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 64px; }
+.pdca3-section-list-mb40 { display: flex; flex-direction: column; gap: 24px; margin-bottom: 40px; }
+.pdca3-card-title { margin-bottom: 24px; font-size: 1.05rem; color: #a78bfa; }
+.pdca3-fase-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: white; flex-shrink: 0; }
+.pdca3-fase-icon-plan  { background: #7c3aed; }
+.pdca3-fase-icon-do    { background: #4f46e5; }
+.pdca3-fase-icon-check { background: #6d28d9; }
+.pdca3-fase-icon-act   { background: #5b21b6; }
+.reflecties-img-wrap { position: relative; cursor: zoom-in; background: rgba(255,255,255,0.97); }
+.reflecties-img { width: 100%; display: block; object-fit: contain; }
+.reflecties-h3 { font-size: 1rem; }
+.logboek-td-text { color: #c0c0e0; }
+.logboek-td-hoog { color: #a78bfa; font-weight: 600; }
+.logboek-td-laag { color: #6366f1; font-weight: 600; }
+
 /* ================================================
    RESPONSIVE — TABLET
    ================================================ */

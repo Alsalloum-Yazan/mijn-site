@@ -34,8 +34,8 @@ export default function Reflecties() {
         <div className="img-grid-2">
           {reflecties.map((item, i) => (
             <div key={i} className="reveal glow-card img-card" style={{ transitionDelay: String(i * 120) + "ms" }}>
-              <div onClick={() => setOpenImg(item.img)} style={{ position: "relative", cursor: "zoom-in", background: "rgba(255,255,255,0.97)" }}>
-                <img src={item.img} alt={item.title} style={{ width: "100%", display: "block", objectFit: "contain" }} />
+              <div onClick={() => setOpenImg(item.img)} className="reflecties-img-wrap">
+                <img src={item.img} alt={item.title} className="reflecties-img" />
                 <div
                   className="img-card-overlay"
                   onMouseEnter={e => {
@@ -54,7 +54,7 @@ export default function Reflecties() {
               </div>
               <div className="img-card-footer">
                 <div className="reflectie-card-meta">
-                  <h3 style={{ fontSize: "1rem" }}>{item.title}</h3>
+                  <h3 className="reflecties-h3">{item.title}</h3>
                   <span className="page-card-sub">{item.sub}</span>
                 </div>
               </div>
