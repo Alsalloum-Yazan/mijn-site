@@ -53,7 +53,7 @@ export default function PersoonlijkDoelPage() {
               emoji="☝️"
               titel="Wijsvinger – Waar ligt mijn focus, waar ga ik naartoe, wat zijn mijn ambities?"
               kleur="linear-gradient(180deg, #4f46e5, #7c3aed)"
-              tekst="Mijn focus ligt nu op het bewuster afwegen van mijn beslissingen. Ik merk bijvoorbeeld dat ik tijdens last-minute werkverzoeken vaak meteen "ja" zeg, zonder stil te staan bij mijn beschikbare tijd en prioriteiten. Ook merk ik dat ik impulsief ben bij aankopen: ik koop vaak iets zonder eerst na te denken of ik het echt nodig heb. Mijn ambitie is om bewuster keuzes te maken door korte pauzes te nemen, mijn eerste impuls te observeren en een checklist te gebruiken. Zo wil ik in zowel werk als privé rustiger en effectiever handelen. Aan het einde van december 2025 wil ik beter kunnen inschatten wanneer ik mijn gevoel kan volgen en wanneer rationeel nadenken nodig is."
+              tekst="Mijn focus ligt nu op het bewuster afwegen van mijn beslissingen. Ik merk bijvoorbeeld dat ik tijdens last-minute werkverzoeken vaak meteen 'ja' zeg, zonder stil te staan bij mijn beschikbare tijd en prioriteiten. Ook merk ik dat ik impulsief ben bij aankopen: ik koop vaak iets zonder eerst na te denken of ik het echt nodig heb. Mijn ambitie is om bewuster keuzes te maken door korte pauzes te nemen, mijn eerste impuls te observeren en een checklist te gebruiken. Zo wil ik in zowel werk als privé rustiger en effectiever handelen. Aan het einde van december 2025 wil ik beter kunnen inschatten wanneer ik mijn gevoel kan volgen en wanneer rationeel nadenken nodig is."
             />
 
             <VingerCard
@@ -74,7 +74,7 @@ export default function PersoonlijkDoelPage() {
               emoji="🤙"
               titel="Pink – Waar kan ik nog in groeien, wat heeft aandacht nodig, waar ben ik nog klein?"
               kleur="linear-gradient(180deg, #7c3aed, #4f46e5)"
-              tekst="Ik kan nog groeien in het consequent toepassen van mijn pauzes en checklists, vooral bij impulsieve momenten zoals last-minute verzoeken of spontane aankopen. Zo vergat ik soms een pauze in te lassen, waardoor ik direct iets kocht of "ja" zei, terwijl een korte reflectie me had geholpen om een verstandiger keuze te maken. Ik heb aandacht nodig voor geduld en zelfcompassie: het kost tijd om nieuwe gewoonten te ontwikkelen. Mijn kleinheid ligt in dat ik nog te vaak automatisch reageer, zowel bij werk als bij privékeuzes, en dit vraagt nog structurele oefening."
+              tekst="Ik kan nog groeien in het consequent toepassen van mijn pauzes en checklists, vooral bij impulsieve momenten zoals last-minute verzoeken of spontane aankopen. Zo vergat ik soms een pauze in te lassen, waardoor ik direct iets kocht of 'ja' zei, terwijl een korte reflectie me had geholpen om een verstandiger keuze te maken. Ik heb aandacht nodig voor geduld en zelfcompassie: het kost tijd om nieuwe gewoonten te ontwikkelen. Mijn kleinheid ligt in dat ik nog te vaak automatisch reageer, zowel bij werk als bij privékeuzes, en dit vraagt nog structurele oefening."
             />
 
           </div>

@@ -151,18 +151,7 @@ export default function PersoonlijkDoel1() {
               <div
                 key={i}
                 onClick={() => setSelectedImage(src)}
-                className="img-tile-card"
-                className="img-tile-card-h200"
-                onMouseEnter={e => {
-                  e.currentTarget.style.borderColor = "rgba(167,139,250,0.45)";
-                  e.currentTarget.style.transform = "translateY(-3px)";
-                  e.currentTarget.style.boxShadow = "0 12px 40px rgba(109,40,217,0.2)";
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.borderColor = "rgba(167,139,250,0.12)";
-                  e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
+                className="img-tile-card img-tile-card-h200"
               >
                 <img
                   src={src}

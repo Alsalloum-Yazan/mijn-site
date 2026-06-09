@@ -803,8 +803,9 @@ dialog.cv-modal-dialog::backdrop {
 .enquete-title { font-size: 13px; font-weight: 600; color: #eeeeee; }
 .enquete-sub { font-size: 11px; color: #a78bfa; margin-top: 2px; }
 
-/* Image tile card (hover done via JS) */
+/* Image tile card */
 .img-tile-card { border-radius: 12px; overflow: hidden; cursor: zoom-in; border: 1px solid rgba(167,139,250,0.12); background-color: #0e0e1a; position: relative; transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s; }
+.img-tile-card:hover { border-color: rgba(167,139,250,0.45); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(109,40,217,0.2); }
 .img-tile-card-label { position: absolute; bottom: 8px; right: 10px; font-size: 10px; color: rgba(167,139,250,0.4); font-weight: 600; }
 .img-tile-card-footer { padding: 8px 12px; border-top: 1px solid rgba(167,139,250,0.08); font-size: 11px; color: #a78bfa; font-weight: 600; }
 .img-tile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
