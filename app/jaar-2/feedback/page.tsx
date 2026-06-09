@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function FeedbackPage() {
   const klasgenotenFeedback = [
@@ -21,77 +21,70 @@ export default function FeedbackPage() {
     <main>
       <article className="content-page">
         <div className="reveal">
-          <a href="/jaar-2" style={{ fontSize: "13px", color: "#a78bfa", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px" }}>
+          <a href="/jaar-2" className="post-back-link">
             ← Terug naar Jaar 2
           </a>
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <div className="badge post-badge">
             <span className="badge-dot" />
             Jaar 2
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
+          <h1 className="post-h1">
             Feedback op mijn <span className="g-text">ontwikkeling</span>
           </h1>
-          <div className="divider" style={{ marginBottom: "40px" }} />
-          
-          <p style={{ marginBottom: "40px", fontSize: "1.1rem" }}>
+          <div className="divider divider-mb40" />
+          <p className="p-intro">
             In dit document verzamel ik de feedback die ik heb ontvangen van klasgenoten en vanuit mijn privéleven. Deze feedback helpt mij bij mijn persoonlijke groei en het realiseren van mijn leerdoelen.
           </p>
         </div>
 
         {/* Klasgenoten Feedback */}
         <div className="reveal" style={{ transitionDelay: "100ms", marginBottom: "64px" }}>
-          <h2 style={{ fontSize: "1.8rem", marginBottom: "24px" }}>Feedback <span className="g-text">klasgenoten</span></h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+          <h2 className="h2-section">Feedback <span className="g-text">klasgenoten</span></h2>
+          <div className="flex-col-gap20">
             {klasgenotenFeedback.map((item, i) => (
-              <div key={i} className="glow-card" style={{ padding: "28px", display: "flex", flexDirection: "column", gap: "12px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "8px" }}>
-                  <div style={{ width: "48px", height: "48px", flexShrink: 0, background: "linear-gradient(135deg, rgba(167,139,250,0.15), rgba(79,70,229,0.15))", border: "1px solid rgba(167,139,250,0.3)", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "20px", fontWeight: 800, color: "#a78bfa" }}>
-                    {item.name.charAt(0)}
-                  </div>
+              <div key={i} className="glow-card feedback-card">
+                <div className="feedback-avatar">
+                  <div className="feedback-icon">{item.name.charAt(0)}</div>
                   <div>
-                    <h3 style={{ fontSize: "1.1rem", marginBottom: "4px" }}>{item.name}</h3>
-                    <p style={{ fontSize: "13px", color: "#a78bfa", fontWeight: 600, margin: 0 }}>{item.topic}</p>
+                    <h3 className="feedback-name">{item.name}</h3>
+                    <p className="feedback-topic">{item.topic}</p>
                   </div>
                 </div>
-                <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#e2e2f0", fontStyle: "italic", paddingLeft: "16px", borderLeft: "3px solid rgba(167,139,250,0.3)", margin: 0 }}>
-                  "{item.text}"
-                </p>
+                <p className="feedback-quote">"{item.text}"</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="glow-line" style={{ marginBottom: "64px" }} />
+        <div className="glow-line glow-line-mb64" />
 
         {/* Privéleven Feedback */}
         <div className="reveal" style={{ transitionDelay: "200ms" }}>
-          <h2 style={{ fontSize: "1.8rem", marginBottom: "24px" }}>Feedback <span className="g-text">privéleven</span></h2>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "20px" }}>
+          <h2 className="h2-section">Feedback <span className="g-text">privéleven</span></h2>
+          <div className="grid-1col-gap24">
             {privelevenFeedback.map((item, i) => (
-              <div key={i} className="glow-card" style={{ padding: "28px", display: "flex", flexDirection: "column", gap: "12px", borderColor: "rgba(129,140,248,0.2)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "8px" }}>
-                  <div style={{ width: "48px", height: "48px", flexShrink: 0, background: "linear-gradient(135deg, rgba(129,140,248,0.15), rgba(79,70,229,0.15))", border: "1px solid rgba(129,140,248,0.3)", borderRadius: "14px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "20px", fontWeight: 800, color: "#818cf8" }}>
-                    {item.name.charAt(0)}
-                  </div>
+              <div key={i} className="glow-card feedback-card feedback-card-border">
+                <div className="feedback-avatar">
+                  <div className="feedback-icon-indigo">{item.name.charAt(0)}</div>
                   <div>
-                    <h3 style={{ fontSize: "1.1rem", marginBottom: "4px" }}>{item.name}</h3>
-                    <p style={{ fontSize: "13px", color: "#818cf8", fontWeight: 600, margin: 0 }}>{item.topic}</p>
+                    <h3 className="feedback-name">{item.name}</h3>
+                    <p className="feedback-topic-indigo">{item.topic}</p>
                   </div>
                 </div>
-                <p style={{ fontSize: "14.5px", lineHeight: "1.7", color: "#e2e2f0", fontStyle: "italic", paddingLeft: "16px", borderLeft: "3px solid rgba(129,140,248,0.3)", margin: 0 }}>
-                  "{item.text}"
-                </p>
+                <p className="feedback-quote-indigo">"{item.text}"</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "12px", justifyContent: "space-between", marginTop: "64px", paddingTop: "32px", borderTop: "1px solid rgba(167,139,250,0.1)" }}>
-          <a href="/jaar-2" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Terug naar Jaar 2</a>
-          <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>Terug naar home →</a>
+        <div className="footer-nav-mt64">
+          <a href="/jaar-2" className="btn-ghost btn-sm">← Terug naar Jaar 2</a>
+          <a href="/" className="btn btn-sm">Terug naar home →</a>
         </div>
 
       </article>
     </main>
   );
 }
+
+

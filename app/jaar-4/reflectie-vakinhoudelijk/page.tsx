@@ -1,47 +1,22 @@
-"use client";
+﻿"use client";
 
 const SectionDivider = ({ label }: { label: string }) => (
-  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-    <div style={{ height: "1px", flex: 1, background: "linear-gradient(90deg, rgba(167,139,250,0.3), transparent)" }} />
-    <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.12em", color: "#a78bfa", textTransform: "uppercase", whiteSpace: "nowrap" }}>
-      {label}
-    </span>
-    <div style={{ height: "1px", flex: 1, background: "linear-gradient(270deg, rgba(167,139,250,0.3), transparent)" }} />
+  <div className="section-divider">
+    <div className="section-divider-line-l-bright" />
+    <span className="section-divider-label-simple">{label}</span>
+    <div className="section-divider-line-r-bright" />
   </div>
 );
 
 const VingerCard = ({ emoji, titel, kleur, tekst }: { emoji: string; titel: string; kleur: string; tekst: string }) => (
-  <div
-    className="glow-card card-hover"
-    style={{
-      padding: "28px 32px",
-      borderRadius: "20px",
-      border: "1px solid rgba(167,139,250,0.15)",
-      position: "relative",
-      overflow: "hidden",
-    }}
-  >
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "3px",
-        height: "100%",
-        background: kleur,
-        borderRadius: "20px 0 0 20px",
-      }}
-    />
-    <div style={{ paddingLeft: "8px" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
-        <span style={{ fontSize: "28px" }}>{emoji}</span>
-        <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#e2e2f0", margin: 0 }}>
-          {titel}
-        </h3>
+  <div className="glow-card card-hover vinger-card">
+    <div className="vinger-card-bar" style={{ background: kleur }} />
+    <div className="vinger-card-inner">
+      <div className="vinger-card-header">
+        <span className="vinger-card-emoji">{emoji}</span>
+        <h3 className="vinger-card-title">{titel}</h3>
       </div>
-      <p style={{ fontSize: "14px", lineHeight: "1.8", color: "#b0b0cc", margin: 0 }}>
-        {tekst}
-      </p>
+      <p className="vinger-card-text">{tekst}</p>
     </div>
   </div>
 );
@@ -51,35 +26,21 @@ export default function VakinhoudelijkDoelPage() {
     <main>
       <article className="content-page">
 
-        {/* ── Header ── */}
         <div className="reveal">
-          <a href="/jaar-4"
-            style={{
-              fontSize: "13px",
-              color: "#a78bfa",
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "6px",
-              marginBottom: "32px",
-            }}
-          >
-            ← Terug naar Jaar 4
-          </a>
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <a href="/jaar-4" className="j4-back-link-accent">← Terug naar Jaar 4</a>
+          <div className="badge j4-badge-mb24">
             <span className="badge-dot" />
             Jaar 4
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
+          <h1 className="j4-h1">
             Mijn <span className="g-text">vakinhoudelijk doel</span>
           </h1>
-          <div className="divider" style={{ marginBottom: "40px" }} />
+          <div className="divider j4-divider-mb40" />
         </div>
 
-        {/* ── Vingers ── */}
-        <div className="reveal" style={{ transitionDelay: "60ms", marginBottom: "72px" }}>
+        <div className="reveal reveal-mb72" style={{ transitionDelay: "60ms" }}>
           <SectionDivider label="De vijf vingers" />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px" }}>
+          <div className="vinger-grid">
 
             <VingerCard
               emoji="👍"
@@ -119,22 +80,13 @@ export default function VakinhoudelijkDoelPage() {
           </div>
         </div>
 
-        {/* ── Footer nav ── */}
-        <div
-          style={{
-            display: "flex",
-            gap: "12px",
-            justifyContent: "space-between",
-            marginTop: "64px",
-            paddingTop: "32px",
-            borderTop: "1px solid rgba(167,139,250,0.1)",
-          }}
-        >
-          <a href="/jaar-4" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Terug naar Jaar 4</a>
-          <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>Terug naar home →</a>
+        <div className="footer-nav-border08">
+          <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
+          <a href="/" className="btn btn-sm">Terug naar home →</a>
         </div>
 
       </article>
     </main>
   );
 }
+

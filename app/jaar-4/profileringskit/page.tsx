@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function ProfileringskitPage() {
   const sections = [
@@ -58,8 +58,7 @@ Belangrijk voor hen is dat een parfum niet alleen goed ruikt, maar ook een gevoe
       accent: "#a855f7",
       accentLight: "rgba(168,85,247,0.12)",
       accentBorder: "rgba(168,85,247,0.25)",
-            src: "/jaar4/profileringskit/logo.png",
-
+      src: "/jaar4/profileringskit/logo.png",
       text: "",
     },
     {
@@ -107,7 +106,6 @@ De tan staat voor tanniglines en een zomers gevoel. Daarnaast staat de 10 weer v
       accentBorder: "rgba(34,197,94,0.25)",
       text: "https://mymedia.avans.nl/media/Persoonlijke+pitch/0_tiga4qf8",
       link: "https://mymedia.avans.nl/media/Persoonlijke+pitch/0_tiga4qf8",
-      // src is verwijderd zodat er geen afbeelding komt
     },
   ];
 
@@ -117,79 +115,61 @@ De tan staat voor tanniglines en een zomers gevoel. Daarnaast staat de 10 weer v
 
         {/* Header */}
         <div className="reveal">
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <div className="badge j4-badge-mb24">
             <span className="badge-dot" />
             Profileringskit
           </div>
 
-          <h1 style={{ fontSize: "clamp(2rem,5vw,3.5rem)", marginBottom: "24px" }}>
-            Profileringskit
-          </h1>
+          <h1 className="j4-h1">Profileringskit</h1>
 
-          <div className="divider" style={{ marginBottom: "24px" }} />
+          <div className="divider divider-mb24" />
 
-          <p style={{ maxWidth: "640px", color: "#8080a0", lineHeight: "1.8" }}>
+          <p className="j4-intro-muted">
             Dit hoofdstuk bestaat uit: een motivatiebrief, mijn cv, videopitch, LinkedIn profiel, een onderscheidende activatie en mijn persoonlijke positionering.
           </p>
         </div>
 
-        {/* Sections */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "64px", marginTop: "48px" }}>
+        {/* Sections — dynamic accent/accentLight/accentBorder kept inline */}
+        <div className="j4-sections-gap">
           {sections.map((item, i) => (
             <div key={item.id} className="reveal" style={{ transitionDelay: `${i * 80}ms` }}>
 
-              <div style={{ display: "flex", gap: "16px", marginBottom: "20px" }}>
-                <div style={{
-                  width: "44px",
-                  height: "44px",
-                  borderRadius: "12px",
+              <div className="profileringskit-section-header">
+                <div className="profileringskit-section-icon-wrap" style={{
                   background: `linear-gradient(135deg, ${item.accent}33, ${item.accent}11)`,
                   border: `1px solid ${item.accentBorder}`,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                 }}>
                   {item.icon}
                 </div>
 
                 <div>
-                  <div style={{ fontSize: "11px", color: "#6060a0", textTransform: "uppercase" }}>
-                    {item.label}
-                  </div>
-                  <h2 style={{ margin: 0 }}>{item.title}</h2>
+                  <div className="profileringskit-section-label">{item.label}</div>
+                  <h2 className="h2-no-margin">{item.title}</h2>
                 </div>
               </div>
 
               {item.text && (
-                <p style={{ color: "#8080a0", marginBottom: "20px", whiteSpace: "pre-line" }}>
-                  {item.text}
-                </p>
+                <p className="profileringskit-section-text">{item.text}</p>
               )}
 
-              {/* Glow-card */}
-              <div className="glow-card" style={{
+              <div className="glow-card profileringskit-section-card" style={{
                 border: `1px solid ${item.accentBorder}`,
                 background: item.accentLight,
-                borderRadius: "24px",
-                overflow: "hidden"
               }}>
-                <div style={{ padding: "20px", textAlign: "center" }}>
-                  {/* Alleen render image als src bestaat */}
-                  {item.src && (
+                <div className="profileringskit-section-card-inner">
+                  {"src" in item && item.src && (
                     <img
                       src={item.src}
                       alt={item.title}
-                      style={{ width: "100%", maxWidth: "700px", borderRadius: "12px" }}
+                      className="profileringskit-section-img"
                     />
                   )}
 
-                  {/* Altijd render link button als link bestaat */}
                   {item.link && (
                     <a
                       href={item.link}
                       target="_blank"
-                      className="btn"
-                      style={{ marginTop: "16px", display: "inline-block" }}
+                      className="btn btn-mt16"
                     >
                       Open link →
                     </a>
@@ -205,3 +185,5 @@ De tan staat voor tanniglines en een zomers gevoel. Daarnaast staat de 10 weer v
     </main>
   );
 }
+
+

@@ -18,12 +18,12 @@ export default function Page() {
           { q: "Voorwerp: Oester/schelp", a: "Ik kom uit Zeeland. Ik ben dol op de zee. Verder is alles beige en goud." },
         ]},
       ].map((section, si) => (
-        <div key={si} className="reveal glow-card" style={{ padding: "36px", borderRadius: "24px", marginBottom: "20px" }}>
-          <h2 style={{ fontSize: "1.2rem", marginBottom: "24px" }}><span className="g-text">{section.title}</span></h2>
+        <div key={si} className="reveal glow-card glow-card-p36 glow-card-mb20">
+          <h2 className="post-h2"><span className="g-text">{section.title}</span></h2>
           {section.items.map((item, ii) => (
-            <div key={ii} style={{ marginBottom: "20px", paddingBottom: "20px", borderBottom: ii < section.items.length - 1 ? "1px solid rgba(167,139,250,0.08)" : "none" }}>
-              <p style={{ fontSize: "12px", color: "#a78bfa", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1px", marginBottom: "8px" }}>{item.q}</p>
-              <p style={{ fontSize: "14px", color: "#c0c0e0" }}>{item.a}</p>
+            <div key={ii} className={`${ii < section.items.length - 1 ? "qa-section-mb qa-border-b" : "qa-section-last"}`}>
+              <p className="qa-question">{item.q}</p>
+              <p className="qa-answer">{item.a}</p>
             </div>
           ))}
         </div>

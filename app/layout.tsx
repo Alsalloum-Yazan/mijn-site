@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             {/* Desktop nav */}
             <div className="nav-links">
-              <a href="/" className="nav-parent" style={{ fontWeight: 600 }}>Home</a>
+              <a href="/" className="nav-parent nav-home-active">Home</a>
               {/* <a href="/posts" className="nav-parent">Opdrachten</a> */}
 
               <div className="nav-group">

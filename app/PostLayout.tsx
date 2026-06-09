@@ -36,27 +36,27 @@ export default function PostLayout({
 
         {/* HEADER */}
         <div className="reveal">
-          <a href="/posts" style={{ fontSize: "13px", color: "#a78bfa", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px" }}>
+          <a href="/posts" className="post-back-link">
             ← Alle opdrachten
           </a>
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <div className="badge post-badge">
             <span className="badge-dot" />
             Persoonlijke ontwikkeling
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
+          <h1 className="post-h1">
             {title}
           </h1>
-          <div style={{ display: "flex", gap: "16px", alignItems: "center", marginBottom: "40px", paddingBottom: "40px", borderBottom: "1px solid rgba(167,139,250,0.1)" }}>
+          <div className="post-meta">
             <img
               src="/home/dian.png"
               alt="Dian"
-              style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover", border: "2px solid rgba(167,139,250,0.3)" }}
+              className="post-avatar"
             />
             <div>
-              <p style={{ fontSize: "13px", fontWeight: 600, color: "#e2e2f0", margin: 0 }}>dcymvannoort</p>
-              <p style={{ fontSize: "12px", color: "#4040a0", margin: 0 }}>{date + " · " + readTime + " om te lezen"}</p>
+              <p className="post-author-name">dcymvannoort</p>
+              <p className="post-author-date">{date + " · " + readTime + " om te lezen"}</p>
             </div>
-            <div style={{ marginLeft: "auto", display: "flex", gap: "16px", fontSize: "13px", color: "#4040a0" }}>
+            <div className="post-meta-right">
               <span>{"♥ " + likes}</span>
               <span>{"💬 " + comments}</span>
             </div>
@@ -66,22 +66,16 @@ export default function PostLayout({
         {/* IMAGE — klikbaar */}
         {img && (
           <div
-            className="reveal"
+            className="reveal post-image-wrap"
             onClick={() => setImgOpen(true)}
-            style={{ marginBottom: "40px", cursor: "zoom-in", position: "relative" }}
           >
             <img
               src={img}
               alt={title}
-              style={{ width: "100%", borderRadius: "20px", border: "1px solid rgba(167,139,250,0.1)", display: "block", transition: "transform 0.3s, box-shadow 0.3s" }}
+              className="post-image-full"
             />
-            <div style={{
-              position: "absolute", inset: 0,
-              background: "rgba(124,58,237,0.0)",
-              borderRadius: "20px",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              transition: "background 0.3s",
-            }}
+            <div
+              className="post-zoom-overlay"
               onMouseEnter={e => {
                 (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.35)";
                 const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLDivElement;
@@ -93,13 +87,7 @@ export default function PostLayout({
                 if (icon) icon.style.opacity = "0";
               }}
             >
-              <div className="zoom-icon" style={{
-                opacity: 0, transition: "opacity 0.3s",
-                background: "rgba(255,255,255,0.15)", backdropFilter: "blur(10px)",
-                borderRadius: "50px", padding: "10px 24px",
-                fontWeight: 600, fontSize: "14px", color: "white",
-                border: "1px solid rgba(255,255,255,0.2)"
-              }}>
+              <div className="zoom-icon">
                 Vergroot afbeelding
               </div>
             </div>
@@ -110,24 +98,24 @@ export default function PostLayout({
         {children}
 
         {/* ANDERE POSTS */}
-        <div style={{ marginTop: "64px", paddingTop: "48px", borderTop: "1px solid rgba(167,139,250,0.1)" }}>
-          <h3 style={{ marginBottom: "24px", fontSize: "1rem", color: "#a78bfa" }}>Andere opdrachten</h3>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "16px" }}>
+        <div className="post-others">
+          <h3 className="post-others-title">Andere opdrachten</h3>
+          <div className="post-others-grid">
             {otherPosts.slice(0, 3).map((p, i) => (
-              <a key={i} href={"/posts/" + p.slug} className="glow-card" style={{ padding: "20px", textDecoration: "none", color: "inherit", display: "block", borderRadius: "16px" }}>
-                <div style={{ width: "32px", height: "32px", background: "rgba(167,139,250,0.1)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "14px", fontWeight: 800, color: "#a78bfa", marginBottom: "12px" }}>
+              <a key={i} href={"/posts/" + p.slug} className="glow-card post-other-card">
+                <div className="post-other-icon">
                   {p.title.charAt(0)}
                 </div>
-                <p style={{ fontSize: "13.5px", color: "#c0c0e0", lineHeight: "1.5", margin: 0 }}>{p.title}</p>
-                <p style={{ fontSize: "12px", color: "#a78bfa", marginTop: "8px", fontWeight: 600 }}>Lees meer →</p>
+                <p className="post-other-title">{p.title}</p>
+                <p className="post-other-more">Lees meer →</p>
               </a>
             ))}
           </div>
         </div>
 
-        <div style={{ display: "flex", gap: "12px", justifyContent: "space-between", marginTop: "48px", paddingTop: "32px", borderTop: "1px solid rgba(167,139,250,0.1)" }}>
-          <a href="/posts" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Alle opdrachten</a>
-          <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>Terug naar home →</a>
+        <div className="post-footer-nav">
+          <a href="/posts" className="btn-ghost btn-sm">← Alle opdrachten</a>
+          <a href="/" className="btn btn-sm">Terug naar home →</a>
         </div>
 
       </article>

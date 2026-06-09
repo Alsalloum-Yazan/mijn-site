@@ -24,20 +24,20 @@ const waarden = [
 export default function Page() {
   return (
     <PostLayout slug="waardenoefening" title="Waardenoefening" date="2 okt 2024" readTime="5 minuten" img={null} likes={0} comments={0}>
-      <div className="reveal glow-card" style={{ padding: "32px", borderRadius: "24px", marginBottom: "32px" }}>
-        <p style={{ marginBottom: "16px" }}>Hieronder heb ik de waardenoefening uitgevoerd, hierbij heb ik aangegeven hoe belangrijk de onderstaande waarden voor mij zijn.</p>
-        <p style={{ color: "#a78bfa", fontWeight: 600 }}>De 3 belangrijkste waarden: Gezondheid — Liefde — Openheid</p>
+      <div className="reveal glow-card glow-card-p32 glow-card-mb32">
+        <p className="post-p-mb16">Hieronder heb ik de waardenoefening uitgevoerd, hierbij heb ik aangegeven hoe belangrijk de onderstaande waarden voor mij zijn.</p>
+        <p className="waarden-accent">De 3 belangrijkste waarden: Gezondheid — Liefde — Openheid</p>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      <div className="pdca-steps-list">
         {waarden.map((w, i) => (
-          <div key={i} className="reveal glow-card" style={{ padding: "20px 24px", borderRadius: "16px", display: "grid", gridTemplateColumns: "1fr auto", alignItems: "center", gap: "16px", transitionDelay: `${i * 40}ms` }}>
+          <div key={i} className="reveal glow-card waarden-row" style={{ transitionDelay: `${i * 40}ms` }}>
             <div>
-              <p style={{ fontWeight: 600, color: "#e2e2f0", marginBottom: "4px", fontSize: "14px" }}>{w.waarde}</p>
-              <p style={{ fontSize: "13px", color: "#6060a0" }}>{w.uitleg}</p>
+              <p className="waarden-name">{w.waarde}</p>
+              <p className="waarden-uitleg">{w.uitleg}</p>
             </div>
-            <div style={{ display: "flex", gap: "4px" }}>
+            <div className="waarden-dots">
               {[1,2,3,4,5].map(n => (
-                <div key={n} style={{ width: "8px", height: "8px", borderRadius: "50%", background: n <= w.score ? "linear-gradient(135deg, #a78bfa, #818cf8)" : "rgba(167,139,250,0.15)" }} />
+                <div key={n} className={n <= w.score ? "waarden-dot-active" : "waarden-dot-inactive"} />
               ))}
             </div>
           </div>

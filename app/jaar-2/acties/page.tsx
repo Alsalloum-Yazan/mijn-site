@@ -1,91 +1,29 @@
-"use client";
+﻿"use client";
 
 const LogboekCard = ({ situatie, datum, tekst }: { situatie: string; datum: string; tekst: string }) => (
-  <div
-    className="glow-card card-hover"
-    style={{
-      padding: "28px 32px",
-      borderRadius: "20px",
-      border: "1px solid rgba(167,139,250,0.15)",
-      position: "relative",
-      overflow: "hidden",
-    }}
-  >
-    <div
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "3px",
-        height: "100%",
-        background: "linear-gradient(180deg, #7c3aed, #4f46e5)",
-        borderRadius: "20px 0 0 20px",
-      }}
-    />
-    <div style={{ paddingLeft: "8px" }}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "8px",
-          marginBottom: "12px",
-        }}
-      >
-        <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#e2e2f0", margin: 0 }}>
-          {situatie}
-        </h3>
-        <span
-          style={{
-            fontSize: "12px",
-            color: "#a78bfa",
-            background: "rgba(167,139,250,0.1)",
-            border: "1px solid rgba(167,139,250,0.2)",
-            padding: "3px 10px",
-            borderRadius: "20px",
-            fontWeight: 600,
-          }}
-        >
-          {datum}
-        </span>
+  <div className="glow-card card-hover logboek-card">
+    <div className="logboek-bar" />
+    <div className="logboek-inner">
+      <div className="logboek-header">
+        <h3 className="logboek-title">{situatie}</h3>
+        <span className="logboek-date">{datum}</span>
       </div>
-      <p style={{ fontSize: "14px", lineHeight: "1.8", color: "#b0b0cc", margin: 0 }}>
-        {tekst}
-      </p>
+      <p className="logboek-text">{tekst}</p>
     </div>
   </div>
 );
 
 const SectionDivider = ({ label }: { label: string }) => (
-  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px" }}>
-    <div style={{ height: "1px", flex: 1, background: "linear-gradient(90deg, rgba(167,139,250,0.3), transparent)" }} />
-    <span
-      style={{
-        fontSize: "11px",
-        fontWeight: 700,
-        letterSpacing: "0.12em",
-        color: "#a78bfa",
-        textTransform: "uppercase",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {label}
-    </span>
-    <div style={{ height: "1px", flex: 1, background: "linear-gradient(270deg, rgba(167,139,250,0.3), transparent)" }} />
+  <div className="section-divider">
+    <div className="section-divider-line-l" />
+    <span className="section-divider-label">{label}</span>
+    <div className="section-divider-line-r" />
   </div>
 );
 
 const ImageCard = ({ src, alt }: { src: string; alt: string }) => (
-  <div
-    className="glow-card"
-    style={{
-      borderRadius: "20px",
-      border: "1px solid rgba(167,139,250,0.15)",
-      overflow: "hidden",
-    }}
-  >
-    <img src={src} alt={alt} style={{ width: "100%", height: "auto", display: "block" }} />
+  <div className="glow-card image-card-simple">
+    <img src={src} alt={alt} className="image-card-img" />
   </div>
 );
 
@@ -153,261 +91,111 @@ export default function ActiesPage() {
 
         {/* Header */}
         <div className="reveal">
-          
-           <a href="/jaar-2"
-            style={{
-              fontSize: "13px",
-              color: "#a78bfa",
-              textDecoration: "none",
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "6px",
-              marginBottom: "32px",
-            }}
-          >
+          <a href="/jaar-2" className="post-back-link">
             ← Terug naar Jaar 2
           </a>
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <div className="badge post-badge">
             <span className="badge-dot" />
             Jaar 2
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
+          <h1 className="post-h1">
             Mijn <span className="g-text">acties</span>
           </h1>
-          <div className="divider" style={{ marginBottom: "40px" }} />
+          <div className="divider divider-mb40" />
         </div>
 
         {/* Doel 1: Assertiviteit */}
         <div className="reveal" style={{ transitionDelay: "60ms", marginBottom: "72px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "18px", marginBottom: "32px" }}>
-            <div
-              style={{
-                width: "52px",
-                height: "52px",
-                borderRadius: "14px",
-                flexShrink: 0,
-                background: "linear-gradient(135deg, #7c3aed, #4f46e5)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "18px",
-                fontWeight: 900,
-                color: "white",
-                boxShadow: "0 6px 24px rgba(124,58,237,0.35)",
-              }}
-            >
-              01
-            </div>
+          <div className="doel-header">
+            <div className="doel-num-icon doel-num-icon-1">01</div>
             <div>
-              <div
-                style={{
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  color: "#6060a0",
-                  textTransform: "uppercase",
-                  marginBottom: "4px",
-                }}
-              >
-                Doel 1
-              </div>
-              <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", margin: 0, color: "#e2e2f0" }}>
-                Assertiviteit
-              </h2>
+              <div className="doel-num-label">Doel 1</div>
+              <h2 className="doel-num-title">Assertiviteit</h2>
             </div>
           </div>
 
-          <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "#8080a0", marginBottom: "40px", maxWidth: "680px" }}>
+          <p className="doel-lead">
             Aan de hand van de afgelopen periode heb ik mijn eigen assertiviteit waargenomen. Hieronder staan concrete situaties waarin ik bewust assertief heb gehandeld.
           </p>
 
           <SectionDivider label="Bewijs — assertiviteit" />
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-              gap: "16px",
-              marginBottom: "40px",
-            }}
-          >
+          <div className="grid-auto-fill-280 mb40">
             <ImageCard src="/jaar2/acties/assertiviteit.png" alt="Assertiviteit bewijs" />
             <ImageCard src="/jaar2/acties/de assertiveitstest.png" alt="De assertiveitstest" />
             <ImageCard src="/jaar2/acties/uitslag van de tijdwinst.png" alt="Uitslag van de tijdwinst" />
           </div>
 
           <SectionDivider label="Logboek assertiviteit — Deel 1" />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px", marginBottom: "40px" }}>
+          <div className="grid-1col-gap16 mb40">
             {logboekDeel1.map((item, i) => (
               <LogboekCard key={i} {...item} />
             ))}
           </div>
 
           <SectionDivider label="Logboek assertiviteit — Deel 2" />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px", marginBottom: "40px" }}>
+          <div className="grid-1col-gap16 mb40">
             {logboekDeel2.map((item, i) => (
               <LogboekCard key={i} {...item} />
             ))}
           </div>
 
           <SectionDivider label="Logboek assertiviteit — Deel 3" />
-          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "16px" }}>
+          <div className="grid-1col-gap16">
             {logboekDeel3.map((item, i) => (
               <LogboekCard key={i} {...item} />
             ))}
           </div>
-                   
         </div>
-         <SectionDivider label="Weekly Planner" />
-          <div
-            style={{
-              display: "grid",
 
-              gap: "16px",
-              marginBottom: "40px",
-            }}
-          >
-            <ImageCard src="/jaar2/acties/weekly planner.png" alt="Weekly planner" />
-          </div>
-          
+        <SectionDivider label="Weekly Planner" />
+        <div className="grid-1col-gap16 mb40">
+          <ImageCard src="/jaar2/acties/weekly planner.png" alt="Weekly planner" />
+        </div>
 
         {/* Doel 2: Stage */}
         <div className="reveal" style={{ transitionDelay: "120ms", marginBottom: "72px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "18px", marginBottom: "32px" }}>
-            <div
-              style={{
-                width: "52px",
-                height: "52px",
-                borderRadius: "14px",
-                flexShrink: 0,
-                background: "linear-gradient(135deg, #4f46e5, #7c3aed)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "18px",
-                fontWeight: 900,
-                color: "white",
-                boxShadow: "0 6px 24px rgba(79,70,229,0.35)",
-              }}
-            >
-              02
-            </div>
+          <div className="doel-header">
+            <div className="doel-num-icon doel-num-icon-2">02</div>
             <div>
-              <div
-                style={{
-                  fontSize: "11px",
-                  fontWeight: 700,
-                  letterSpacing: "0.12em",
-                  color: "#6060a0",
-                  textTransform: "uppercase",
-                  marginBottom: "4px",
-                }}
-              >
-                Doel 2
-              </div>
-              <h2 style={{ fontSize: "clamp(1.4rem, 3vw, 2rem)", margin: 0, color: "#e2e2f0" }}>
-                Op zoek naar een stageplaats
-              </h2>
+              <div className="doel-num-label">Doel 2</div>
+              <h2 className="doel-num-title">Op zoek naar een stageplaats</h2>
             </div>
           </div>
 
-          <p style={{ fontSize: "1rem", lineHeight: "1.8", color: "#8080a0", marginBottom: "40px", maxWidth: "680px" }}>
+          <p className="doel-lead">
             Doel 2 is onder doel 1 terug te vinden. Hieronder de acties die zijn ondernomen rondom het vinden van een stageplaats.
           </p>
 
           <SectionDivider label="Bewijs — stage" />
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-              gap: "16px",
-              marginBottom: "40px",
-            }}
-          >
+          <div className="grid-auto-fill-280 mb40">
             <ImageCard src="/jaar2/acties/motivatie.png" alt="Motivatie" />
             <ImageCard src="/jaar2/acties/dian cv 21 jaar.png" alt="CV Dian 21 jaar" />
             <ImageCard src="/jaar2/acties/online marketing stage feb - julie.png" alt="Online marketing stage" />
             <ImageCard src="/jaar2/acties/lijst.png" alt="Lijst bedrijven" />
-            
           </div>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-              gap: "16px",
-              marginBottom: "24px",
-            }}
-          >
+          <div className="grid-auto-fill-260 mb-[24px]">
             {[
               { stap: "Doelen opstellen", desc: "In kaart brengen naar wat voor soort stage ik op zoek ben, zodat ik doelgericht kan zoeken." },
               { stap: "CV aanpassen", desc: "CV aangevuld met updates en in een andere stijl vormgegeven — passend bij mijn huidige stijl." },
               { stap: "Bedrijven contacteren", desc: "Fingerspitz, LVNG, Craze en GR8 gecontacteerd. Niet afwachtend, maar proactief meerdere bedrijven benaderd." },
               { stap: "Herinneringen sturen", desc: "Na het niet ontvangen van een reactie na een week (in werkdagen) herinneringen gestuurd." },
             ].map((item, i) => (
-              <div
-                key={i}
-                className="glow-card"
-                style={{
-                  padding: "28px",
-                  borderRadius: "20px",
-                  border: "1px solid rgba(79,70,229,0.2)",
-                  background: "radial-gradient(ellipse at top left, rgba(79,70,229,0.08), transparent 60%), rgba(255,255,255,0.02)",
-                }}
-              >
-                <div
-                  style={{
-                    width: "32px",
-                    height: "32px",
-                    borderRadius: "8px",
-                    background: "rgba(79,70,229,0.2)",
-                    border: "1px solid rgba(79,70,229,0.4)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "13px",
-                    fontWeight: 800,
-                    color: "#818cf8",
-                    marginBottom: "16px",
-                  }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#e2e2f0", margin: "0 0 10px" }}>
-                  {item.stap}
-                </h3>
-                <p style={{ fontSize: "14px", lineHeight: "1.7", color: "#8080a0", margin: 0 }}>
-                  {item.desc}
-                </p>
+              <div key={i} className="glow-card stap-card">
+                <div className="stap-num-icon">{String(i + 1).padStart(2, "0")}</div>
+                <h3 className="stap-title">{item.stap}</h3>
+                <p className="stap-desc">{item.desc}</p>
               </div>
             ))}
           </div>
 
           {/* Reflectie */}
-          <div
-            className="glow-card"
-            style={{
-              padding: "28px 32px",
-              borderRadius: "20px",
-              border: "1px solid rgba(167,139,250,0.12)",
-              background: "rgba(255,255,255,0.02)",
-            }}
-          >
-            <div style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
-              <div style={{ fontSize: "22px", flexShrink: 0, marginTop: "2px" }}>💬</div>
+          <div className="glow-card reflectie-card">
+            <div className="reflectie-inner">
+              <div className="reflectie-emoji">💬</div>
               <div>
-                <div
-                  style={{
-                    fontSize: "11px",
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    color: "#a78bfa",
-                    textTransform: "uppercase",
-                    marginBottom: "10px",
-                  }}
-                >
-                  Reflectie
-                </div>
-                <p style={{ fontSize: "14px", lineHeight: "1.8", color: "#b0b0cc", margin: 0 }}>
+                <div className="reflectie-label">Reflectie</div>
+                <p className="reflectie-text">
                   Het vinden van een stageplaats bleef ondanks de verschillende focuspunten niet gemakkelijk. Waar ik van twee bedrijven hoop heb gekregen, bleef een definitief resultaat helaas uit.
                 </p>
               </div>
@@ -416,25 +204,14 @@ export default function ActiesPage() {
         </div>
 
         {/* Footer nav */}
-        <div
-          style={{
-            display: "flex",
-            gap: "12px",
-            justifyContent: "space-between",
-            marginTop: "64px",
-            paddingTop: "32px",
-            borderTop: "1px solid rgba(167,139,250,0.1)",
-          }}
-        >
-          <a href="/jaar-2" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>
-            ← Terug naar Jaar 2
-          </a>
-          <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>
-            Terug naar home →
-          </a>
+        <div className="footer-nav-mt64">
+          <a href="/jaar-2" className="btn-ghost btn-sm">← Terug naar Jaar 2</a>
+          <a href="/" className="btn btn-sm">Terug naar home →</a>
         </div>
 
       </article>
     </main>
   );
 }
+
+

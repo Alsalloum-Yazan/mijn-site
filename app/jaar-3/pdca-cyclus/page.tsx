@@ -1,4 +1,4 @@
-export default function PdcaCyclus() {
+﻿export default function PdcaCyclus() {
   const persoonlijk = [
     {
       title: "Het conceptualiseren van bedrijfsproducten",
@@ -79,49 +79,46 @@ export default function PdcaCyclus() {
     <main>
       <article className="content-page">
         <div className="reveal">
-          <a href="/jaar-3" style={{ fontSize: "13px", color: "#a78bfa", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px" }}>
-            ← Terug naar Jaar 3
-          </a>
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <a href="/jaar-3" className="post-back-link">← Terug naar Jaar 3</a>
+          <div className="badge post-badge">
             <span className="badge-dot" />
             Jaar 3 — Stage
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
+          <h1 className="post-h1">
             <span className="g-text">PDCA-cyclus</span>
           </h1>
-          <div style={{ borderBottom: "1px solid rgba(167,139,250,0.1)", marginBottom: "40px", paddingBottom: "24px" }}>
-            <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+          <div className="content-header-border-sm">
+            <div className="pdca3-pills">
               {["Plan", "Do", "Check", "Act"].map((fase, i) => (
-                <div key={i} style={{ padding: "6px 16px", background: "rgba(167,139,250,0.08)", border: "1px solid rgba(167,139,250,0.2)", borderRadius: "50px", fontSize: "13px", fontWeight: 600, color: "#a78bfa" }}>
-                  {fase}
-                </div>
+                <div key={i} className="pdca3-pill">{fase}</div>
               ))}
             </div>
           </div>
         </div>
 
         {/* PERSOONLIJK */}
-        <div className="reveal" style={{ marginBottom: "32px" }}>
-          <h2 style={{ fontSize: "1.6rem", marginBottom: "8px" }}>
+        <div className="reveal section-heading-mb32">
+          <h2 className="h2-sub">
             Persoonlijk <span className="g-text">doel</span>
           </h2>
-          <div className="divider" style={{ marginBottom: "32px" }} />
+          <div className="divider divider-mb32" />
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "64px" }}>
           {persoonlijk.map((item, i) => (
-            <div key={i} className="reveal glow-card" style={{ padding: "36px", borderRadius: "24px", transitionDelay: String(i * 80) + "ms" }}>
+            <div key={i} className="reveal glow-card intro-card-lg" style={{ transitionDelay: String(i * 80) + "ms" }}>
               <h3 style={{ marginBottom: "24px", fontSize: "1.05rem", color: "#a78bfa" }}>{item.title}</h3>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
+              <div className="grid-2col-gap16">
                 {item.items.map((step, j) => (
-                  <div key={j} style={{ padding: "20px", background: "rgba(167,139,250,0.04)", border: "1px solid rgba(167,139,250,0.1)", borderRadius: "14px" }}>
-                    <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+                  <div key={j} className="pdca3-step-item">
+                    <div className="pdca3-fase-badge">
+                      {/* Dynamic background from faseColors */}
                       <div style={{ width: "28px", height: "28px", background: faseColors[step.fase], borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 800, color: "white" }}>
                         {step.fase.charAt(0)}
                       </div>
-                      <span style={{ fontSize: "12px", fontWeight: 700, color: "#a78bfa", letterSpacing: "1px", textTransform: "uppercase" }}>{step.fase}</span>
+                      <span className="pdca3-fase-text">{step.fase}</span>
                     </div>
-                    <p style={{ fontSize: "13.5px", lineHeight: "1.7" }}>{step.text}</p>
+                    <p className="pdca3-text">{step.text}</p>
                   </div>
                 ))}
               </div>
@@ -130,27 +127,27 @@ export default function PdcaCyclus() {
         </div>
 
         {/* VAKINHOUDELIJK */}
-        <div className="reveal" style={{ marginBottom: "32px" }}>
-          <h2 style={{ fontSize: "1.6rem", marginBottom: "8px" }}>
+        <div className="reveal section-heading-mb32">
+          <h2 className="h2-sub">
             Vakinhoudelijk <span className="g-text">doel</span>
           </h2>
-          <div className="divider" style={{ marginBottom: "32px" }} />
+          <div className="divider divider-mb32" />
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginBottom: "40px" }}>
           {vakinhoudelijk.map((item, i) => (
-            <div key={i} className="reveal glow-card" style={{ padding: "36px", borderRadius: "24px", transitionDelay: String(i * 80) + "ms" }}>
+            <div key={i} className="reveal glow-card intro-card-lg" style={{ transitionDelay: String(i * 80) + "ms" }}>
               <h3 style={{ marginBottom: "24px", fontSize: "1.05rem", color: "#a78bfa" }}>{item.title}</h3>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
+              <div className="grid-2col-gap16">
                 {item.items.map((step, j) => (
-                  <div key={j} style={{ padding: "20px", background: "rgba(167,139,250,0.04)", border: "1px solid rgba(167,139,250,0.1)", borderRadius: "14px" }}>
-                    <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
+                  <div key={j} className="pdca3-step-item">
+                    <div className="pdca3-fase-badge">
                       <div style={{ width: "28px", height: "28px", background: faseColors[step.fase], borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "11px", fontWeight: 800, color: "white" }}>
                         {step.fase.charAt(0)}
                       </div>
-                      <span style={{ fontSize: "12px", fontWeight: 700, color: "#a78bfa", letterSpacing: "1px", textTransform: "uppercase" }}>{step.fase}</span>
+                      <span className="pdca3-fase-text">{step.fase}</span>
                     </div>
-                    <p style={{ fontSize: "13.5px", lineHeight: "1.7" }}>{step.text}</p>
+                    <p className="pdca3-text">{step.text}</p>
                   </div>
                 ))}
               </div>
@@ -158,11 +155,12 @@ export default function PdcaCyclus() {
           ))}
         </div>
 
-        <div style={{ display: "flex", gap: "12px", justifyContent: "space-between", paddingTop: "32px", borderTop: "1px solid rgba(167,139,250,0.1)" }}>
-          <a href="/jaar-3/doelen-stage" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Doelen stage</a>
-          <a href="/jaar-3/reflecties" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>Reflecties →</a>
+        <div className="post-footer-nav">
+          <a href="/jaar-3/doelen-stage" className="btn-ghost btn-sm">← Doelen stage</a>
+          <a href="/jaar-3/reflecties" className="btn btn-sm">Reflecties →</a>
         </div>
       </article>
     </main>
   );
 }
+

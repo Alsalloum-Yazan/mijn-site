@@ -17,17 +17,17 @@ export default function Page() {
           acties: ["Oefenen door te praten in conclusies, en overbodige details achterwege te laten.", "Mijn manier van verhalen vertellen aanpassen op tegen wie ik aan het praten ben.", "Het leren toepassen van structuur in mijn praten, met een centraal probleem/uitdaging."]
         },
       ].map((doel, i) => (
-        <div key={i} className="reveal glow-card" style={{ padding: "36px", borderRadius: "24px", marginBottom: "20px" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "16px", flexWrap: "wrap", gap: "8px" }}>
-            <h2 style={{ fontSize: "1.3rem" }}><span className="g-text">{doel.title}</span></h2>
-            <span style={{ fontSize: "12px", color: "#4040a0", background: "rgba(167,139,250,0.05)", border: "1px solid rgba(167,139,250,0.1)", borderRadius: "50px", padding: "4px 12px" }}>{doel.period}</span>
+        <div key={i} className="reveal glow-card glow-card-p36 glow-card-mb20">
+          <div className="doel-header-row">
+            <h2 className="post-h2-lg"><span className="g-text">{doel.title}</span></h2>
+            <span className="period-badge">{doel.period}</span>
           </div>
-          <p style={{ marginBottom: "24px", fontSize: "14px" }}>{doel.text}</p>
-          <p style={{ fontSize: "11px", color: "#a78bfa", fontWeight: 700, textTransform: "uppercase", letterSpacing: "1.5px", marginBottom: "12px" }}>Concrete acties</p>
+          <p className="post-p-sm-mb24">{doel.text}</p>
+          <p className="acties-label">Concrete acties</p>
           {doel.acties.map((actie, j) => (
-            <div key={j} style={{ display: "flex", gap: "12px", alignItems: "flex-start", marginBottom: "10px" }}>
-              <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#a78bfa", marginTop: "7px", flexShrink: 0 }} />
-              <p style={{ fontSize: "13.5px", color: "#8080a0", margin: 0 }}>{actie}</p>
+            <div key={j} className="actie-item">
+              <div className="actie-dot" />
+              <p className="actie-text">{actie}</p>
             </div>
           ))}
         </div>

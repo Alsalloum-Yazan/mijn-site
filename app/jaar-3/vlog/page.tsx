@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function VlogPage() {
   const vlogs = [
@@ -14,71 +14,47 @@ export default function VlogPage() {
     <main>
       <article className="content-page">
         <div className="reveal">
-          <a href="/jaar-3" style={{ fontSize: "13px", color: "#a78bfa", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px" }}>
-            ← Terug naar Jaar 3
-          </a>
-          <div className="badge" style={{ marginBottom: "24px" }}>
+          <a href="/jaar-3" className="post-back-link">← Terug naar Jaar 3</a>
+          <div className="badge post-badge">
             <span className="badge-dot" />
             Persoonlijk Leiderschap
           </div>
-          <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", marginBottom: "24px", lineHeight: "1.1" }}>
+          <h1 className="post-h1">
             Mijn <span className="g-text">Vlogs</span>
           </h1>
-          <div className="divider" style={{ marginBottom: "40px" }} />
+          <div className="divider divider-mb40" />
 
-          <p style={{ marginBottom: "40px", fontSize: "1.1rem", color: "#e2e2f0" }}>
+          <p className="p-intro-light">
             Hieronder vind je de vlogs met betrekking tot mijn voortgang en reflecties.
-            <br /><span style={{ fontSize: "14px", color: "#8080a0" }}>Klik op de kaart om de vlog te starten.</span>
+            <br /><span className="span-muted">Klik op de kaart om de vlog te starten.</span>
           </p>
         </div>
 
         <div className="reveal" style={{ transitionDelay: "100ms" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "24px" }}>
+          <div className="videos-grid">
             {vlogs.map((vlog, i) => (
-              <a
-                key={i}
-                href={vlog.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="glow-card card-hover"
-                style={{ display: "block", textDecoration: "none", padding: "16px", borderRadius: "24px", position: "relative", overflow: "hidden", border: "1px solid rgba(167,139,250,0.2)" }}
-              >
-                {/* Thumbnail Container */}
-                <div style={{ width: "100%", height: "200px", borderRadius: "16px", marginBottom: "20px", position: "relative", overflow: "hidden", background: "linear-gradient(135deg, rgba(124,58,237,0.15), rgba(79,70,229,0.15))" }}>
+              <a key={i} href={vlog.url} target="_blank" rel="noopener noreferrer" className="glow-card card-hover video-card">
+                <div className="video-thumb-wrap">
                   <img
                     src={vlog.thumbnail}
                     alt={vlog.title}
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                    style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: "16px" }}
+                    onError={(e) => { e.currentTarget.style.display = "none"; }}
+                    className="video-thumb-img"
                   />
-
-                  {/* VLOG Badge */}
-                  <div style={{ position: "absolute", top: "12px", right: "12px", background: "rgba(167,139,250,0.8)", borderRadius: "8px", padding: "4px 10px", fontSize: "11px", fontWeight: 800, color: "white", backdropFilter: "blur(4px)" }}>
-                    VLOG
-                  </div>
-
-                  {/* Play Button Overlay */}
-                  <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <div className="play-btn" style={{ width: "60px", height: "60px", background: "rgba(0,0,0,0.5)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", backdropFilter: "blur(8px)", border: "1px solid rgba(255,255,255,0.3)" }}>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: "4px" }}>
+                  <div className="video-badge">VLOG</div>
+                  <div className="video-play-overlay">
+                    <div className="video-play-btn">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" className="video-play-icon">
                         <path d="M8 5V19L19 12L8 5Z" />
                       </svg>
                     </div>
                   </div>
                 </div>
 
-                <div style={{ padding: "0 8px 8px" }}>
-                  <h3 style={{ fontSize: "1.15rem", marginBottom: "10px", color: "#e2e2f0", lineHeight: "1.4" }}>
-                    {vlog.title}
-                  </h3>
-                  <p style={{ fontSize: "14px", color: "#8080a0", marginBottom: "16px", lineHeight: "1.5" }}>
-                    {vlog.description}
-                  </p>
-                  <p style={{ fontSize: "13px", color: "#a78bfa", margin: 0, fontWeight: 600, display: "flex", alignItems: "center", gap: "4px" }}>
-                    Bekijken op MyMedia <span style={{ fontSize: "16px" }}>→</span>
-                  </p>
+                <div className="video-body">
+                  <h3 className="video-title">{vlog.title}</h3>
+                  <p className="video-desc">{vlog.description}</p>
+                  <p className="video-link">Bekijken op MyMedia <span className="span-arrow">→</span></p>
                 </div>
               </a>
             ))}
@@ -86,11 +62,12 @@ export default function VlogPage() {
         </div>
 
         {/* Footer Navigatie */}
-        <div style={{ display: "flex", gap: "12px", justifyContent: "space-between", marginTop: "64px", paddingTop: "32px", borderTop: "1px solid rgba(167,139,250,0.1)" }}>
-          <a href="/jaar-3" className="btn-ghost" style={{ fontSize: "13px", padding: "10px 20px" }}>← Terug naar Jaar 3</a>
-          <a href="/" className="btn" style={{ fontSize: "13px", padding: "10px 20px" }}>Naar Home →</a>
+        <div className="footer-nav-mt64">
+          <a href="/jaar-3" className="btn-ghost btn-sm">← Terug naar Jaar 3</a>
+          <a href="/" className="btn btn-sm">Naar Home →</a>
         </div>
       </article>
     </main>
   );
 }
+
