@@ -5,9 +5,9 @@ export default function PDCAPage() {
     {
       number: "01",
       title: "Assertiviteit",
-      accent: "#7c3aed",
-      accentLight: "rgba(124,58,237,0.15)",
-      accentBorder: "rgba(124,58,237,0.25)",
+      accent: "#013F32",
+      accentLight: "rgba(1,63,50,0.10)",
+      accentBorder: "rgba(1,63,50,0.24)",
       pdca: {
         P: { items: ["Assertiviteit zelf in kaart brengen.", "Persoonlijkheidstest 1", "Persoonlijkheidstest 2", "Logboek"] },
         D: { items: ["Een cirkeldiagram opstellen, waarin ik laat zien hoe ik momenteel naar mijn assertiviteit kijk.", "Twee testen zoeken en uitvoeren, gerelateerd aan assertiviteit.", "Een logboek bijhouden, wanneer ik assertief ben geweest."] },
@@ -18,9 +18,9 @@ export default function PDCAPage() {
     {
       number: "02",
       title: "Op zoek naar een stageplaats",
-      accent: "#4f46e5",
-      accentLight: "rgba(79,70,229,0.15)",
-      accentBorder: "rgba(79,70,229,0.25)",
+      accent: "#E7FE25",
+      accentLight: "rgba(231,254,37,0.28)",
+      accentBorder: "rgba(231,254,37,0.55)",
       pdca: {
         P: { items: ["Doelen opstellen voor wat voor soort stage.", "CV aanpassen.", "Verschillende bedrijven contacteren.", "Eventueel herinneringen uitsturen."] },
         D: { items: ["Deze is vormgegeven aan de hand van een boodschappenlijstje.", "CV is aangevuld met updates en in een andere stijl vormgegeven.", "Ik heb: Fingerspitz, LVNG, Craze en GR8 gecontacteerd."] },
@@ -31,10 +31,10 @@ export default function PDCAPage() {
   ];
 
   const pdcaMeta = {
-    P: { label: "Plan",  color: "#a78bfa", glow: "rgba(167,139,250,0.20)", desc: "Wat ga ik doen?" },
-    D: { label: "Do",    color: "#818cf8", glow: "rgba(129,140,248,0.20)", desc: "Hoe heb ik het uitgevoerd?" },
-    C: { label: "Check", color: "#c084fc", glow: "rgba(192,132,252,0.20)", desc: "Wat zijn de bevindingen?" },
-    A: { label: "Act",   color: "#e879f9", glow: "rgba(232,121,249,0.20)", desc: "Wat doe ik hiermee?" },
+    P: { label: "Plan",  color: "#013F32", glow: "rgba(1,63,50,0.14)", desc: "Wat ga ik doen?" },
+    D: { label: "Do",    color: "#E7FE25", glow: "rgba(231,254,37,0.34)", desc: "Hoe heb ik het uitgevoerd?" },
+    C: { label: "Check", color: "#161616", glow: "rgba(22,22,22,0.10)", desc: "Wat zijn de bevindingen?" },
+    A: { label: "Act",   color: "#0A5A48", glow: "rgba(1,63,50,0.18)", desc: "Wat doe ik hiermee?" },
   };
 
   return (
