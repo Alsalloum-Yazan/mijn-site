@@ -12,7 +12,14 @@
       "Bash(curl -s https://dian-portfolio.vercel.app/ -o /tmp/live.html -w \"status: %{http_code}\\\\n\")",
       "Read(//tmp/**)",
       "Bash(curl -s -I https://dian-portfolio.vercel.app/)",
-      "Bash(git commit -m 'Extend iOS crash fix to all touch devices *)"
+      "Bash(git commit -m 'Extend iOS crash fix to all touch devices *)",
+      "Bash(node scripts/generate-icon.js)",
+      "Bash(curl -s http://localhost:3179/)",
+      "Bash(kill %1)",
+      "Bash(curl -s http://localhost:3180/)",
+      "Bash(curl -s -o /dev/null -w \"icon.png: %{http_code}\\\\napple: \" \"http://localhost:3180/icon.png\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://localhost:3180/apple-icon.png\")",
+      "Bash(git commit -m 'Add branded favicon and app icons *)"
     ]
   }
 }
