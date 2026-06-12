@@ -2226,14 +2226,14 @@ dialog.cv-modal-dialog::backdrop {
 
 
 
-@media (max-width: 768px) {
+/* ===== iOS-CRASH FIX =====
+   Safari op iOS crasht ("Er heeft zich herhaaldelijk een probleem
+   voorgedaan") door GPU-geheugen: grote filter-blurs en gestapelde
+   backdrop-filters. Op alle touch-apparaten (telefoons in portrait
+   én landscape, iPads) schakelen we die uit; de semi-transparante
+   achtergronden zelf blijven, dus het blijft er hetzelfde uitzien. */
 
-  /* ===== iOS-CRASH FIX =====
-     Safari op iOS crasht ("Er heeft zich herhaaldelijk een probleem
-     voorgedaan") door GPU-geheugen: grote filter-blurs en gestapelde
-     backdrop-filters. Op mobiel schakelen we die uit; de semi-
-     transparante achtergronden zelf blijven, dus het blijft er
-     hetzelfde uitzien. */
+@media (max-width: 768px), (pointer: coarse) {
 
   *, *::before, *::after, ::backdrop { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 
@@ -2256,6 +2256,12 @@ dialog.cv-modal-dialog::backdrop {
   .bg-wrap::before { display: none; }
 
   dialog.img-modal-dialog::backdrop, dialog.cv-modal-dialog::backdrop { background: rgba(0,0,0,0.92); }
+
+}
+
+
+
+@media (max-width: 768px) {
 
   /* Grids die op desktop 2 of 3 kolommen hebben -> 1 kolom op mobiel */
 
