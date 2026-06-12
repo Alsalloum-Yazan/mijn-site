@@ -140,7 +140,7 @@ export default function Home() {
               <h2 className="over-mij-h2">Mijn <span className="g-text">verhaal</span></h2>
               <div className="divider over-mij-divider" />
               <p className="over-mij-p">
-                Ik ben Dian van Noort, 23 jaar en sinds dit jaar (2024/2025) gestart op de hogeschool in Breda.
+                Ik ben Dian van Noort, 23 jaar en sinds dit jaar (2025/2026) gestart op de hogeschool in Breda.
               </p>
 
               <h3 className="cv-subtitle">Huidig CV</h3>

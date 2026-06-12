@@ -1,4 +1,23 @@
 ﻿export default function Afstuderen() {
+  const pages = [
+    { title: "Profileringskit", sub: "Kernstuk", link: "/Afstuderen/Profileringskit", delay: 0 },
+    { title: "Voorwoord", sub: "Introductie", link: "/Afstuderen/voorwoord", delay: 60 },
+    { title: "Inleidend", sub: "Start", link: "/Afstuderen/inleidend", delay: 120 },
+    { title: "Professionele Profilering", sub: "Wie ik ben", link: "/Afstuderen/professionele-profilering", delay: 180 },
+    { title: "Feedback & Stakeholders", sub: "Feedback", link: "/Afstuderen/feedback-stakeholders", delay: 240 },
+    { title: "Leerdoel 1: Presenteren", sub: "Persoonlijk", link: "/Afstuderen/leerdoel-1-presenteren", delay: 300 },
+    { title: "Leerdoel 2: Spaans Leren", sub: "Persoonlijk", link: "/Afstuderen/leerdoel-2-spaans", delay: 360 },
+    { title: "Conclusie Leerdoelen", sub: "Terugblik", link: "/Afstuderen/conclusie-leerdoelen", delay: 420 },
+    { title: "Vakdoel: AI-Zoekgedrag", sub: "Vakinhoudelijk", link: "/Afstuderen/vakdoel-ai-zoekgedrag", delay: 480 },
+    { title: "Conclusie Vakdoelen", sub: "Terugblik", link: "/Afstuderen/conclusie-vakdoelen", delay: 540 },
+    { title: "Doelen & Metingen", sub: "Meting", link: "/Afstuderen/doelen-metingen", delay: 600 },
+    { title: "Marktbewerkingsplan", sub: "Plan", link: "/Afstuderen/marktbewerkingsplan", delay: 660 },
+    { title: "Eindreflectie", sub: "Reflectie", link: "/Afstuderen/eindreflectie", delay: 720 },
+    { title: "AI-Protocol", sub: "Onderzoek", link: "/Afstuderen/ai-protocol", delay: 780 },
+    { title: "Literatuurlijst", sub: "Bronnen", link: "/Afstuderen/literatuurlijst", delay: 840 },
+    { title: "Bijlagen", sub: "Aanvulling", link: "/Afstuderen/bijlagen", delay: 900 },
+  ];
+
   return (
     <main>
       <div className="page-header">
@@ -61,24 +80,33 @@
           </div>
         </div>
 
-        {/* PROFILERINGSKIT CARD */}
+        {/* PAGES GRID */}
         <div className="reveal section-heading-mb32">
           <h2 className="section-h2-small">
-            Mijn <span className="g-text">profileringskit</span>
+            Alle <span className="g-text">pagina's</span>
           </h2>
           <div className="divider divider-mb32" />
         </div>
 
-        <a href="/Afstuderen/Profileringskit" className="glow-card reveal profileringskit-cta">
-          <div className="profileringskit-cta-inner">
-            <div className="profileringskit-icon">P</div>
-            <div className="profileringskit-text">
-              <h2 className="profileringskit-h2">Profileringskit</h2>
-              <p className="profileringskit-p">CV, motivatiebrief en een compleet beeld van wie ik ben, wat mij motiveert en waar mijn kwaliteiten liggen.</p>
-            </div>
-            <div className="profileringskit-arrow">→</div>
-          </div>
-        </a>
+        <div className="pages-grid">
+          {pages.map((page, i) => {
+            const cardDelay = String(page.delay) + "ms";
+            return (
+              <a key={i} href={page.link} className="glow-card reveal page-card" style={{ transitionDelay: cardDelay }}>
+                <div className="page-card-top">
+                  <div className="page-card-num">
+                    {String(i + 1)}
+                  </div>
+                  <span className="page-card-sub">
+                    {page.sub}
+                  </span>
+                </div>
+                <h3 className="page-card-title">{page.title}</h3>
+                <p className="page-card-link">Bekijk →</p>
+              </a>
+            );
+          })}
+        </div>
 
       </div>
 

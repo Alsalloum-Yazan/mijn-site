@@ -88,6 +88,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="/Afstuderen" className="nav-parent">Afstuderen <span className="nav-arrow">▼</span></a>
                 <div className="nav-dropdown">
                   <a href="/Afstuderen/Profileringskit">Profileringskit</a>
+                  <a href="/Afstuderen/voorwoord">Voorwoord</a>
+                  <a href="/Afstuderen/inleidend">Inleidend</a>
+                  <a href="/Afstuderen/professionele-profilering">Professionele Profilering</a>
+                  <a href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</a>
+                  <a href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</a>
+                  <a href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</a>
+                  <a href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</a>
+                  <a href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</a>
+                  <a href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</a>
+                  <a href="/Afstuderen/doelen-metingen">Doelen & Metingen</a>
+                  <a href="/Afstuderen/marktbewerkingsplan">Marktbewerkingsplan</a>
+                  <a href="/Afstuderen/eindreflectie">Eindreflectie</a>
+                  <a href="/Afstuderen/ai-protocol">AI-Protocol</a>
+                  <a href="/Afstuderen/literatuurlijst">Literatuurlijst</a>
+                  <a href="/Afstuderen/bijlagen">Bijlagen</a>
                 </div>
               </div>
             </div>
@@ -149,6 +164,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <button className="nav-mobile-toggle">Afstuderen <span>▼</span></button>
               <div className="nav-mobile-sub">
                 <a href="/Afstuderen/Profileringskit">Profileringskit</a>
+                <a href="/Afstuderen/voorwoord">Voorwoord</a>
+                <a href="/Afstuderen/inleidend">Inleidend</a>
+                <a href="/Afstuderen/professionele-profilering">Professionele Profilering</a>
+                <a href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</a>
+                <a href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</a>
+                <a href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</a>
+                <a href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</a>
+                <a href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</a>
+                <a href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</a>
+                <a href="/Afstuderen/doelen-metingen">Doelen & Metingen</a>
+                <a href="/Afstuderen/marktbewerkingsplan">Marktbewerkingsplan</a>
+                <a href="/Afstuderen/eindreflectie">Eindreflectie</a>
+                <a href="/Afstuderen/ai-protocol">AI-Protocol</a>
+                <a href="/Afstuderen/literatuurlijst">Literatuurlijst</a>
+                <a href="/Afstuderen/bijlagen">Bijlagen</a>
               </div>
             </div>
           </div>
