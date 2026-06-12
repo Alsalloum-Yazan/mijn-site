@@ -5,7 +5,14 @@
       "Bash(npm i *)",
       "Bash(git add *)",
       "Bash(git commit -m 'Fix iOS mobile crashes and site health issues *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "mcp__claude_ai_Vercel__get_deployment",
+      "mcp__claude_ai_Vercel__list_teams",
+      "mcp__claude_ai_Vercel__list_projects",
+      "Bash(curl -s https://dian-portfolio.vercel.app/ -o /tmp/live.html -w \"status: %{http_code}\\\\n\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s -I https://dian-portfolio.vercel.app/)",
+      "Bash(git commit -m 'Extend iOS crash fix to all touch devices *)"
     ]
   }
 }
