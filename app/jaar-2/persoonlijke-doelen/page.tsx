@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 export default function PersoonlijkeDoelenPage() {
   const doelen = [
@@ -64,7 +65,7 @@ export default function PersoonlijkeDoelenPage() {
 
         <div className="footer-nav-mt64">
           <a href="/jaar-2" className="btn-ghost btn-sm">← Terug naar Jaar 2</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

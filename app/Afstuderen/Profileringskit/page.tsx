@@ -11,7 +11,7 @@ export default function Profileringskit() {
 
       <article className="content-page">
         <div className="reveal">
-          <a href="/afstuderen" className="post-back-link">
+          <a href="/Afstuderen" className="post-back-link">
             ← Terug naar Afstuderen
           </a>
           <div className="badge post-badge">
@@ -70,7 +70,7 @@ export default function Profileringskit() {
 
         <div className="post-footer-nav">
           <a href="/Afstuderen" className="btn-ghost btn-sm">← Terug naar Afstuderen</a>
-          <a href="/afstuderen/eindreflectie" className="btn btn-sm">Eindreflectie →</a>
+          <a href="/Afstuderen/eindreflectie" className="btn btn-sm">Eindreflectie →</a>
         </div>
 
       </article>

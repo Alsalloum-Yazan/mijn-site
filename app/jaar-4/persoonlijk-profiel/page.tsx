@@ -72,7 +72,7 @@ export default function PersoonlijkProfielPage() {
                   </div>
                 </div>
                 <p className="profiel-item-quote" style={{ borderLeft: `3px solid ${item.color}33` }}>
-                  "{item.text}"
+                  &quot;{item.text}&quot;
                 </p>
               </div>
             </div>

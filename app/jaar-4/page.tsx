@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 export default function Jaar4() {
   const pages = [
@@ -24,7 +25,7 @@ export default function Jaar4() {
       {/* HEADER */}
       <div className="page-header">
         <div className="reveal">
-          <a href="/" className="back-link-sm">← Terug naar home</a>
+          <Link href="/" className="back-link-sm">← Terug naar home</Link>
           <div className="badge badge-mb20">
             <span className="badge-dot" />
             Avans Hogeschool Breda — 2025
@@ -121,7 +122,7 @@ export default function Jaar4() {
         {/* PAGES GRID */}
         <div className="reveal section-heading-mb32">
           <h2 className="section-h2-small">
-            Alle <span className="g-text">pagina's</span>
+            Alle <span className="g-text">pagina&apos;s</span>
           </h2>
           <div className="divider divider-mb32" />
         </div>
@@ -144,7 +145,7 @@ export default function Jaar4() {
       {/* FOOTER NAV */}
       <div className="year-footer-wrap">
         <div className="year-footer-btns">
-          <a href="/" className="btn-ghost btn-sm-pad24">← Home</a>
+          <Link href="/" className="btn-ghost btn-sm-pad24">← Home</Link>
           <a href="/jaar-3" className="btn-ghost btn-sm-pad24">← Jaar 3 | Stage</a>
         </div>
       </div>

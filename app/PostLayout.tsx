@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
 
@@ -115,7 +116,7 @@ export default function PostLayout({
 
         <div className="post-footer-nav">
           <a href="/posts" className="btn-ghost btn-sm">← Alle opdrachten</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

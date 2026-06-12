@@ -60,7 +60,7 @@ export default function Marktbewerkingsplan() {
 
       <article className="content-page">
         <div className="reveal">
-          <a href="/afstuderen" className="post-back-link">
+          <a href="/Afstuderen" className="post-back-link">
             ← Terug naar Afstuderen
           </a>
 
@@ -423,7 +423,7 @@ export default function Marktbewerkingsplan() {
         </div>
 
         <div className="post-footer-nav">
-          <a href="/afstuderen" className="btn-ghost btn-sm">
+          <a href="/Afstuderen" className="btn-ghost btn-sm">
             ← Terug naar Afstuderen
           </a>
         </div>

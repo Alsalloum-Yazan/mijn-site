@@ -131,7 +131,7 @@ export default function Presenteren() {
 
       <article className="content-page">
         <div className="reveal">
-          <a href="/afstuderen" className="post-back-link">
+          <a href="/Afstuderen" className="post-back-link">
             ← Terug naar Afstuderen
           </a>
 
@@ -607,7 +607,7 @@ export default function Presenteren() {
             aanvullende opmerking van Xander. Zij gaven aan dat er al een
             duidelijke lijn in mijn verhaal zat, maar dat sommige onderdelen nog
             niet goed overkwamen. Daarnaast kreeg ik tips om meer houvast te
-            creëren door kernwoorden op de dia's te plaatsen in plaats van alles
+            creëren door kernwoorden op de dia&apos;s te plaatsen in plaats van alles
             uit het hoofd te leren.
           </p>
 
@@ -643,7 +643,7 @@ export default function Presenteren() {
             Op basis van de ontvangen feedback ga ik mijn presentatie de komende
             weken verder verbeteren. Ik wil kritisch kijken naar de inhoud en
             onderdelen herschrijven die niet meer goed aansluiten bij mijn eigen
-            verhaal. Daarnaast ga ik kernwoorden toevoegen aan mijn dia's, zodat
+            verhaal. Daarnaast ga ik kernwoorden toevoegen aan mijn dia&apos;s, zodat
             ik tijdens het presenteren meer houvast heb zonder volledige teksten
             voor te lezen.
           </p>
@@ -673,7 +673,7 @@ export default function Presenteren() {
         </div>
 
         <div className="post-footer-nav">
-          <a href="/afstuderen" className="btn-ghost btn-sm">
+          <a href="/Afstuderen" className="btn-ghost btn-sm">
             ← Terug naar Afstuderen
           </a>
         </div>

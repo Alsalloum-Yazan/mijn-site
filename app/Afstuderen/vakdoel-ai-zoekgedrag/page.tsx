@@ -193,7 +193,7 @@ export default function VakdoelAIZoekgedrag() {
 
           <h3 className="h3-sub mb16">Act</h3>
           <p className="intro-divider">
-            Op basis van dit onderzoek zou een volgende stap zijn om de GEO-principes daadwerkelijk toe te passen binnen de content van AllSens. Hierbij kan worden gekeken naar het optimaliseren van bestaande blogs en webpagina's door vaker concrete klantvragen te beantwoorden, FAQ-secties toe te voegen en expertise duidelijker naar voren te laten komen.
+            Op basis van dit onderzoek zou een volgende stap zijn om de GEO-principes daadwerkelijk toe te passen binnen de content van AllSens. Hierbij kan worden gekeken naar het optimaliseren van bestaande blogs en webpagina&apos;s door vaker concrete klantvragen te beantwoorden, FAQ-secties toe te voegen en expertise duidelijker naar voren te laten komen.
           </p>
 
           <p className="intro-divider">
@@ -262,7 +262,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <p className="intro-divider">
-            Opvallend kozen alle vier de respondenten voor het toevoegen van 'betrouwbaarheid'.
+            Opvallend kozen alle vier de respondenten voor het toevoegen van &apos;betrouwbaarheid&apos;.
           </p>
         </div>
 
@@ -706,7 +706,7 @@ export default function VakdoelAIZoekgedrag() {
 
           <h3 className="h3-sub">Act</h3>
           <p className="intro-divider">
-            Op basis van deze resultaten wil ik de GEO-analysetool blijven gebruiken bij het ontwikkelen van nieuwe content. Hierdoor kunnen teksten al tijdens het schrijfproces worden gecontroleerd en geoptimaliseerd voordat ze gepubliceerd worden. Ook kan de tool worden ingezet voor het analyseren van bestaande webpagina's, blogs en landingspagina's om de online zichtbaarheid verder te verbeteren.
+            Op basis van deze resultaten wil ik de GEO-analysetool blijven gebruiken bij het ontwikkelen van nieuwe content. Hierdoor kunnen teksten al tijdens het schrijfproces worden gecontroleerd en geoptimaliseerd voordat ze gepubliceerd worden. Ook kan de tool worden ingezet voor het analyseren van bestaande webpagina&apos;s, blogs en landingspagina&apos;s om de online zichtbaarheid verder te verbeteren.
           </p>
 
           <p className="intro-divider">
@@ -727,7 +727,7 @@ export default function VakdoelAIZoekgedrag() {
 
           <h3 className="h3-sub">Oude aanpak</h3>
           <p className="intro-divider">
-            In mijn eerdere teksten lag de focus vooral op het beschrijven van een onderwerp. De informatie was vaak informatief, maar gaf niet altijd direct antwoord op een concrete vraag van de lezer. Daarnaast gebruikte ik regelmatig langere alinea's en beschrijvende tussenkoppen. Deze aanpak was geschikt voor traditionele SEO, waarbij vooral zoekwoorden en algemene informatie een belangrijke rol spelen.
+            In mijn eerdere teksten lag de focus vooral op het beschrijven van een onderwerp. De informatie was vaak informatief, maar gaf niet altijd direct antwoord op een concrete vraag van de lezer. Daarnaast gebruikte ik regelmatig langere alinea&apos;s en beschrijvende tussenkoppen. Deze aanpak was geschikt voor traditionele SEO, waarbij vooral zoekwoorden en algemene informatie een belangrijke rol spelen.
           </p>
 
           <h3 className="h3-sub">Nieuwe aanpak</h3>
@@ -757,7 +757,7 @@ export default function VakdoelAIZoekgedrag() {
                 <tr>
                   <td>Structuur</td>
                   <td>Lange tekstblokken</td>
-                  <td>Kortere alinea's met duidelijke tussenkoppen</td>
+                  <td>Kortere alinea&apos;s met duidelijke tussenkoppen</td>
                   <td>Verbetert leesbaarheid voor gebruikers en AI.</td>
                 </tr>
                 <tr>
@@ -789,7 +789,7 @@ export default function VakdoelAIZoekgedrag() {
 
           <h3 className="h3-sub">Conclusie</h3>
           <p className="intro-divider">
-            Deze actie heeft mij geholpen om de theorie uit mijn onderzoek direct toe te passen in de praktijk. Door mijn oude en nieuwe aanpak te vergelijken heb ik inzicht gekregen in hoe GEO-principes invloed hebben op de kwaliteit en vindbaarheid van content. Deze kennis neem ik mee in toekomstige blogs, webpagina's en andere content die ik voor AllSens ontwikkel.
+            Deze actie heeft mij geholpen om de theorie uit mijn onderzoek direct toe te passen in de praktijk. Door mijn oude en nieuwe aanpak te vergelijken heb ik inzicht gekregen in hoe GEO-principes invloed hebben op de kwaliteit en vindbaarheid van content. Deze kennis neem ik mee in toekomstige blogs, webpagina&apos;s en andere content die ik voor AllSens ontwikkel.
           </p>
         </div>
 

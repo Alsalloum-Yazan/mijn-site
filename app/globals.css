@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 @import "tailwindcss";
 
 
@@ -42,7 +40,7 @@
 
 html { scroll-behavior: smooth; perspective: 1px; }
 
-body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg, #FDFDFD 0%, #F8FAF4 58%, #FDFDFD 100%); color: #161616; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color-scheme: light; }
+body { font-family: var(--font-inter), 'Inter', sans-serif; background: linear-gradient(180deg, #FDFDFD 0%, #F8FAF4 58%, #FDFDFD 100%); color: #161616; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color-scheme: light; }
 
 
 
@@ -2229,6 +2227,32 @@ dialog.cv-modal-dialog::backdrop {
 
 
 @media (max-width: 768px) {
+
+  /* Grids die op desktop 2 of 3 kolommen hebben -> 1 kolom op mobiel */
+
+  .intro-2-grid, .img-grid-2, .levenslijn-grid, .grid-2col-gap16 { grid-template-columns: 1fr; }
+
+  .goals-3-grid, .stats-3-grid { grid-template-columns: 1fr; }
+
+  /* Footer-navigatie knoppen mogen wrappen i.p.v. overflowen */
+
+  .footer-nav, .footer-nav-mt64, .footer-nav-mt80, .footer-nav-border08, .post-footer-nav { flex-wrap: wrap; }
+
+  .post-meta { flex-wrap: wrap; }
+
+  .post-meta-right { margin-left: 0; width: 100%; }
+
+  /* Grote card-paddings terugschalen */
+
+  .intro-card, .intro-card-lg, .glow-card-p36, .glow-card-p40, .glow-card-content { padding: 24px; }
+
+  .profileringskit-cta { padding: 28px 24px; }
+
+  .vinger-card, .logboek-card, .vraag-card, .interview-inleiding, .interview-qa, .interview-aanvullend, .interview-impact-card, .reflectie-card { padding: 22px 20px; }
+
+  /* Lange woorden in koppen nooit buiten beeld laten lopen */
+
+  h1, h2, h3 { overflow-wrap: break-word; }
 
   .nav-inner { flex-direction: row; justify-content: space-between; align-items: center; padding: 14px 20px; }
 

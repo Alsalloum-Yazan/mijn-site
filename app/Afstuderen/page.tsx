@@ -1,3 +1,4 @@
+import Link from "next/link";
 ﻿export default function Afstuderen() {
   const pages = [
     { title: "Profileringskit", sub: "Kernstuk", link: "/Afstuderen/Profileringskit", delay: 0 },
@@ -22,9 +23,9 @@
     <main>
       <div className="page-header">
         <div className="reveal">
-          <a href="/" className="back-link-sm">
+          <Link href="/" className="back-link-sm">
             ← Terug naar home
-          </a>
+          </Link>
           <div className="badge badge-mb20">
             <span className="badge-dot" />
             Avans Hogeschool Breda — 2024/2025
@@ -83,7 +84,7 @@
         {/* PAGES GRID */}
         <div className="reveal section-heading-mb32">
           <h2 className="section-h2-small">
-            Alle <span className="g-text">pagina's</span>
+            Alle <span className="g-text">pagina&apos;s</span>
           </h2>
           <div className="divider divider-mb32" />
         </div>
@@ -111,7 +112,7 @@
       </div>
 
       <div className="year-footer-wrap">
-        <a href="/" className="btn-ghost btn-sm-pad24">← Home</a>
+        <Link href="/" className="btn-ghost btn-sm-pad24">← Home</Link>
       </div>
 
     </main>

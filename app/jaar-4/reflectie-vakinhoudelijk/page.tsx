@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 const SectionDivider = ({ label }: { label: string }) => (
   <div className="section-divider">
@@ -82,7 +83,7 @@ export default function VakinhoudelijkDoelPage() {
 
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

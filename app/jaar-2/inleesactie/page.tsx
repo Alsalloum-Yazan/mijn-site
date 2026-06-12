@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 export default function InleesactiePage() {
   const boeken = [
@@ -54,7 +55,7 @@ export default function InleesactiePage() {
         {/* Footer Navigatie */}
         <div className="footer-nav-mt64">
           <a href="/jaar-2" className="btn-ghost btn-sm">← Terug naar Jaar 2</a>
-          <a href="/" className="btn btn-sm">Naar Home →</a>
+          <Link href="/" className="btn btn-sm">Naar Home →</Link>
         </div>
       </article>
     </main>

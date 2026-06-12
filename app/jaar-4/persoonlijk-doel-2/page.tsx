@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
@@ -121,7 +122,7 @@ export default function PersoonlijkDoel2() {
                         {step.quotes.map((q) => (
                           <div key={q.name} className="quote-card">
                             <div className="quote-name">{q.name}</div>
-                            <p className="quote-text">"{q.text}"</p>
+                            <p className="quote-text">&quot;{q.text}&quot;</p>
                           </div>
                         ))}
                       </div>
@@ -166,7 +167,7 @@ export default function PersoonlijkDoel2() {
         {/* Footer nav */}
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

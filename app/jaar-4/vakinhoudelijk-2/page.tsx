@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
@@ -107,7 +108,7 @@ export default function VakinhoudelijkDoel2() {
             <p className="j4-text-mb">
               In dit mini-experiment ga ik onderzoeken hoe mensen reageren op een product via visuele en emotionele cues,
               geïnspireerd door principes uit de neuromarketing. Het product dat ik heb gekozen is een{" "}
-              <strong className="accent-strong">föhn</strong> (foto's gemaakt met AI). Het doel is te ontdekken welke
+              <strong className="accent-strong">föhn</strong> (foto&apos;s gemaakt met AI). Het doel is te ontdekken welke
               elementen de aantrekkelijkheid en keuze van het product beïnvloeden, zoals kleur, design, sociale bewijskracht,
               emotie en beleving.
             </p>
@@ -262,7 +263,7 @@ export default function VakinhoudelijkDoel2() {
         {/* Footer nav */}
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

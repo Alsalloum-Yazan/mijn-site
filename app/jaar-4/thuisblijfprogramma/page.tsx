@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 const SectionDivider = ({ label }: { label: string }) => (
   <div className="section-divider">
@@ -81,7 +82,7 @@ export default function ThuisblijfprogrammaPage() {
           <SectionDivider label="1.1 Vooronderzoek" />
           <div className="glow-card interview-inleiding interview-inleiding-mb">
             <p className="interview-p interview-p-mb16">
-              Solvid Ondernemen uit Tilburg is een organisatie die sinds 2023 officieel is gecertificeerd als B-Corp. Een B-Corp is een bedrijf dat aantoont op een verantwoorde en transparante manier te werken, waarbij niet alleen winst telt, maar ook maatschappelijke en ecologische impact. De certificering wordt toegekend door B-Lab en beoordeelt bedrijven op thema's zoals goed bestuur, aandacht voor medewerkers, maatschappelijke bijdrage, milieuzorg en klantgerichtheid. Alleen organisaties die minimaal tachtig punten behalen in de B-Impact Assessment ontvangen het keurmerk.
+              Solvid Ondernemen uit Tilburg is een organisatie die sinds 2023 officieel is gecertificeerd als B-Corp. Een B-Corp is een bedrijf dat aantoont op een verantwoorde en transparante manier te werken, waarbij niet alleen winst telt, maar ook maatschappelijke en ecologische impact. De certificering wordt toegekend door B-Lab en beoordeelt bedrijven op thema&apos;s zoals goed bestuur, aandacht voor medewerkers, maatschappelijke bijdrage, milieuzorg en klantgerichtheid. Alleen organisaties die minimaal tachtig punten behalen in de B-Impact Assessment ontvangen het keurmerk.
             </p>
             <p className="interview-p interview-p-mb16">
               Voor Solvid sluit deze manier van werken aan bij hun dagelijkse praktijk. Het bedrijf ondersteunt mensen met een uitkering die een eigen onderneming willen starten, waardoor sociale impact centraal staat in hun dienstverlening. Met een score van 110,9 punten laat Solvid zien dat deze maatschappelijke missie niet alleen in woorden bestaat, maar ook terugkomt in hun processen, beleid en organisatiecultuur.
@@ -187,7 +188,7 @@ export default function ThuisblijfprogrammaPage() {
             <div className="glow-card interview-inleiding">
               <div className="interview-label">Inleiding</div>
               <p className="interview-p">
-                Amnesty is opgericht in 1961 door Peter Benenson na een artikel dat The Observer publiceerde over gewetensgevangenen in Portugal. De aanleiding van hen gevangenschap is de toost op de vrijheid. Op 10 december is 'de dag van de mensenrechten' en dan heeft Trudy 10 onterechte gevangenen, genaamd: Write for Rights, door een brief of groetenkaart op te sturen. Op en rond die dag schrijven mensen wereldwijd miljoenen brieven tegen onrecht. Voor mensen die onterecht vastzitten of bedreigd en gemarteld worden, omdat ze opkomen voor hen rechten. En op 8 maart is het wereldwijd een 'internationale vrouwendag', Trudy zorgt ervoor dat er die dag altijd in de bioscoop van Hulst een vrouwenfilm wordt gedraaid en er een petitielijst wordt getekend. Tot slot is Trudy langs geweest bij het Reynaertcollege (middelbare school).
+                Amnesty is opgericht in 1961 door Peter Benenson na een artikel dat The Observer publiceerde over gewetensgevangenen in Portugal. De aanleiding van hen gevangenschap is de toost op de vrijheid. Op 10 december is &apos;de dag van de mensenrechten&apos; en dan heeft Trudy 10 onterechte gevangenen, genaamd: Write for Rights, door een brief of groetenkaart op te sturen. Op en rond die dag schrijven mensen wereldwijd miljoenen brieven tegen onrecht. Voor mensen die onterecht vastzitten of bedreigd en gemarteld worden, omdat ze opkomen voor hen rechten. En op 8 maart is het wereldwijd een &apos;internationale vrouwendag&apos;, Trudy zorgt ervoor dat er die dag altijd in de bioscoop van Hulst een vrouwenfilm wordt gedraaid en er een petitielijst wordt getekend. Tot slot is Trudy langs geweest bij het Reynaertcollege (middelbare school).
               </p>
             </div>
 
@@ -221,7 +222,7 @@ export default function ThuisblijfprogrammaPage() {
                     Ik wil u zeggen dat dit soort simpele daden (zoals brieven schrijven) toch niets uithaalt. Iets daarvan dringt ergens door tot de mensen om wie u zich bezorgd maakt, zoals het uiteindelijk doordrong tot mij en mijn kameraden.
                   </p>
                   <p className="interview-quote-italic">
-                    'Als oma zijnde vind ik het heel bijzonder, dat haar kleindochter de waarde van Amnesty oppakt.'
+                    &apos;Als oma zijnde vind ik het heel bijzonder, dat haar kleindochter de waarde van Amnesty oppakt.&apos;
                   </p>
                 </div>
               </div>
@@ -252,7 +253,7 @@ export default function ThuisblijfprogrammaPage() {
         {/* Footer nav */}
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 export default function VideosPage() {
   const videos = [
@@ -34,12 +35,12 @@ export default function VideosPage() {
             Jaar 4
           </div>
           <h1 className="j4-h1">
-            Mijn <span className="g-text">video's</span>
+            Mijn <span className="g-text">video&apos;s</span>
           </h1>
           <div className="divider j4-divider-mb40" />
 
           <p className="content-intro-text">
-            Extra pagina met nogmaals alle video's.
+            Extra pagina met nogmaals alle video&apos;s.
             <br /><span className="content-intro-sub">Klik op een kaart om de video te openen in Avans MyMedia.</span>
           </p>
         </div>
@@ -96,7 +97,7 @@ export default function VideosPage() {
 
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
       </article>
     </main>

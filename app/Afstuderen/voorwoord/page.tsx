@@ -12,7 +12,7 @@ export default function Voorwoord() {
 
       <article className="content-page">
         <div className="reveal">
-          <a href="/afstuderen" className="post-back-link">
+          <a href="/Afstuderen" className="post-back-link">
             ← Terug naar Afstuderen
           </a>
 
@@ -71,10 +71,10 @@ export default function Voorwoord() {
         </div>
 
         <div className="post-footer-nav">
-          <a href="/afstuderen" className="btn-ghost btn-sm">
+          <a href="/Afstuderen" className="btn-ghost btn-sm">
             ← Terug naar Afstuderen
           </a>
-          <a href="/afstuderen/inleiding" className="btn btn-sm">
+          <a href="/Afstuderen/inleidend" className="btn btn-sm">
             Inleiding →
           </a>
         </div>

@@ -1,20 +1,29 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import Link from "next/link";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import ClientScripts from "./ClientScripts";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
   title: "Dian | Commerciële Economie — Avans",
   description: "Afstudeerpresentatie van Dian — Avans Hogeschool Breda",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="nl">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="nl" className={inter.variable}>
       <body>
         <div className="bg-wrap">
           <div className="bg-blob bg-blob-1" />
@@ -24,7 +33,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <nav id="navbar">
           <div className="nav-inner">
-            <a href="/" className="nav-logo">Dian</a>
+            <Link href="/" className="nav-logo">Dian</Link>
 
             {/* Hamburger — alleen zichtbaar op mobiel */}
             <button className="nav-hamburger" id="nav-hamburger" aria-label="Menu">
@@ -33,76 +42,76 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
             {/* Desktop nav */}
             <div className="nav-links">
-              <a href="/" className="nav-parent nav-home-active">Home</a>
-              {/* <a href="/posts" className="nav-parent">Opdrachten</a> */}
+              <Link href="/" className="nav-parent nav-home-active">Home</Link>
+              {/* <Link href="/posts" className="nav-parent">Opdrachten</Link> */}
 
               <div className="nav-group">
-                <a href="/jaar-2" className="nav-parent">Jaar 2 <span className="nav-arrow">▼</span></a>
+                <Link href="/jaar-2" className="nav-parent">Jaar 2 <span className="nav-arrow">▼</span></Link>
                 <div className="nav-dropdown">
-                  <a href="/jaar-2/aquisitieset">Aquisitieset</a>
-                  <a href="/jaar-2/amx-week">AMX week</a>
-                  <a href="/jaar-2/inleesactie">Inleesactie</a>
-                  <a href="/jaar-2/persoonlijke-doelen">Persoonlijke doelen</a>
-                  <a href="/jaar-2/pdca-cyclus">PDCA-cyclus</a>
-                  <a href="/jaar-2/acties">Acties</a>
-                  <a href="/jaar-2/reflecties">Reflecties</a>
-                  <a href="/jaar-2/feedback">Feedback</a>
-                  <a href="/posts">Opdrachten</a>
+                  <Link href="/jaar-2/aquisitieset">Aquisitieset</Link>
+                  <Link href="/jaar-2/amx-week">AMX week</Link>
+                  <Link href="/jaar-2/inleesactie">Inleesactie</Link>
+                  <Link href="/jaar-2/persoonlijke-doelen">Persoonlijke doelen</Link>
+                  <Link href="/jaar-2/pdca-cyclus">PDCA-cyclus</Link>
+                  <Link href="/jaar-2/acties">Acties</Link>
+                  <Link href="/jaar-2/reflecties">Reflecties</Link>
+                  <Link href="/jaar-2/feedback">Feedback</Link>
+                  <Link href="/posts">Opdrachten</Link>
                 </div>
               </div>
 
               <div className="nav-group">
-                <a href="/jaar-3" className="nav-parent">Jaar 3 | Stage <span className="nav-arrow">▼</span></a>
+                <Link href="/jaar-3" className="nav-parent">Jaar 3 | Stage <span className="nav-arrow">▼</span></Link>
                 <div className="nav-dropdown">
-                  <a href="/jaar-3/bedrijfsproducten">Bedrijfsproducten</a>
-                  <a href="/jaar-3/doelen-stage">Doelen stage</a>
-                  <a href="/jaar-3/vlog">VLOG</a>
-                  <a href="/jaar-3/bewijslasten-persoonlijk">Bewijslasten Persoonlijk doel</a>
-                  <a href="/jaar-3/bewijslasten-vakinhoudelijk">Bewijslasten Vakinhoudelijk doel</a>
-                  <a href="/jaar-3/pdca-cyclus">PDCA-cyclus</a>
-                  <a href="/jaar-3/reflecties">Reflecties doelen</a>
+                  <Link href="/jaar-3/bedrijfsproducten">Bedrijfsproducten</Link>
+                  <Link href="/jaar-3/doelen-stage">Doelen stage</Link>
+                  <Link href="/jaar-3/vlog">VLOG</Link>
+                  <Link href="/jaar-3/bewijslasten-persoonlijk">Bewijslasten Persoonlijk doel</Link>
+                  <Link href="/jaar-3/bewijslasten-vakinhoudelijk">Bewijslasten Vakinhoudelijk doel</Link>
+                  <Link href="/jaar-3/pdca-cyclus">PDCA-cyclus</Link>
+                  <Link href="/jaar-3/reflecties">Reflecties doelen</Link>
                 </div>
               </div>
 
               <div className="nav-group">
-                <a href="/jaar-4" className="nav-parent">Jaar 4 <span className="nav-arrow">▼</span></a>
+                <Link href="/jaar-4" className="nav-parent">Jaar 4 <span className="nav-arrow">▼</span></Link>
                 <div className="nav-dropdown">
-                  <a href="/jaar-4/profileringskit">Profileringskit</a>
-                  <a href="/jaar-4/eindreflectie">Eindreflectie</a>
-                  <a href="/jaar-4/persoonlijk-profiel">Persoonlijk profiel door de jaren heen</a>
-                  <a href="/jaar-4/reflectie-persoonlijk">Reflectie Persoonlijk doel</a>
-                  <a href="/jaar-4/reflectie-vakinhoudelijk">Reflectie Vakinhoudelijk doel</a>
-                  <a href="/jaar-4/persoonlijk-doel-1">Persoonlijk doel actie 1</a>
-                  <a href="/jaar-4/persoonlijk-doel-2">Persoonlijk doel actie 2</a>
-                  <a href="/jaar-4/vakinhoudelijk-1">Vakinhoudelijk doel actie 1</a>
-                  <a href="/jaar-4/vakinhoudelijk-2">Vakinhoudelijk doel actie 2</a>
-                  <a href="/jaar-4/ai-protocol">AI-protocol</a>
-                  <a href="/jaar-4/thuisblijfprogramma">Het thuisblijfprogramma</a>
-                  <a href="/jaar-4/9-stappen">9 stappen tot het afstuderen</a>
-                  <a href="/jaar-4/videos">Video&apos;s</a>
-                  <a href="/jaar-4/bijlagen">Bijlagen</a>
+                  <Link href="/jaar-4/profileringskit">Profileringskit</Link>
+                  <Link href="/jaar-4/eindreflectie">Eindreflectie</Link>
+                  <Link href="/jaar-4/persoonlijk-profiel">Persoonlijk profiel door de jaren heen</Link>
+                  <Link href="/jaar-4/reflectie-persoonlijk">Reflectie Persoonlijk doel</Link>
+                  <Link href="/jaar-4/reflectie-vakinhoudelijk">Reflectie Vakinhoudelijk doel</Link>
+                  <Link href="/jaar-4/persoonlijk-doel-1">Persoonlijk doel actie 1</Link>
+                  <Link href="/jaar-4/persoonlijk-doel-2">Persoonlijk doel actie 2</Link>
+                  <Link href="/jaar-4/vakinhoudelijk-1">Vakinhoudelijk doel actie 1</Link>
+                  <Link href="/jaar-4/vakinhoudelijk-2">Vakinhoudelijk doel actie 2</Link>
+                  <Link href="/jaar-4/ai-protocol">AI-protocol</Link>
+                  <Link href="/jaar-4/thuisblijfprogramma">Het thuisblijfprogramma</Link>
+                  <Link href="/jaar-4/9-stappen">9 stappen tot het afstuderen</Link>
+                  <Link href="/jaar-4/videos">Video&apos;s</Link>
+                  <Link href="/jaar-4/bijlagen">Bijlagen</Link>
                 </div>
               </div>
 
               <div className="nav-group">
-                <a href="/Afstuderen" className="nav-parent">Afstuderen <span className="nav-arrow">▼</span></a>
+                <Link href="/Afstuderen" className="nav-parent">Afstuderen <span className="nav-arrow">▼</span></Link>
                 <div className="nav-dropdown">
-                  <a href="/Afstuderen/Profileringskit">Profileringskit</a>
-                  <a href="/Afstuderen/voorwoord">Voorwoord</a>
-                  <a href="/Afstuderen/inleidend">Inleidend</a>
-                  <a href="/Afstuderen/professionele-profilering">Professionele Profilering</a>
-                  <a href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</a>
-                  <a href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</a>
-                  <a href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</a>
-                  <a href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</a>
-                  <a href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</a>
-                  <a href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</a>
-                  <a href="/Afstuderen/doelen-metingen">Doelen & Metingen</a>
-                  <a href="/Afstuderen/marktbewerkingsplan">Marktbewerkingsplan</a>
-                  <a href="/Afstuderen/eindreflectie">Eindreflectie</a>
-                  <a href="/Afstuderen/ai-protocol">AI-Protocol</a>
-                  <a href="/Afstuderen/literatuurlijst">Literatuurlijst</a>
-                  <a href="/Afstuderen/bijlagen">Bijlagen</a>
+                  <Link href="/Afstuderen/Profileringskit">Profileringskit</Link>
+                  <Link href="/Afstuderen/voorwoord">Voorwoord</Link>
+                  <Link href="/Afstuderen/inleidend">Inleidend</Link>
+                  <Link href="/Afstuderen/professionele-profilering">Professionele Profilering</Link>
+                  <Link href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</Link>
+                  <Link href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</Link>
+                  <Link href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</Link>
+                  <Link href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</Link>
+                  <Link href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</Link>
+                  <Link href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</Link>
+                  <Link href="/Afstuderen/doelen-metingen">Doelen & Metingen</Link>
+                  <Link href="/Afstuderen/marktbewerkingsplan">Marktbewerkingsplan</Link>
+                  <Link href="/Afstuderen/eindreflectie">Eindreflectie</Link>
+                  <Link href="/Afstuderen/ai-protocol">AI-Protocol</Link>
+                  <Link href="/Afstuderen/literatuurlijst">Literatuurlijst</Link>
+                  <Link href="/Afstuderen/bijlagen">Bijlagen</Link>
                 </div>
               </div>
             </div>
@@ -110,75 +119,75 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* Mobiel menu */}
           <div className="nav-mobile" id="nav-mobile">
-            <a href="/" className="nav-mobile-link">Home</a>
-            <a href="/posts" className="nav-mobile-link">Opdrachten</a>
+            <Link href="/" className="nav-mobile-link">Home</Link>
+            <Link href="/posts" className="nav-mobile-link">Opdrachten</Link>
 
             <div className="nav-mobile-group">
               <button className="nav-mobile-toggle">Jaar 2 <span>▼</span></button>
               <div className="nav-mobile-sub">
-                <a href="/jaar-2/aquisitieset">Aquisitieset</a>
-                <a href="/jaar-2/amx-week">AMX week</a>
-                <a href="/jaar-2/inleesactie">Inleesactie</a>
-                <a href="/jaar-2/persoonlijke-doelen">Persoonlijke doelen</a>
-                <a href="/jaar-2/pdca-cyclus">PDCA-cyclus</a>
-                <a href="/jaar-2/acties">Acties</a>
-                <a href="/jaar-2/reflecties">Reflecties</a>
-                <a href="/jaar-2/feedback">Feedback</a>
+                <Link href="/jaar-2/aquisitieset">Aquisitieset</Link>
+                <Link href="/jaar-2/amx-week">AMX week</Link>
+                <Link href="/jaar-2/inleesactie">Inleesactie</Link>
+                <Link href="/jaar-2/persoonlijke-doelen">Persoonlijke doelen</Link>
+                <Link href="/jaar-2/pdca-cyclus">PDCA-cyclus</Link>
+                <Link href="/jaar-2/acties">Acties</Link>
+                <Link href="/jaar-2/reflecties">Reflecties</Link>
+                <Link href="/jaar-2/feedback">Feedback</Link>
               </div>
             </div>
 
             <div className="nav-mobile-group">
               <button className="nav-mobile-toggle">Jaar 3 | Stage <span>▼</span></button>
               <div className="nav-mobile-sub">
-                <a href="/jaar-3/bedrijfsproducten">Bedrijfsproducten</a>
-                <a href="/jaar-3/doelen-stage">Doelen stage</a>
-                <a href="/jaar-3/vlog">VLOG</a>
-                <a href="/jaar-3/bewijslasten-persoonlijk">Bewijslasten Persoonlijk</a>
-                <a href="/jaar-3/bewijslasten-vakinhoudelijk">Bewijslasten Vakinhoudelijk</a>
-                <a href="/jaar-3/pdca-cyclus">PDCA-cyclus</a>
-                <a href="/jaar-3/reflecties">Reflecties doelen</a>
+                <Link href="/jaar-3/bedrijfsproducten">Bedrijfsproducten</Link>
+                <Link href="/jaar-3/doelen-stage">Doelen stage</Link>
+                <Link href="/jaar-3/vlog">VLOG</Link>
+                <Link href="/jaar-3/bewijslasten-persoonlijk">Bewijslasten Persoonlijk</Link>
+                <Link href="/jaar-3/bewijslasten-vakinhoudelijk">Bewijslasten Vakinhoudelijk</Link>
+                <Link href="/jaar-3/pdca-cyclus">PDCA-cyclus</Link>
+                <Link href="/jaar-3/reflecties">Reflecties doelen</Link>
               </div>
             </div>
 
             <div className="nav-mobile-group">
               <button className="nav-mobile-toggle">Jaar 4 <span>▼</span></button>
               <div className="nav-mobile-sub">
-                <a href="/jaar-4/profileringskit">Profileringskit</a>
-                <a href="/jaar-4/eindreflectie">Eindreflectie</a>
-                <a href="/jaar-4/persoonlijk-profiel">Persoonlijk profiel</a>
-                <a href="/jaar-4/reflectie-persoonlijk">Reflectie Persoonlijk doel</a>
-                <a href="/jaar-4/reflectie-vakinhoudelijk">Reflectie Vakinhoudelijk doel</a>
-                <a href="/jaar-4/persoonlijk-doel-1">Persoonlijk doel actie 1</a>
-                <a href="/jaar-4/persoonlijk-doel-2">Persoonlijk doel actie 2</a>
-                <a href="/jaar-4/vakinhoudelijk-1">Vakinhoudelijk doel actie 1</a>
-                <a href="/jaar-4/vakinhoudelijk-2">Vakinhoudelijk doel actie 2</a>
-                <a href="/jaar-4/ai-protocol">AI-protocol</a>
-                <a href="/jaar-4/thuisblijfprogramma">Thuisblijfprogramma</a>
-                <a href="/jaar-4/9-stappen">9 stappen</a>
-                <a href="/jaar-4/videos">Video&apos;s</a>
-                <a href="/jaar-4/bijlagen">Bijlagen</a>
+                <Link href="/jaar-4/profileringskit">Profileringskit</Link>
+                <Link href="/jaar-4/eindreflectie">Eindreflectie</Link>
+                <Link href="/jaar-4/persoonlijk-profiel">Persoonlijk profiel</Link>
+                <Link href="/jaar-4/reflectie-persoonlijk">Reflectie Persoonlijk doel</Link>
+                <Link href="/jaar-4/reflectie-vakinhoudelijk">Reflectie Vakinhoudelijk doel</Link>
+                <Link href="/jaar-4/persoonlijk-doel-1">Persoonlijk doel actie 1</Link>
+                <Link href="/jaar-4/persoonlijk-doel-2">Persoonlijk doel actie 2</Link>
+                <Link href="/jaar-4/vakinhoudelijk-1">Vakinhoudelijk doel actie 1</Link>
+                <Link href="/jaar-4/vakinhoudelijk-2">Vakinhoudelijk doel actie 2</Link>
+                <Link href="/jaar-4/ai-protocol">AI-protocol</Link>
+                <Link href="/jaar-4/thuisblijfprogramma">Thuisblijfprogramma</Link>
+                <Link href="/jaar-4/9-stappen">9 stappen</Link>
+                <Link href="/jaar-4/videos">Video&apos;s</Link>
+                <Link href="/jaar-4/bijlagen">Bijlagen</Link>
               </div>
             </div>
 
             <div className="nav-mobile-group">
               <button className="nav-mobile-toggle">Afstuderen <span>▼</span></button>
               <div className="nav-mobile-sub">
-                <a href="/Afstuderen/Profileringskit">Profileringskit</a>
-                <a href="/Afstuderen/voorwoord">Voorwoord</a>
-                <a href="/Afstuderen/inleidend">Inleidend</a>
-                <a href="/Afstuderen/professionele-profilering">Professionele Profilering</a>
-                <a href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</a>
-                <a href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</a>
-                <a href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</a>
-                <a href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</a>
-                <a href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</a>
-                <a href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</a>
-                <a href="/Afstuderen/doelen-metingen">Doelen & Metingen</a>
-                <a href="/Afstuderen/marktbewerkingsplan">Marktbewerkingsplan</a>
-                <a href="/Afstuderen/eindreflectie">Eindreflectie</a>
-                <a href="/Afstuderen/ai-protocol">AI-Protocol</a>
-                <a href="/Afstuderen/literatuurlijst">Literatuurlijst</a>
-                <a href="/Afstuderen/bijlagen">Bijlagen</a>
+                <Link href="/Afstuderen/Profileringskit">Profileringskit</Link>
+                <Link href="/Afstuderen/voorwoord">Voorwoord</Link>
+                <Link href="/Afstuderen/inleidend">Inleidend</Link>
+                <Link href="/Afstuderen/professionele-profilering">Professionele Profilering</Link>
+                <Link href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</Link>
+                <Link href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</Link>
+                <Link href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</Link>
+                <Link href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</Link>
+                <Link href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</Link>
+                <Link href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</Link>
+                <Link href="/Afstuderen/doelen-metingen">Doelen & Metingen</Link>
+                <Link href="/Afstuderen/marktbewerkingsplan">Marktbewerkingsplan</Link>
+                <Link href="/Afstuderen/eindreflectie">Eindreflectie</Link>
+                <Link href="/Afstuderen/ai-protocol">AI-Protocol</Link>
+                <Link href="/Afstuderen/literatuurlijst">Literatuurlijst</Link>
+                <Link href="/Afstuderen/bijlagen">Bijlagen</Link>
               </div>
             </div>
           </div>

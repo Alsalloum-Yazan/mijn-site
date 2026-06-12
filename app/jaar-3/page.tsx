@@ -1,3 +1,4 @@
+import Link from "next/link";
 ﻿export default function Jaar3() {
   const pages = [
     { title: "Bedrijfsproducten", sub: "Stage", link: "/jaar-3/bedrijfsproducten", delay: 0 },
@@ -13,9 +14,9 @@
     <main>
       <div className="page-header">
         <div className="reveal">
-          <a href="/" className="back-link-sm">
+          <Link href="/" className="back-link-sm">
             ← Terug naar home
-          </a>
+          </Link>
           <div className="badge badge-mb20">
             <span className="badge-dot" />
             Avans Hogeschool Breda — Stage 2025
@@ -126,7 +127,7 @@
         {/* PAGES GRID */}
         <div className="reveal section-heading-mb32">
           <h2 className="section-h2-small">
-            Alle <span className="g-text">pagina's</span>
+            Alle <span className="g-text">pagina&apos;s</span>
           </h2>
           <div className="divider divider-mb32" />
         </div>

@@ -65,7 +65,7 @@ export default function Bijlagen() {
 
           <h3 className="h3-sub">1. Wat was mijn kernboodschap en kwam die duidelijk over?</h3>
           <p className="intro-divider">
-            Mijn kernboodschap was het presenteren van mijn afstudeeronderzoek en het laten zien welke stappen ik heb genomen, welke resultaten ik heb verzameld en waarom dit onderzoek relevant is voor AllSens. Uit de ontvangen feedback bleek dat deze boodschap duidelijk overkwam. Collega's gaven aan dat de presentatie inhoudelijk sterk was en dat zichtbaar was hoeveel tijd en werk ik in het onderzoek had geïnvesteerd. Hierdoor werd de waarde van het onderzoek goed duidelijk voor het publiek.
+            Mijn kernboodschap was het presenteren van mijn afstudeeronderzoek en het laten zien welke stappen ik heb genomen, welke resultaten ik heb verzameld en waarom dit onderzoek relevant is voor AllSens. Uit de ontvangen feedback bleek dat deze boodschap duidelijk overkwam. Collega&apos;s gaven aan dat de presentatie inhoudelijk sterk was en dat zichtbaar was hoeveel tijd en werk ik in het onderzoek had geïnvesteerd. Hierdoor werd de waarde van het onderzoek goed duidelijk voor het publiek.
           </p>
 
           <h3 className="h3-sub">2. Waar verloor ik mijn structuur of ging ik te veel uitleggen?</h3>
@@ -75,7 +75,7 @@ export default function Bijlagen() {
 
           <h3 className="h3-sub">3. Hoe was mijn spreektempo en hoe weet ik dat?</h3>
           <p className="intro-divider">
-            Mijn spreektempo lag relatief hoog. Dit bleek uit de feedback van meerdere collega's, die aangaven dat sommige onderdelen lastig te volgen waren omdat ik snel sprak. Waarschijnlijk komt dit doordat ik dagelijks met het onderzoek bezig ben en de inhoud goed ken. Hierdoor ging ik soms sneller door de informatie heen dan prettig was voor mensen die minder bekend waren met het onderwerp.
+            Mijn spreektempo lag relatief hoog. Dit bleek uit de feedback van meerdere collega&apos;s, die aangaven dat sommige onderdelen lastig te volgen waren omdat ik snel sprak. Waarschijnlijk komt dit doordat ik dagelijks met het onderzoek bezig ben en de inhoud goed ken. Hierdoor ging ik soms sneller door de informatie heen dan prettig was voor mensen die minder bekend waren met het onderwerp.
           </p>
 
           <h3 className="h3-sub">4. Welke feedback kreeg ik en wat doe ik daarmee in de volgende presentatie?</h3>
@@ -128,7 +128,7 @@ export default function Bijlagen() {
 
           <h3 className="h3-sub">4. Welke feedback kreeg ik en wat doe ik daarmee in de volgende presentatie?</h3>
           <p className="intro-divider">
-            Ik kreeg onder andere de feedback dat er al een goede lijn in mijn verhaal zat, maar dat deze nog sterker naar voren mag komen. Daarnaast werd geadviseerd om kernwoorden op de dia's te plaatsen als geheugensteun en om belangrijke onderdelen, zoals mijn onderzoek en doorzettingsvermogen, duidelijker te benoemen.
+            Ik kreeg onder andere de feedback dat er al een goede lijn in mijn verhaal zat, maar dat deze nog sterker naar voren mag komen. Daarnaast werd geadviseerd om kernwoorden op de dia&apos;s te plaatsen als geheugensteun en om belangrijke onderdelen, zoals mijn onderzoek en doorzettingsvermogen, duidelijker te benoemen.
           </p>
 
           <p className="intro-divider">
@@ -137,7 +137,7 @@ export default function Bijlagen() {
 
           <ul className="content-list">
             <li>De inhoud verder aanscherpen en versimpelen.</li>
-            <li>Kernwoorden toevoegen aan de dia's voor extra houvast.</li>
+            <li>Kernwoorden toevoegen aan de dia&apos;s voor extra houvast.</li>
             <li>Meer nadruk leggen op mijn belangrijkste leerervaringen en resultaten.</li>
             <li>Extra oefenen op een rustig spreektempo.</li>
             <li>De rode draad van mijn verhaal duidelijker naar voren laten komen.</li>
@@ -255,7 +255,7 @@ export default function Bijlagen() {
 
           <h3 className="h3-sub">1. Welke GEO-principes kwamen in beide artikelen naar voren?</h3>
           <p className="intro-divider">
-            Uit beide artikelen bleek dat het steeds belangrijker wordt om content te schrijven, die direct antwoord geeft op vragen van gebruikers. Daarnaast werd het belang benadrukt van duidelijke structuur, betrouwbare informatie, expertise en het gebruik van vraaggerichte content zoals FAQ's.
+            Uit beide artikelen bleek dat het steeds belangrijker wordt om content te schrijven, die direct antwoord geeft op vragen van gebruikers. Daarnaast werd het belang benadrukt van duidelijke structuur, betrouwbare informatie, expertise en het gebruik van vraaggerichte content zoals FAQ&apos;s.
           </p>
 
           <h3 className="h3-sub">2. Wat is volgens de artikelen het verschil tussen SEO en GEO?</h3>
@@ -265,7 +265,7 @@ export default function Bijlagen() {
 
           <h3 className="h3-sub">3. Welke inzichten waren volgens jou het meest relevant voor AllSens?</h3>
           <p className="intro-divider">
-            Voor AllSens vond ik vooral het beantwoorden van veelgestelde vragen, het tonen van expertise en het aanbieden van duidelijke en consistente informatie relevant. Deze principes sluiten goed aan bij de informatieve blogs en kennis/geurpagina's die AllSens al gebruikt.
+            Voor AllSens vond ik vooral het beantwoorden van veelgestelde vragen, het tonen van expertise en het aanbieden van duidelijke en consistente informatie relevant. Deze principes sluiten goed aan bij de informatieve blogs en kennis/geurpagina&apos;s die AllSens al gebruikt.
           </p>
 
           <h3 className="h3-sub">4. Welke feedback ontving je op je infographic?</h3>

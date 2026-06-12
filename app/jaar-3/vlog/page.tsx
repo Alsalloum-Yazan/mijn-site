@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 export default function VlogPage() {
   const vlogs = [
@@ -64,7 +65,7 @@ export default function VlogPage() {
         {/* Footer Navigatie */}
         <div className="footer-nav-mt64">
           <a href="/jaar-3" className="btn-ghost btn-sm">← Terug naar Jaar 3</a>
-          <a href="/" className="btn btn-sm">Naar Home →</a>
+          <Link href="/" className="btn btn-sm">Naar Home →</Link>
         </div>
       </article>
     </main>

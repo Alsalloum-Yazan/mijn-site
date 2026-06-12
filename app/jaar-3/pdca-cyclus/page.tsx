@@ -68,13 +68,6 @@
     },
   ];
 
-  const faseColors: Record<string, string> = {
-    Plan: "#7c3aed",
-    Do: "#4f46e5",
-    Check: "#6d28d9",
-    Act: "#5b21b6",
-  };
-
   return (
     <main>
       <article className="content-page">

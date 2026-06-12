@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 const SectionDivider = ({ label }: { label: string }) => (
   <div className="section-divider">
@@ -37,7 +38,7 @@ export default function BijlagenPage() {
               Er is gekozen voor een Word-document, omdat de bijlage veel screenshots bevat, welke niet worden overgenomen op de website.
             </p>
             <p className="j4-text">
-              De bijlagen zijn een extra toevoeging op de overige pagina's.
+              De bijlagen zijn een extra toevoeging op de overige pagina&apos;s.
             </p>
           </div>
         </div>
@@ -73,7 +74,7 @@ export default function BijlagenPage() {
         {/* Footer nav */}
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

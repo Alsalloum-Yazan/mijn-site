@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 export default function FeedbackPage() {
   const klasgenotenFeedback = [
@@ -50,7 +51,7 @@ export default function FeedbackPage() {
                     <p className="feedback-topic">{item.topic}</p>
                   </div>
                 </div>
-                <p className="feedback-quote">"{item.text}"</p>
+                <p className="feedback-quote">&quot;{item.text}&quot;</p>
               </div>
             ))}
           </div>
@@ -71,7 +72,7 @@ export default function FeedbackPage() {
                     <p className="feedback-topic-indigo">{item.topic}</p>
                   </div>
                 </div>
-                <p className="feedback-quote-indigo">"{item.text}"</p>
+                <p className="feedback-quote-indigo">&quot;{item.text}&quot;</p>
               </div>
             ))}
           </div>
@@ -79,7 +80,7 @@ export default function FeedbackPage() {
 
         <div className="footer-nav-mt64">
           <a href="/jaar-2" className="btn-ghost btn-sm">← Terug naar Jaar 2</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>

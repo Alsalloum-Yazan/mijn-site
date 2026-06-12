@@ -1,4 +1,5 @@
-﻿"use client";
+"use client";
+import Link from "next/link";
 
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
@@ -154,7 +155,7 @@ export default function AIProtocolPage() {
             ].map((prompt, i) => (
               <div key={i} className="prompt-item">
                 <span className="prompt-num">#{i + 1}</span>
-                <span className="prompt-text">"{prompt}"</span>
+                <span className="prompt-text">&quot;{prompt}&quot;</span>
               </div>
             ))}
           </div>
@@ -193,7 +194,7 @@ export default function AIProtocolPage() {
         {/* Footer nav */}
         <div className="footer-nav-border08">
           <a href="/jaar-4" className="btn-ghost btn-sm">← Terug naar Jaar 4</a>
-          <a href="/" className="btn btn-sm">Terug naar home →</a>
+          <Link href="/" className="btn btn-sm">Terug naar home →</Link>
         </div>
 
       </article>
