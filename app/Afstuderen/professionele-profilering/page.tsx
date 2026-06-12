@@ -61,8 +61,7 @@ export default function ProfessioneleProfilering() {
             className="reveal content-image-wrap"
             onClick={() => setImgOpen("/afstuderen/pl/professionele-profilering.webp")}
           >
-            <img
-              src="/afstuderen/pl/professionele-profilering.webp"
+            <img loading="lazy" decoding="async"               src="/afstuderen/pl/professionele-profilering.webp"
               alt="Persoonlijke en professionele profilering"
               className="content-image-lg"
             />

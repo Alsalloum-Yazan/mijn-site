@@ -37,8 +37,7 @@ export default function PersoonlijkeDoelenPage() {
 
           {/* Afbeelding */}
           <div className="reveal doel-img-section">
-            <img
-              src="/jaar2/Persoonlijke doelen/Persoonlijke doelen.png"
+            <img loading="lazy" decoding="async"               src="/jaar2/Persoonlijke doelen/Persoonlijke doelen.png"
               alt="Bescherming tegen de zon op het strand"
               className="doel-img-full"
             />

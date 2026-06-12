@@ -154,8 +154,7 @@ export default function PersoonlijkDoel1() {
                 onClick={() => setSelectedImage(src)}
                 className="img-tile-card img-tile-card-h200"
               >
-                <img
-                  src={src}
+                <img loading="lazy" decoding="async"                   src={src}
                   alt={`Bewijs ${i + 1}`}
                   className="img-tile-card-img-contain"
                   draggable={false}

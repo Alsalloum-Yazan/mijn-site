@@ -56,8 +56,7 @@ export default function VideosPage() {
                 className="glow-card card-hover j4-video-card-border"
               >
                 <div className="j4-video-thumb-wrap">
-                  <img
-                    src={video.thumbnail}
+                  <img loading="lazy" decoding="async"                     src={video.thumbnail}
                     alt={video.title}
                     onError={(e) => {
                       e.currentTarget.style.display = "none";

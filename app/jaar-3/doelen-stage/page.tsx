@@ -42,7 +42,7 @@ export default function DoelenStage() {
           {/* PERSOONLIJK DOEL */}
           <div className="reveal glow-card img-card">
             <div onClick={() => setOpenImg("/jaar3/doelen-stage/persoonlijk doel.png")} className="img-card-image-wrap">
-              <img src="/jaar3/doelen-stage/persoonlijk doel.png" alt="Persoonlijk doel" className="img-card-img-contain img-card-img-h220" />
+              <img loading="lazy" decoding="async" src="/jaar3/doelen-stage/persoonlijk doel.png" alt="Persoonlijk doel" className="img-card-img-contain img-card-img-h220" />
               <div
                 className="img-card-overlay"
                 onMouseEnter={e => {
@@ -74,7 +74,7 @@ export default function DoelenStage() {
           {/* VAKINHOUDELIJK DOEL */}
           <div className="reveal glow-card img-card">
             <div onClick={() => setOpenImg("/jaar3/doelen-stage/vakinhoud.png")} className="img-card-image-wrap">
-              <img src="/jaar3/doelen-stage/vakinhoud.png" alt="Vakinhoudelijk doel" className="img-card-img-contain img-card-img-h220" />
+              <img loading="lazy" decoding="async" src="/jaar3/doelen-stage/vakinhoud.png" alt="Vakinhoudelijk doel" className="img-card-img-contain img-card-img-h220" />
               <div
                 className="img-card-overlay"
                 onMouseEnter={e => {

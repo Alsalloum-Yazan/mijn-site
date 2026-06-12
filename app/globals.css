@@ -38,7 +38,7 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; perspective: 1px; }
+html { scroll-behavior: smooth; }
 
 body { font-family: var(--font-inter), 'Inter', sans-serif; background: linear-gradient(180deg, #FDFDFD 0%, #F8FAF4 58%, #FDFDFD 100%); color: #161616; overflow-x: hidden; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; color-scheme: light; }
 
@@ -2227,6 +2227,35 @@ dialog.cv-modal-dialog::backdrop {
 
 
 @media (max-width: 768px) {
+
+  /* ===== iOS-CRASH FIX =====
+     Safari op iOS crasht ("Er heeft zich herhaaldelijk een probleem
+     voorgedaan") door GPU-geheugen: grote filter-blurs en gestapelde
+     backdrop-filters. Op mobiel schakelen we die uit; de semi-
+     transparante achtergronden zelf blijven, dus het blijft er
+     hetzelfde uitzien. */
+
+  *, *::before, *::after, ::backdrop { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+
+  #navbar { background: rgba(253,253,253,0.97); }
+
+  /* Blobs zonder filter: gradients die zelf naar transparant vervagen */
+
+  .bg-blob { filter: none; }
+
+  .bg-blob-1 { background: radial-gradient(circle, rgba(231,254,37,0.20), transparent 70%); }
+
+  .bg-blob-2 { background: radial-gradient(circle, rgba(1,63,50,0.10), transparent 70%); }
+
+  .bg-blob-3 { background: radial-gradient(circle, rgba(231,254,37,0.16), transparent 70%); }
+
+  .bg-blob-4 { background: radial-gradient(circle, rgba(231,254,37,0.14), transparent 70%); }
+
+  /* Noise-laag (opacity 0.025, onzichtbaar) kost wel rendergeheugen */
+
+  .bg-wrap::before { display: none; }
+
+  dialog.img-modal-dialog::backdrop, dialog.cv-modal-dialog::backdrop { background: rgba(0,0,0,0.92); }
 
   /* Grids die op desktop 2 of 3 kolommen hebben -> 1 kolom op mobiel */
 

@@ -15,7 +15,7 @@ function ZoomImage({
   return (
     <>
       <div onClick={() => setOpenImg(src)} className="zoom-img-wrap">
-        <img src={src} alt={alt} className="zoom-img" />
+        <img loading="lazy" decoding="async" src={src} alt={alt} className="zoom-img" />
 
         <div
           className="zoom-overlay"
@@ -62,8 +62,7 @@ function VideoCard({
       className="glow-card card-hover spaans-video-card"
     >
       <div className="spaans-video-thumb-wrap">
-        <img
-          src={thumbnail}
+        <img loading="lazy" decoding="async"           src={thumbnail}
           alt={title}
           onError={(e) => {
             e.currentTarget.style.display = "none";

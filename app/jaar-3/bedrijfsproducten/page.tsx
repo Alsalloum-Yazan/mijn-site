@@ -39,7 +39,7 @@ export default function Bedrijfsproducten() {
           {products.map((product, i) => (
             <div key={i} className="reveal glow-card img-card" style={{ transitionDelay: String(i * 80) + "ms" }}>
               <div onClick={() => setOpenImg(product.img)} className="img-card-image-wrap">
-                <img src={product.img} alt={product.title} className="img-card-img-contain-lg" />
+                <img loading="lazy" decoding="async" src={product.img} alt={product.title} className="img-card-img-contain-lg" />
                 <div
                   className="img-card-overlay"
                   onMouseEnter={e => {

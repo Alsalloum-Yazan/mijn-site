@@ -44,7 +44,7 @@ export default function BewijslastenVakinhoudelijk() {
           {bewijzen.map((bewijs, i) => (
             <div key={i} className="reveal glow-card img-card" style={{ transitionDelay: String(i * 80) + "ms" }}>
               <div onClick={() => setOpenImg(bewijs.img)} className="img-card-image-wrap">
-                <img src={bewijs.img} alt={bewijs.title} className="img-card-img-contain" />
+                <img loading="lazy" decoding="async" src={bewijs.img} alt={bewijs.title} className="img-card-img-contain" />
                 <div
                   className="img-card-overlay"
                   onMouseEnter={e => {

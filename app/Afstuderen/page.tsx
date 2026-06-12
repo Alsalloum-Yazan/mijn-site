@@ -44,7 +44,7 @@ import Link from "next/link";
 
         {/* IMAGE */}
         <div className="reveal mb64">
-          <img
+          <img loading="lazy" decoding="async" 
             src="/afstuderen/afstuderen.jpg"
             alt="Afstuderen"
             className="afstuderen-img"

@@ -43,8 +43,7 @@ export default function ImageModal({
       <button onClick={onClose} className="img-modal-close">✕</button>
 
       {src && (
-        <img
-          src={src}
+        <img loading="lazy" decoding="async"           src={src}
           alt="Vergroot"
           onClick={e => e.stopPropagation()}
           className="img-modal-img"

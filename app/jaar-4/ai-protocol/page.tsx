@@ -181,7 +181,7 @@ export default function AIProtocolPage() {
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                <img src={src} alt={`AI screenshot ${i + 1}`} draggable={false} />
+                <img loading="lazy" decoding="async" src={src} alt={`AI screenshot ${i + 1}`} draggable={false} />
                 <div className="img-tile-label">{i + 1}/{images.length}</div>
               </div>
             ))}

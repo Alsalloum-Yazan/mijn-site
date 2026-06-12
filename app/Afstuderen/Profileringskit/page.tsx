@@ -36,7 +36,7 @@ export default function Profileringskit() {
             In mijn cv beschrijf ik mijn stages, wat ik daar precies heb gedaan en welke bijbaantjes ik tot nu toe heb gehad. Zo is goed te zien welke praktische ervaring ik al heb opgebouwd.
           </p>
           <div onClick={() => setOpenImg("/afstuderen/Profileringskit/cv.png")} className="zoom-img-wrap">
-            <img src="/afstuderen/Profileringskit/cv.png" alt="CV" className="zoom-img" />
+            <img loading="lazy" decoding="async" src="/afstuderen/Profileringskit/cv.png" alt="CV" className="zoom-img" />
             <div
               className="zoom-overlay"
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
@@ -56,7 +56,7 @@ export default function Profileringskit() {
             Mijn motivatiebrief laat zien waarom ik enthousiast ben om terug te gaan naar LVNG en wat ik kan toevoegen.
           </p>
           <div onClick={() => setOpenImg("/afstuderen/Profileringskit/motivatie.png")} className="zoom-img-wrap">
-            <img src="/afstuderen/Profileringskit/motivatie.png" alt="Motivatiebrief" className="zoom-img" />
+            <img loading="lazy" decoding="async" src="/afstuderen/Profileringskit/motivatie.png" alt="Motivatiebrief" className="zoom-img" />
             <div
               className="zoom-overlay"
               onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}

@@ -15,7 +15,7 @@ function ZoomImage({
   return (
     <>
       <div onClick={() => setOpenImg(src)} className="zoom-img-wrap">
-        <img src={src} alt={alt} className="zoom-img" />
+        <img loading="lazy" decoding="async" src={src} alt={alt} className="zoom-img" />
 
         <div
           className="zoom-overlay"
@@ -360,8 +360,7 @@ export default function Marktbewerkingsplan() {
             className="glow-card card-hover video-card-border"
           >
             <div className="video-thumb-wrap">
-              <img
-                src={video.thumbnail}
+              <img loading="lazy" decoding="async"                 src={video.thumbnail}
                 alt={video.title}
                 onError={(e) => {
                   e.currentTarget.style.display = "none";

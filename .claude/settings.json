@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e ' *)",
+      "Bash(npm i *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Fix iOS mobile crashes and site health issues *)",
+      "Bash(git push *)"
+    ]
+  }
+}

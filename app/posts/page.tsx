@@ -31,7 +31,7 @@ export default function PostsOverzicht() {
             return (
               <a key={i} href={link} className="glow-card reveal posts-card" style={{ transitionDelay: String(i * 60) + "ms" }}>
                 {post.img ? (
-                  <img src={post.img} alt={post.title} className="posts-card-img" />
+                  <img loading="lazy" decoding="async" src={post.img} alt={post.title} className="posts-card-img" />
                 ) : (
                   <div className="posts-card-no-img">
                     <div className="posts-card-icon">

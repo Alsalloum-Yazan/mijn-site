@@ -28,7 +28,7 @@ export default function AmxWeekPage() {
             <div className="amx-content">
               <h2 className="amx-content-title">Bewijslasten deze week</h2>
               <div className="amx-img-wrap">
-                <img
+                <img loading="lazy" decoding="async" 
                   src="/jaar2/amx-week/whatspp.png"
                   alt="WhatsApp Bewijslast"
                   className="amx-img"

@@ -15,7 +15,7 @@ function ZoomImage({
   return (
     <>
       <div onClick={() => setOpenImg(src)} className="zoom-img-wrap">
-        <img src={src} alt={alt} className="zoom-img" />
+        <img loading="lazy" decoding="async" src={src} alt={alt} className="zoom-img" />
 
         <div
           className="zoom-overlay"

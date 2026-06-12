@@ -42,7 +42,7 @@ export default function InleesactiePage() {
             {boeken.map((boek, i) => (
               <div key={i} className="glow-card book-card">
                 <div className="book-img-wrap">
-                  <img src={boek.image} alt={boek.title} className="book-img" />
+                  <img loading="lazy" decoding="async" src={boek.image} alt={boek.title} className="book-img" />
                 </div>
                 <h3 className="book-title">{boek.title}</h3>
                 <p className="book-author">{boek.author}</p>

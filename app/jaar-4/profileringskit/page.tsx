@@ -158,7 +158,7 @@ De tan staat voor tanniglines en een zomers gevoel. Daarnaast staat de 10 weer v
               }}>
                 <div className="profileringskit-section-card-inner">
                   {"src" in item && item.src && (
-                    <img
+                    <img loading="lazy" decoding="async" 
                       src={item.src}
                       alt={item.title}
                       className="profileringskit-section-img"

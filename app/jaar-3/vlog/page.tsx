@@ -36,8 +36,7 @@ export default function VlogPage() {
             {vlogs.map((vlog, i) => (
               <a key={i} href={vlog.url} target="_blank" rel="noopener noreferrer" className="glow-card card-hover video-card">
                 <div className="video-thumb-wrap">
-                  <img
-                    src={vlog.thumbnail}
+                  <img loading="lazy" decoding="async"                     src={vlog.thumbnail}
                     alt={vlog.title}
                     onError={(e) => { e.currentTarget.style.display = "none"; }}
                     className="video-thumb-img"

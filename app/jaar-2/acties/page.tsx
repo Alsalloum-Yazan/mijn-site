@@ -24,7 +24,7 @@ const SectionDivider = ({ label }: { label: string }) => (
 
 const ImageCard = ({ src, alt }: { src: string; alt: string }) => (
   <div className="glow-card image-card-simple">
-    <img src={src} alt={alt} className="image-card-img" />
+    <img loading="lazy" decoding="async" src={src} alt={alt} className="image-card-img" />
   </div>
 );
 

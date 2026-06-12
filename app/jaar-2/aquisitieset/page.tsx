@@ -102,7 +102,7 @@ export default function AquisitiesetPage() {
 
                 {/* Beeld */}
                 <div className="doc-img-pad">
-                  <img
+                  <img loading="lazy" decoding="async" 
                     src={doc.src}
                     alt={doc.title}
                     className="doc-img"

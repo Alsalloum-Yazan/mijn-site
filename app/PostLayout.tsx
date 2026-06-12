@@ -48,7 +48,7 @@ export default function PostLayout({
             {title}
           </h1>
           <div className="post-meta">
-            <img
+            <img loading="lazy" decoding="async" 
               src="/home/dian.png"
               alt="Dian"
               className="post-avatar"
@@ -70,7 +70,7 @@ export default function PostLayout({
             className="reveal post-image-wrap"
             onClick={() => setImgOpen(true)}
           >
-            <img
+            <img loading="lazy" decoding="async" 
               src={img}
               alt={title}
               className="post-image-full"

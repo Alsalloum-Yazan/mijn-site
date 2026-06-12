@@ -66,11 +66,11 @@ export default function AiProtocol() {
                     <p style={{ fontSize: "0.9rem", margin: "0 0 12px" }}>AI-gesprekken voor redactie en herschrijving</p>
                     <div style={{ display: "flex", gap: "12px" }}>
                       <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-1a.webp")}>
-                        <img src="/afstuderen/pl/screenshot-1a.webp" alt="Screenshot 1a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                        <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-1a.webp" alt="Screenshot 1a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                         <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                       </div>
                       <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-1b.webp")}>
-                        <img src="/afstuderen/pl/screenshot-1b.webp" alt="Screenshot 1b" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                        <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-1b.webp" alt="Screenshot 1b" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                         <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                       </div>
                     </div>
@@ -84,11 +84,11 @@ export default function AiProtocol() {
                     <p style={{ fontSize: "0.9rem", margin: "0 0 12px" }}>AI-gesprekken voor brainstormen</p>
                     <div style={{ display: "flex", gap: "12px" }}>
                       <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-2a.webp")}>
-                        <img src="/afstuderen/pl/screenshot-2a.webp" alt="Screenshot 2a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                        <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-2a.webp" alt="Screenshot 2a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                         <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                       </div>
                       <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-2b.webp")}>
-                        <img src="/afstuderen/pl/screenshot-2b.webp" alt="Screenshot 2b" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                        <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-2b.webp" alt="Screenshot 2b" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                         <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                       </div>
                     </div>
@@ -102,11 +102,11 @@ export default function AiProtocol() {
                     <p style={{ fontSize: "0.9rem", margin: "0 0 12px" }}>AI-gesprekken over GEO</p>
                     <div style={{ display: "flex", gap: "12px" }}>
                       <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-3a.webp")}>
-                        <img src="/afstuderen/pl/screenshot-3a.webp" alt="Screenshot 3a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                        <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-3a.webp" alt="Screenshot 3a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                         <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                       </div>
                       <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-3b.webp")}>
-                        <img src="/afstuderen/pl/screenshot-3b.webp" alt="Screenshot 3b" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                        <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-3b.webp" alt="Screenshot 3b" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                         <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                       </div>
                     </div>
@@ -119,7 +119,7 @@ export default function AiProtocol() {
                   <td>
                     <p style={{ fontSize: "0.9rem", margin: "0 0 12px" }}>GEO-tool analyse output</p>
                     <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4a.webp")}>
-                      <img src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
+                      <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "120px", borderRadius: "6px", border: "1px solid rgba(1,63,50,0.12)", cursor: "pointer", display: "block" }} />
                       <div style={{ fontSize: "0.75rem", color: "rgba(1,63,50,0.6)", marginTop: "4px" }}>Klik</div>
                     </div>
                   </td>
@@ -302,11 +302,11 @@ export default function AiProtocol() {
             <h3 className="h3-sub">Screenshot 1: AI gebruiken voor redactie en herschrijven</h3>
             <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-1a.webp")}>
-                <img src="/afstuderen/pl/screenshot-1a.webp" alt="Screenshot 1a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-1a.webp" alt="Screenshot 1a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-1b.webp")}>
-                <img src="/afstuderen/pl/screenshot-1b.webp" alt="Screenshot 1b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-1b.webp" alt="Screenshot 1b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
             </div>
@@ -320,11 +320,11 @@ export default function AiProtocol() {
             <h3 className="h3-sub">Screenshot 2: AI gebruiken voor ideeën en structuur</h3>
             <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-2a.webp")}>
-                <img src="/afstuderen/pl/screenshot-2a.webp" alt="Screenshot 2a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-2a.webp" alt="Screenshot 2a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-2b.webp")}>
-                <img src="/afstuderen/pl/screenshot-2b.webp" alt="Screenshot 2b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-2b.webp" alt="Screenshot 2b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
             </div>
@@ -338,11 +338,11 @@ export default function AiProtocol() {
             <h3 className="h3-sub">Screenshot 3: AI gebruiken voor inhoudelijke uitleg over GEO</h3>
             <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-3a.webp")}>
-                <img src="/afstuderen/pl/screenshot-3a.webp" alt="Screenshot 3a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-3a.webp" alt="Screenshot 3a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-3b.webp")}>
-                <img src="/afstuderen/pl/screenshot-3b.webp" alt="Screenshot 3b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-3b.webp" alt="Screenshot 3b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
             </div>
@@ -356,11 +356,11 @@ export default function AiProtocol() {
             <h3 className="h3-sub">Screenshot 4: AI gebruiken voor afbeelding genereren</h3>
             <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4a.webp")}>
-                <img src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4a.webp")}>
-                <img src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
             </div>
@@ -374,11 +374,11 @@ export default function AiProtocol() {
             <h3 className="h3-sub">Screenshot 5: AI gebruiken bij analyse via de GEO-tool</h3>
             <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4b.webp")}>
-                <img src="/afstuderen/pl/screenshot-5a.webp" alt="Screenshot 4b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-5a.webp" alt="Screenshot 4b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
               <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4b.webp")}>
-                <img src="/afstuderen/pl/screenshot-5b.webp" alt="Screenshot 4b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-5b.webp" alt="Screenshot 4b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
             </div>

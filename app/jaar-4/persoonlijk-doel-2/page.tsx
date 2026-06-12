@@ -154,8 +154,7 @@ export default function PersoonlijkDoel2() {
               e.currentTarget.style.boxShadow = "none";
             }}
           >
-            <img
-              src="/jaar4/persoonlijk-doel-2/image1.png"
+            <img loading="lazy" decoding="async"               src="/jaar4/persoonlijk-doel-2/image1.png"
               alt="Bewijs actie 2"
               className="img-tile-card-img-contain"
               draggable={false}

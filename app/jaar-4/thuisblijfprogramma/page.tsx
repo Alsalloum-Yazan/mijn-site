@@ -11,7 +11,7 @@ const SectionDivider = ({ label }: { label: string }) => (
 
 const ImageCard = ({ src, alt }: { src: string; alt: string }) => (
   <div className="glow-card vinger-card vinger-card-img-border">
-    <img src={src} alt={alt} className="img-full-block" />
+    <img loading="lazy" decoding="async" src={src} alt={alt} className="img-full-block" />
   </div>
 );
 

@@ -247,8 +247,7 @@ export default function VakinhoudelijkDoel2() {
                   e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                <img
-                  src={img.src}
+                <img loading="lazy" decoding="async"                   src={img.src}
                   alt={img.label}
                   className="img-tile-card-img"
                   draggable={false}

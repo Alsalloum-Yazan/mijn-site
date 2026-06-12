@@ -35,7 +35,7 @@ export default function Reflecties() {
           {reflecties.map((item, i) => (
             <div key={i} className="reveal glow-card img-card" style={{ transitionDelay: String(i * 120) + "ms" }}>
               <div onClick={() => setOpenImg(item.img)} className="reflecties-img-wrap">
-                <img src={item.img} alt={item.title} className="reflecties-img" />
+                <img loading="lazy" decoding="async" src={item.img} alt={item.title} className="reflecties-img" />
                 <div
                   className="img-card-overlay"
                   onMouseEnter={e => {

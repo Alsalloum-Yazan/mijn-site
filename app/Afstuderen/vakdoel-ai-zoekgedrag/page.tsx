@@ -124,8 +124,7 @@ export default function VakdoelAIZoekgedrag() {
           <p className="intro-divider">
             De reflectievragen zijn terug te lezen in de bijlagen.
           </p>
-          <img
-            src="/afstuderen/pl/reflectievragen.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/reflectievragen.webp"
             alt="Infographic GEO AllSens"
             className="content-image-lg"
           />
@@ -146,8 +145,7 @@ export default function VakdoelAIZoekgedrag() {
             Aan de hand van artikelen van Frankwatching en Hostnet Academy heb ik de belangrijkste inzichten verzameld over GEO en de gevolgen hiervan voor contentmarketing (Traffic Builders, 19 juni 2025) (Romy Veul, 28 november 2025). Vervolgens heb ik deze inzichten vertaald naar de situatie van AllSens. In onderstaande infographic laat ik zien welke principes volgens mij het meest relevant zijn voor AllSens en hoe deze kunnen bijdragen aan een grotere online zichtbaarheid. Daarbij heb ik ook de feedback van mijn bedrijfsbegeleider meegenomen om de praktische toepasbaarheid binnen de organisatie te beoordelen.
           </p>
 
-          <img
-            src="/afstuderen/pl/infographic-geo-allsens.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/infographic-geo-allsens.webp"
             alt="Infographic GEO AllSens"
             className="content-image-lg"
           />
@@ -216,8 +214,7 @@ export default function VakdoelAIZoekgedrag() {
             De tool laat precies zien waar een tekst sterk is en waar nog winst te behalen valt. Zo leer ik niet alleen schrijven voor traditionele zoekmachines, maar ook voor AI-tools zoals Google SGE en ChatGPT, die steeds vaker complete antwoorden geven op zoekvragen in plaats van een lijst met links. Dit sluit direct aan op mijn vakinhoudelijke leerdoel, waarbij ik minimaal vier marketingteksten schrijf en optimaliseer volgens de principes van GEO.
           </p>
 
-          <img
-            src="/afstuderen/pl/claude-tool-flow.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-flow.webp"
             alt="Claude Tool Flow"
             className="content-image-lg"
           />
@@ -247,8 +244,7 @@ export default function VakdoelAIZoekgedrag() {
             <li>Door testers uit verschillende werkvelden te vragen, kreeg ik een breder beeld van de toepasbaarheid van mijn tool.</li>
           </ul>
 
-          <img
-            src="/afstuderen/pl/testers-claude-tool.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/testers-claude-tool.webp"
             alt="Testers Claude Tool"
             className="content-image-lg"
           />
@@ -316,8 +312,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 1e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-1-eerste-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-1-eerste-keer.webp"
             alt="Claude Tool Tekst 1 Eerste Keer"
             className="content-image-lg"
           />
@@ -349,8 +344,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 2e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-1-tweede-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-1-tweede-keer.webp"
             alt="Claude Tool Tekst 1 Tweede Keer"
             className="content-image-lg"
           />
@@ -386,8 +380,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 1e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-2-eerste-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-2-eerste-keer.webp"
             alt="Claude Tool Tekst 2 Eerste Keer"
             className="content-image-lg"
           />
@@ -419,8 +412,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van Claude tool | 2e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-2-tweede-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-2-tweede-keer.webp"
             alt="Claude Tool Tekst 2 Tweede Keer"
             className="content-image-lg"
           />
@@ -456,8 +448,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 1e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-3-eerste-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-3-eerste-keer.webp"
             alt="Claude Tool Tekst 3 Eerste Keer"
             className="content-image-lg"
           />
@@ -487,8 +478,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 2e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-3-tweede-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-3-tweede-keer.webp"
             alt="Claude Tool Tekst 3 Tweede Keer"
             className="content-image-lg"
           />
@@ -610,8 +600,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 1e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-4-eerste-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-4-eerste-keer.webp"
             alt="Claude Tool Tekst 4 Eerste Keer"
             className="content-image-lg"
           />
@@ -661,8 +650,7 @@ export default function VakdoelAIZoekgedrag() {
           </p>
 
           <h3 className="h3-sub">Toepassen van de Claude tool | 2e keer</h3>
-          <img
-            src="/afstuderen/pl/claude-tool-tekst-4-tweede-keer.webp"
+          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-tekst-4-tweede-keer.webp"
             alt="Claude Tool Tekst 4 Tweede Keer"
             className="content-image-lg"
           />
