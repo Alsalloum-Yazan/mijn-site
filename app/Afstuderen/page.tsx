@@ -28,7 +28,7 @@ import Link from "next/link";
           </Link>
           <div className="badge badge-mb20">
             <span className="badge-dot" />
-            Avans Hogeschool Breda — 2024/2025
+            Avans Hogeschool Breda — 2025/2026
           </div>
           <h1 className="page-h1-large">
             <span className="g-text">Afstuderen</span>
@@ -41,15 +41,6 @@ import Link from "next/link";
       </div>
 
       <div className="year-index-wrap">
-
-        {/* IMAGE */}
-        <div className="reveal mb64">
-          <img loading="lazy" decoding="async" 
-            src="/afstuderen/afstuderen.jpg"
-            alt="Afstuderen"
-            className="afstuderen-img"
-          />
-        </div>
 
         {/* DOELEN */}
         <div className="intro-2-grid">
@@ -76,7 +67,7 @@ import Link from "next/link";
               <span className="badge-dot" />
               Vakinhoudelijk doel
             </div>
-            <h3 className="h3-card-mb16">SEO blogs schrijven</h3>
+            <h3 className="h3-card-mb16">GEO teksten schrijven</h3>
             <p className="p-sm-14">Ik wil mij gedurende 17 weken ontwikkelen in het schrijven van geoptimaliseerde SEO blogs voor AllSens en Pure by Zalati.</p>
           </div>
         </div>
