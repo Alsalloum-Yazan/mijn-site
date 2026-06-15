@@ -102,8 +102,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <Link href="/Afstuderen/professionele-profilering">Professionele Profilering</Link>
                   <Link href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</Link>
                   <Link href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</Link>
+                  <Link href="/Afstuderen/conclusie-leerdoelen-1">Conclusie Leerdoelen 1</Link>
                   <Link href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</Link>
-                  <Link href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</Link>
+                  <Link href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen 2</Link>
                   <Link href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</Link>
                   <Link href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</Link>
                   <Link href="/Afstuderen/doelen-metingen">Doelen & Metingen</Link>
@@ -178,8 +179,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="/Afstuderen/professionele-profilering">Professionele Profilering</Link>
                 <Link href="/Afstuderen/feedback-stakeholders">Feedback & Stakeholders</Link>
                 <Link href="/Afstuderen/leerdoel-1-presenteren">Leerdoel 1: Presenteren</Link>
+                <Link href="/Afstuderen/conclusie-leerdoelen-1">Conclusie Leerdoelen 1</Link>
                 <Link href="/Afstuderen/leerdoel-2-spaans">Leerdoel 2: Spaans Leren</Link>
-                <Link href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen</Link>
+                <Link href="/Afstuderen/conclusie-leerdoelen">Conclusie Leerdoelen 2</Link>
                 <Link href="/Afstuderen/vakdoel-ai-zoekgedrag">Vakdoel: AI-Zoekgedrag</Link>
                 <Link href="/Afstuderen/conclusie-vakdoelen">Conclusie Vakdoelen</Link>
                 <Link href="/Afstuderen/doelen-metingen">Doelen & Metingen</Link>

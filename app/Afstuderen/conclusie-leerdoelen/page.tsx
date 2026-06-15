@@ -18,11 +18,11 @@ export default function ConclusieLeerdoelen() {
 
           <div className="badge post-badge">
             <span className="badge-dot" />
-            Afstuderen — Conclusie Leerdoelen
+            Afstuderen — Conclusie Leerdoelen 2
           </div>
 
           <h1 className="post-h1">
-            <span className="g-text">Conclusie Leerdoelen</span>
+            <span className="g-text">Conclusie Leerdoelen 2</span>
           </h1>
 
           <div className="content-header-border">

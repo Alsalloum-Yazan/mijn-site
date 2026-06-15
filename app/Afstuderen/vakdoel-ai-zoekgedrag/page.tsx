@@ -249,13 +249,23 @@ export default function VakdoelAIZoekgedrag() {
             className="content-image-lg"
           />
 
-          <p className="intro-divider">
-            Onderstaand de enquête:
-            <br />
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9cWK8JuOqnL-m9qX2CFfP7AyQF6DMsCa386lZottst6WalQ/viewform?usp=sharing&ouid=118370528379486787285" target="_blank" rel="noreferrer" className="inline-link">
-              Bekijk de enquête
+          <p className="intro-divider">Onderstaand de enquête:</p>
+
+          <div className="external-link-btn-wrap">
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc9cWK8JuOqnL-m9qX2CFfP7AyQF6DMsCa386lZottst6WalQ/viewform?usp=sharing&ouid=118370528379486787285"
+              target="_blank"
+              rel="noreferrer"
+              className="external-link-btn"
+            >
+              <span>Bekijk de enquête</span>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
             </a>
-          </p>
+          </div>
 
           <p className="intro-divider">
             Opvallend kozen alle vier de respondenten voor het toevoegen van &apos;betrouwbaarheid&apos;.

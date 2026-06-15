@@ -68,6 +68,63 @@ export default function Profileringskit() {
           <p className="zoom-hint">Klik om te vergroten</p>
         </div>
 
+        {/* LINKEDIN-PROFIEL */}
+        <div className="reveal glow-card intro-card mb40">
+          <h2 className="h2-sub-lg"><span className="g-text">LinkedIn-profiel</span></h2>
+          <div className="divider divider-mb20" />
+          <p className="intro-divider">
+            Het LinkedIn-profiel als aanvulling op het professionele profiel. Mijn connecties zijn met 49 gestegen in vergelijking met het vorige semester.
+          </p>
+          <div onClick={() => setOpenImg("/afstuderen/pl/profileringskit-linkedin.webp")} className="zoom-img-wrap">
+            <img loading="lazy" decoding="async" src="/afstuderen/pl/profileringskit-linkedin.webp" alt="LinkedIn-profiel" className="zoom-img" />
+            <div
+              className="zoom-overlay"
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "0"; }}
+            >
+              <div className="zoom-icon">Vergroot afbeelding</div>
+            </div>
+          </div>
+          <p className="zoom-hint">Klik om te vergroten</p>
+        </div>
+
+        {/* LOGO */}
+        <div className="reveal glow-card intro-card mb40">
+          <h2 className="h2-sub-lg"><span className="g-text">Logo</span></h2>
+          <div className="divider divider-mb20" />
+          <p className="intro-divider">
+            Logo ter visuele weergave van het basic chique design, dat ik wil uitstralen.
+          </p>
+          <div onClick={() => setOpenImg("/afstuderen/pl/profileringskit-logo.webp")} className="zoom-img-wrap">
+            <img loading="lazy" decoding="async" src="/afstuderen/pl/profileringskit-logo.webp" alt="Logo" className="zoom-img" />
+            <div
+              className="zoom-overlay"
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "0"; }}
+            >
+              <div className="zoom-icon">Vergroot afbeelding</div>
+            </div>
+          </div>
+          <p className="zoom-hint">Klik om te vergroten</p>
+        </div>
+
+        {/* PITCH */}
+        <div className="reveal glow-card intro-card mb40">
+          <h2 className="h2-sub-lg"><span className="g-text">Pitch</span></h2>
+          <div className="divider divider-mb20" />
+          <p className="intro-divider">
+            Mijn persoonlijke pitch waarin ik mezelf kort en krachtig presenteer.
+          </p>
+          <a
+            href="https://mymedia.avans.nl/media/Persoonlijke+pitch/0_tiga4qf8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="external-link-btn"
+          >
+            Bekijk persoonlijke pitch op MyMedia →
+          </a>
+        </div>
+
         <div className="post-footer-nav">
           <a href="/Afstuderen" className="btn-ghost btn-sm">← Terug naar Afstuderen</a>
           <a href="/Afstuderen/eindreflectie" className="btn btn-sm">Eindreflectie →</a>

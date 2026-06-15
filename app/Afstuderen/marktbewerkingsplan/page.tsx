@@ -48,12 +48,6 @@ function ZoomImage({
 export default function Marktbewerkingsplan() {
   const [openImg, setOpenImg] = useState<string | null>(null);
 
-  const video = {
-    title: "Persoonlijke pitch",
-    url: "https://mymedia.avans.nl/media/Persoonlijke+pitch/0_tiga4qf8",
-    thumbnail: "https://cfvod.frp2.ovp.kaltura.com/p/10066/sp/1006600/thumbnail/entry_id/0_tiga4qf8/width/600/height/340"
-  };
-
   return (
     <main>
       <ImageModal src={openImg} onClose={() => setOpenImg(null)} />
@@ -235,54 +229,17 @@ export default function Marktbewerkingsplan() {
             alt="Resultaten van de korte enquête over de Ibiza Chic website"
             setOpenImg={setOpenImg}
           />
-        </div>
 
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Bewijslasten | Marktbewerkingsplan</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
+          <h3 className="h3-sub">4. Promotiefilmpje</h3>
 
           <p className="intro-divider">
-            Concluderend blijkt uit de bewijslasten dat de website een effectief
-            middel is om mijn profilering overtuigend over te brengen.
+            Een kort promotiefilmpje om mijn profilering en de geur Ibiza Chic
+            visueel onder de aandacht te brengen.
           </p>
-
-          <h3 className="h3-sub">Bewijslast: 1. QR-code aanmaken</h3>
-
-          <ZoomImage
-            src="/afstuderen/pl/qr-code-website.webp"
-            alt="Bewijslast QR-code aanmaken"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">
-            Bewijslast: 2. Website in mijn LinkedIn-bio plaatsen
-          </h3>
 
           <p className="intro-divider">
-            Dit is terug te zien op mijn huidige LinkedIn-profiel: Dian van
-            Noort.
+            Bewijslast: het promotiefilmpje (Canva).
           </p>
-
-          <ZoomImage
-            src="/afstuderen/pl/linkedin-bio-website.webp"
-            alt="Bewijslast LinkedIn-bio met websitelink"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">
-            Bewijslast: 3. Korte enquête laten invullen
-          </h3>
-
-          <ZoomImage
-            src="/afstuderen/pl/enquete-resultaten.webp"
-            alt="Bewijslast enquête resultaten"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">Bewijslast: 4. Promotiefilmpje</h3>
 
           <div className="external-link-btn-wrap">
             <a
@@ -299,121 +256,6 @@ export default function Marktbewerkingsplan() {
               </svg>
             </a>
           </div>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Profileringskit</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Onderstaand volledig ingericht de profileringskit: bestaande uit CV,
-            motivatiebrief, LinkedIn-profiel, logo, pitch en motto.
-          </p>
-
-          <h3 className="h3-sub">1. CV</h3>
-
-          <p className="intro-divider">
-            CV als overzicht van opleiding, werkervaring en relevante
-            vaardigheden.
-          </p>
-
-          <ZoomImage
-            src="/afstuderen/pl/profileringskit-cv.webp"
-            alt="Profileringskit CV"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">2. Motivatiebrief</h3>
-
-          <p className="intro-divider">
-            Motivatiebrief als korte toelichting op motivatie, ambities en
-            aansluiting bij de functie.
-          </p>
-
-          <ZoomImage
-            src="/afstuderen/pl/profileringskit-motivatiebrief.webp"
-            alt="Profileringskit motivatiebrief"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">3. LinkedIn-profiel</h3>
-
-          <p className="intro-divider">
-            Het LinkedIn-profiel als aanvulling op het professionele profiel.
-          </p>
-
-          <p className="intro-divider">
-            Mijn connecties zijn met 49 gestegen in vergelijking met het vorige
-            semester.
-          </p>
-
-          <ZoomImage
-            src="/afstuderen/pl/profileringskit-linkedin.webp"
-            alt="Profileringskit LinkedIn-profiel"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">4. Logo</h3>
-
-          <p className="intro-divider">
-            Logo ter visuele weergave van het basic chique design dat ik wil
-            uitstralen.
-          </p>
-
-          <ZoomImage
-            src="/afstuderen/pl/profileringskit-logo.webp"
-            alt="Profileringskit logo"
-            setOpenImg={setOpenImg}
-          />
-
-          <h3 className="h3-sub">5. Pitch</h3>
-
-          <a
-            href={video.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glow-card card-hover video-card-border"
-          >
-            <div className="video-thumb-wrap">
-              <img loading="lazy" decoding="async"                 src={video.thumbnail}
-                alt={video.title}
-                onError={(e) => {
-                  e.currentTarget.style.display = "none";
-                }}
-                className="video-thumb-img"
-              />
-
-              <div className="video-mymedia-badge">MYMEDIA</div>
-
-              <div className="video-play-overlay">
-                <div
-                  className="video-play-btn"
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "scale(1.12)";
-                    e.currentTarget.style.background = "rgba(231,254,37,0.6)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "scale(1)";
-                    e.currentTarget.style.background = "rgba(0,0,0,0.45)";
-                  }}
-                >
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg" className="video-play-icon">
-                    <path d="M8 5V19L19 12L8 5Z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div className="video-body">
-              <h3 className="video-title">{video.title}</h3>
-              <p className="video-link">Bekijk op Avans MyMedia →</p>
-            </div>
-          </a>
-
-
         </div>
 
         <div className="reveal glow-card intro-card mb40">

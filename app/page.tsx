@@ -53,7 +53,7 @@ export default function Home() {
         <div className="cv-modal-inner">
           <div onClick={e => e.stopPropagation()} className="cv-modal-content">
             <button onClick={closeCv} className="cv-modal-close">×</button>
-            <img loading="lazy" decoding="async" src="/home/cv.png" alt="CV Dian van Noort" className="cv-modal-img" />
+            <img loading="lazy" decoding="async" src="/afstuderen/pl/CV  Dian van Noort-new.jpg" alt="CV Dian van Noort" className="cv-modal-img" />
           </div>
         </div>
       </dialog>
@@ -145,7 +145,7 @@ export default function Home() {
 
               <h3 className="cv-subtitle">Huidig CV</h3>
               <div className="cv-wrap" onClick={openCv}>
-                <img loading="lazy" decoding="async" src="/home/cv.png" alt="CV Dian van Noort" className="cv-preview-img" />
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/CV  Dian van Noort-new.jpg" alt="CV Dian van Noort" className="cv-preview-img" />
                 <div className="cv-overlay hide-mobile">
                   <div className="cv-overlay-btn">Vergroot CV</div>
                 </div>
