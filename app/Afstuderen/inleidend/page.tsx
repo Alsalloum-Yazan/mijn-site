@@ -1,82 +1,45 @@
-"use client";
-
-import { useState } from "react";
-import ImageModal from "@/app/components/ImageModal";
+import { Card, FooterNav, PageHeader } from "@/app/components/ContentBits";
 
 export default function Inleidend() {
-  const [openImg, setOpenImg] = useState<string | null>(null);
-
   return (
     <main>
-      <ImageModal src={openImg} onClose={() => setOpenImg(null)} />
-
       <article className="content-page">
-        <div className="reveal">
-          <a href="/Afstuderen" className="post-back-link">
-            ← Terug naar Afstuderen
-          </a>
+        <PageHeader
+          badge="Afstuderen — Inleidend"
+          title="Inleidend"
+          lead="Tijdens mijn afstudeerperiode wilde ik aan drie doelen werken die echt bij mij passen. Doelen waar ik mezelf in herken en waar ik ook enthousiast van word, omdat ze aansluiten bij wie ik ben, wat ik leuk vind en waar ik nog in wil groeien."
+        />
 
-          <div className="badge post-badge">
-            <span className="badge-dot" />
-            Afstuderen — Inleidend
-          </div>
-
-          <h1 className="post-h1">
-            <span className="g-text">Inleidend</span>
-          </h1>
-
-          <div className="content-header-border">
-            <p className="content-text">
-              Tijdens mijn afstudeerperiode wilde ik aan drie doelen werken die
-              echt bij mij passen. Doelen waar ik mezelf in herken en waar ik
-              ook enthousiast van word, omdat ze aansluiten bij wie ik ben, wat
-              ik leuk vind en waar ik nog in wil groeien.
-            </p>
-          </div>
-        </div>
-
-        <div className="reveal glow-card intro-card mb40">
+        <Card last>
           <p className="intro-divider">
-            Ik ben iemand die snel enthousiast raakt wanneer ik ergens veel over
-            weet. Dan wil ik het liefst alles vertellen, omdat ik het onderwerp
-            zelf interessant vind. Dat enthousiasme vind ik een mooie eigenschap,
-            maar ik merk ook dat ik daardoor soms te veel vertel en de kern een
-            beetje kwijtraak. Daarom wil ik beter leren presenteren. Ik wil
-            leren om rustiger te spreken, mijn verhaal duidelijker op te bouwen
-            en sterker over te brengen wat ik bedoel.
+            Ik ben iemand die snel enthousiast raakt wanneer ik ergens veel over weet. Dan wil ik het liefst alles vertellen,
+            omdat ik het onderwerp zelf interessant vind. Dat enthousiasme vind ik een mooie eigenschap, maar ik merk ook dat
+            ik daardoor soms te veel vertel en de kern een beetje kwijtraak. Daarom wil ik beter leren presenteren. Ik wil
+            leren om rustiger te spreken, mijn verhaal duidelijker op te bouwen en sterker over te brengen wat ik bedoel.
           </p>
 
           <p className="intro-divider">
-            Daarnaast wil ik Spaans leren. Spanje trekt mij al langer en vooral
-            Malaga blijft in mijn hoofd zitten. Ik zie mezelf daar later
-            misschien wel wonen of werken. Dan wil ik niet alleen als toerist
-            iets kunnen bestellen, maar ook echt een eenvoudig gesprek kunnen
-            voeren en contact kunnen maken met mensen.
+            Daarnaast wil ik mij verder ontwikkelen op het gebied van gedragseconomie. Hiervoor heb ik The Subtle Art of Not
+            Giving a Fuck en Volkomen onlogisch van Dan Ariely gelezen. Deze boeken hebben mij laten zien hoe irrationeel
+            menselijk gedrag kan zijn en hoe emoties, verwachtingen en de manier waarop keuzes worden gepresenteerd invloed
+            hebben op ons gedrag. Dit vind ik interessant omdat het direct aansluit bij consumentengedrag en marketing.
           </p>
 
           <p className="intro-divider">
-            Mijn vakinhoudelijke doel gaat over AI-gedreven zoekgedrag. Binnen
-            marketing verandert er veel en juist dat vind ik interessant. Mensen
-            zoeken anders, lezen anders en verwachten sneller een duidelijk
-            antwoord. Omdat ik tijdens mijn afstuderen veel met teksten bezig
-            ben, wil ik leren hoe ik teksten beter kan laten aansluiten op die
-            manier van zoeken.
+            Mijn andere vakinhoudelijke doel gaat over AI-gedreven zoekgedrag. Binnen marketing verandert er veel en juist
+            dat vind ik interessant, daarom heb ik het boek GEO: SEO in de tijd van AI gelezen. Mensen zoeken anders, lezen
+            anders en verwachten sneller een duidelijk antwoord.
           </p>
 
           <p className="intro-divider">
-            Met de PDCA-cyclus kan ik stap voor stap volgen wat goed gaat, wat
-            beter kan en hoe ik mezelf hierin ontwikkel.
+            Met de PDCA-cyclus kan ik stap voor stap volgen wat goed gaat, wat beter kan en hoe ik mezelf hierin ontwikkel.
           </p>
-        </div>
+        </Card>
 
-        <div className="post-footer-nav">
-          <a href="/Afstuderen/voorwoord" className="btn-ghost btn-sm">
-            ← Voorwoord
-          </a>
-          <a href="/Afstuderen" className="btn btn-sm">
-            Terug naar Afstuderen →
-          </a>
-        </div>
+        <FooterNav
+          prev={["/Afstuderen/voorwoord", "Voorwoord"]}
+          next={["/Afstuderen/professionele-profilering", "Professionele profilering"]}
+        />
       </article>
     </main>
   );

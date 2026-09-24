@@ -1,23 +1,19 @@
 import Link from "next/link";
-﻿export default function Afstuderen() {
+export default function Afstuderen() {
   const pages = [
-    { title: "Profileringskit", sub: "Kernstuk", link: "/Afstuderen/Profileringskit", delay: 0 },
-    { title: "Voorwoord", sub: "Introductie", link: "/Afstuderen/voorwoord", delay: 60 },
-    { title: "Inleidend", sub: "Start", link: "/Afstuderen/inleidend", delay: 120 },
-    { title: "Professionele Profilering", sub: "Wie ik ben", link: "/Afstuderen/professionele-profilering", delay: 180 },
-    { title: "Feedback & Stakeholders", sub: "Feedback", link: "/Afstuderen/feedback-stakeholders", delay: 240 },
-    { title: "Leerdoel 1: Presenteren", sub: "Persoonlijk", link: "/Afstuderen/leerdoel-1-presenteren", delay: 300 },
-    { title: "Conclusie Leerdoelen 1", sub: "Terugblik", link: "/Afstuderen/conclusie-leerdoelen-1", delay: 360 },
-    { title: "Leerdoel 2: Spaans Leren", sub: "Persoonlijk", link: "/Afstuderen/leerdoel-2-spaans", delay: 420 },
-    { title: "Conclusie Leerdoelen 2", sub: "Terugblik", link: "/Afstuderen/conclusie-leerdoelen", delay: 480 },
-    { title: "Vakdoel: AI-Zoekgedrag", sub: "Vakinhoudelijk", link: "/Afstuderen/vakdoel-ai-zoekgedrag", delay: 540 },
-    { title: "Conclusie Vakdoelen", sub: "Terugblik", link: "/Afstuderen/conclusie-vakdoelen", delay: 600 },
-    { title: "Doelen & Metingen", sub: "Meting", link: "/Afstuderen/doelen-metingen", delay: 660 },
-    { title: "Marktbewerkingsplan", sub: "Plan", link: "/Afstuderen/marktbewerkingsplan", delay: 720 },
-    { title: "Eindreflectie", sub: "Reflectie", link: "/Afstuderen/eindreflectie", delay: 780 },
-    { title: "AI-Protocol", sub: "Onderzoek", link: "/Afstuderen/ai-protocol", delay: 840 },
-    { title: "Literatuurlijst", sub: "Bronnen", link: "/Afstuderen/literatuurlijst", delay: 900 },
-    { title: "Bijlagen", sub: "Aanvulling", link: "/Afstuderen/bijlagen", delay: 960 },
+    { title: "Voorwoord", sub: "Introductie", link: "/Afstuderen/voorwoord" },
+    { title: "Inleidend", sub: "Start", link: "/Afstuderen/inleidend" },
+    { title: "Professionele Profilering", sub: "Wie ik ben", link: "/Afstuderen/professionele-profilering" },
+    { title: "Marktbewerkingsplan", sub: "Plan", link: "/Afstuderen/marktbewerkingsplan" },
+    { title: "Profileringskit", sub: "Kernstuk", link: "/Afstuderen/Profileringskit" },
+    { title: "Stakeholders voor feedback", sub: "Feedback", link: "/Afstuderen/feedback-stakeholders" },
+    { title: "Leerdoel: Presenteren", sub: "Persoonlijk", link: "/Afstuderen/leerdoel-1-presenteren" },
+    { title: "Vakdoel: AI-gedreven zoekgedrag", sub: "Vakinhoudelijk", link: "/Afstuderen/vakdoel-ai-zoekgedrag" },
+    { title: "Vakdoel: Gedragseconomie", sub: "Vakinhoudelijk", link: "/Afstuderen/vakdoel-gedragseconomie" },
+    { title: "Eindreflectie", sub: "Reflectie", link: "/Afstuderen/eindreflectie" },
+    { title: "AI-Protocol", sub: "Onderzoek", link: "/Afstuderen/ai-protocol" },
+    { title: "Literatuurlijst", sub: "Bronnen", link: "/Afstuderen/literatuurlijst" },
+    { title: "Bijlagen", sub: "Aanvulling", link: "/Afstuderen/bijlagen" },
   ];
 
   return (
@@ -45,31 +41,31 @@ import Link from "next/link";
 
         {/* DOELEN */}
         <div className="intro-2-grid">
-          <div className="glow-card reveal intro-card-lg">
-            <div className="badge badge-mb20">
-              <span className="badge-dot" />
-              Persoonlijk doel 1
-            </div>
-            <h3 className="h3-card-mb16">Presenteren</h3>
-            <p className="p-sm-14">Aan het einde van mijn afstudeerperiode presenteer ik helder en overtuigend, aangetoond met drie presentaties en feedback van minstens drie personen.</p>
-          </div>
-
-          <div className="glow-card reveal intro-card-lg">
-            <div className="badge badge-mb20">
-              <span className="badge-dot" />
-              Persoonlijk doel 2
-            </div>
-            <h3 className="h3-card-mb16">Spaans leren</h3>
-            <p className="p-sm-14">Aan het einde van mijn afstudeerperiode beheers ik Spaans op A1-niveau, aangetoond met een 100-daagse streak op Duolingo.</p>
-          </div>
-
           <div className="glow-card reveal intro-card-lg intro-card-full-col">
             <div className="badge badge-mb20">
               <span className="badge-dot" />
-              Vakinhoudelijk doel
+              Persoonlijk leerdoel
             </div>
-            <h3 className="h3-card-mb16">GEO teksten schrijven</h3>
-            <p className="p-sm-14">Ik wil mij gedurende 17 weken ontwikkelen in het schrijven van geoptimaliseerde SEO blogs voor AllSens en Pure by Zalati.</p>
+            <h3 className="h3-card-mb16">Presenteren</h3>
+            <p className="p-sm-14">Uiterlijk op 19 oktober 2026 beheers ik mijn spreektempo tijdens presentaties, zodat ik rustiger en prettiger overkom op mijn publiek.</p>
+          </div>
+
+          <div className="glow-card reveal intro-card-lg">
+            <div className="badge badge-mb20">
+              <span className="badge-dot" />
+              Vakinhoudelijk doel 1
+            </div>
+            <h3 className="h3-card-mb16">AI-gedreven zoekgedrag (GEO)</h3>
+            <p className="p-sm-14">Uiterlijk op 19 oktober 2026 kan ik zelfstandig marketingcontent schrijven, analyseren en optimaliseren volgens de principes van Generative Engine Optimization.</p>
+          </div>
+
+          <div className="glow-card reveal intro-card-lg">
+            <div className="badge badge-mb20">
+              <span className="badge-dot" />
+              Vakinhoudelijk doel 2
+            </div>
+            <h3 className="h3-card-mb16">Gedragseconomie</h3>
+            <p className="p-sm-14">Uiterlijk op 19 oktober 2026 kan ik minimaal vijf gedragseconomische principes herkennen, uitleggen en toepassen op mijn eigen gedrag en binnen marketing.</p>
           </div>
         </div>
 
@@ -83,7 +79,7 @@ import Link from "next/link";
 
         <div className="pages-grid">
           {pages.map((page, i) => {
-            const cardDelay = String(page.delay) + "ms";
+            const cardDelay = String(i * 60) + "ms";
             return (
               <a key={i} href={page.link} className="glow-card reveal page-card" style={{ transitionDelay: cardDelay }}>
                 <div className="page-card-top">

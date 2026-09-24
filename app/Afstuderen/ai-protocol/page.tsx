@@ -129,6 +129,42 @@ export default function AiProtocol() {
           </div>
         </div>
 
+        {/* WAAROM NIVEAU 3 */}
+        <div className="reveal glow-card intro-card mb24">
+          <h2 className="h2-sub-lg">
+            <span className="g-text">Waarom niveau 3 van toepassing is</span>
+          </h2>
+          <div className="divider divider-mb20" />
+
+          <p className="intro-divider">
+            Niveau 3 is van toepassing omdat ik AI heb gebruikt om inhoudelijke kennis over gedragseconomie te verdiepen. Tijdens mijn leerdoel heb ik onderzocht hoe psychologische factoren invloed hebben op consumentengedrag. Hierbij heb ik onder andere gekeken naar ankerwerking, framing, het standaardoptie-effect en loss aversion.
+          </p>
+
+          <p className="intro-divider">
+            AI gebruikte ik hierbij als hulpmiddel om deze begrippen beter te begrijpen, voorbeelden te bedenken en de theorie te koppelen aan mijn eigen experimenten en ervaringen met consumentengedrag.
+          </p>
+        </div>
+
+        {/* METHODE NIVEAU 3 */}
+        <div className="reveal glow-card intro-card mb24">
+          <h2 className="h2-sub-lg">
+            <span className="g-text">Methode van AI-gebruik bij inhoudelijke verdieping</span>
+          </h2>
+          <div className="divider divider-mb20" />
+
+          <p className="intro-divider">Voor het verdiepen van mijn kennis over gedragseconomie werkte ik met de volgende methode:</p>
+
+          <ol className="content-list">
+            <li>Ik koos een gedragseconomisch begrip dat ik beter wilde begrijpen.</li>
+            <li>Ik stelde AI vragen over de betekenis en werking van het begrip.</li>
+            <li>Ik vroeg om voorbeelden die aansluiten bij consumentengedrag en de FMCG-branche.</li>
+            <li>Ik vergeleek deze uitleg met de theorie uit mijn gebruikte bronnen.</li>
+            <li>Ik koos welke informatie relevant was voor mijn eigen leerdoel.</li>
+            <li>Ik paste de theorie toe in mijn eigen experimenten en voorbeelden.</li>
+            <li>Ik verwerkte mijn bevindingen in mijn eigen woorden en reflecteerde op wat ik hiervan had geleerd.</li>
+          </ol>
+        </div>
+
         {/* WAAROM NIVEAU 4 */}
         <div className="reveal glow-card intro-card mb24">
           <h2 className="h2-sub-lg">
@@ -359,10 +395,6 @@ export default function AiProtocol() {
                 <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
-              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4a.webp")}>
-                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-4a.webp" alt="Screenshot 4a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
-                <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
-              </div>
             </div>
             <div className="intro-divider" style={{ fontSize: "0.9rem", marginBottom: "0" }}>
               <strong>Korte toelichting:</strong> Deze screenshot laat zien dat ik AI heb gebruikt om een afbeelding te genereren voor mijn document. Dit valt onder niveau 3, omdat AI nieuwe inhoud heeft gemaakt op basis van mijn prompt. Ik heb zelf de opdracht gegeven, beoordeeld of de afbeelding paste bij de uitstraling van mijn document en gecontroleerd of de afbeelding professioneel en relevant genoeg was. De afbeelding is dus niet automatisch overgenomen, maar bewust geselecteerd.
@@ -373,17 +405,32 @@ export default function AiProtocol() {
           <div className="glow-card intro-card mb24">
             <h3 className="h3-sub">Screenshot 5: AI gebruiken bij analyse via de GEO-tool</h3>
             <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
-              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4b.webp")}>
-                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-5a.webp" alt="Screenshot 4b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-5a.webp")}>
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-5a.webp" alt="Screenshot 5a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
-              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-4b.webp")}>
-                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-5b.webp" alt="Screenshot 4b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-5b.webp")}>
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-5b.webp" alt="Screenshot 5b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
                 <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
               </div>
             </div>
             <div className="intro-divider" style={{ fontSize: "0.9rem", marginBottom: "0" }}>
               <strong>Korte toelichting:</strong> In dit gesprek of deze tool-output is zichtbaar hoe AI is gebruikt om een tekst te analyseren. De AI gaf scores en verbeterpunten. Ik heb deze feedback kritisch beoordeeld en alleen verbeteringen doorgevoerd die logisch en passend waren.
+            </div>
+          </div>
+
+          {/* SCREENSHOT 6 - GEDRAGSECONOMIE */}
+          <div className="glow-card intro-card mb24">
+            <h3 className="h3-sub">Screenshot 6: AI laten helpen bij inhoudelijke kennis over gedragseconomie</h3>
+            <div style={{ display: "flex", gap: "16px", marginBottom: "20px", flexWrap: "wrap" }}>
+              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-6a.webp")}>
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-6a.webp" alt="Screenshot 6a" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
+              </div>
+              <div style={{ cursor: "pointer" }} onClick={() => setImgOpen("/afstuderen/pl/screenshot-6b.webp")}>
+                <img loading="lazy" decoding="async" src="/afstuderen/pl/screenshot-6b.webp" alt="Screenshot 6b" style={{ maxWidth: "200px", borderRadius: "8px", border: "1px solid rgba(1,63,50,0.12)", display: "block", marginBottom: "6px", cursor: "pointer" }} />
+                <div style={{ fontSize: "0.85rem", color: "rgba(1,63,50,0.6)", textAlign: "center" }}>📸 Klik</div>
+              </div>
             </div>
           </div>
         </div>

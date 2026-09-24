@@ -2,847 +2,308 @@
 
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
-
-function ZoomImage({
-  src,
-  alt,
-  setOpenImg,
-}: {
-  src: string;
-  alt: string;
-  setOpenImg: (src: string) => void;
-}) {
-  return (
-    <>
-      <div onClick={() => setOpenImg(src)} className="zoom-img-wrap">
-        <img loading="lazy" decoding="async" src={src} alt={alt} className="zoom-img" />
-
-        <div
-          className="zoom-overlay"
-          onMouseEnter={(e) => {
-            (e.currentTarget as HTMLDivElement).style.background =
-              "rgba(5, 84, 70, 0.28)";
-            const icon = e.currentTarget.querySelector(
-              ".zoom-icon"
-            ) as HTMLElement;
-            if (icon) icon.style.opacity = "1";
-          }}
-          onMouseLeave={(e) => {
-            (e.currentTarget as HTMLDivElement).style.background =
-              "rgba(5, 84, 70, 0)";
-            const icon = e.currentTarget.querySelector(
-              ".zoom-icon"
-            ) as HTMLElement;
-            if (icon) icon.style.opacity = "0";
-          }}
-        >
-          <div className="zoom-icon">Vergroot afbeelding</div>
-        </div>
-      </div>
-
-      <p className="zoom-hint">Klik om te vergroten</p>
-    </>
-  );
-}
-
-function VideoCard({
-  title,
-  url,
-  thumbnail,
-}: {
-  title: string;
-  url: string;
-  thumbnail: string;
-}) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="glow-card card-hover presentatie-video-card"
-    >
-      <div className="presentatie-video-thumb-wrap">
-        <img loading="lazy" decoding="async"           src={thumbnail}
-          alt={title}
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
-          className="presentatie-video-thumb-img"
-        />
-
-        <div className="presentatie-video-mymedia-badge">MYMEDIA</div>
-
-        <div className="presentatie-video-play-overlay">
-          <div
-            className="presentatie-video-play-btn"
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.12)";
-              e.currentTarget.style.background = "rgba(5,84,70,0.72)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.background = "rgba(0,0,0,0.45)";
-            }}
-          >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="white"
-              xmlns="http://www.w3.org/2000/svg"
-              className="presentatie-video-play-icon"
-            >
-              <path d="M8 5V19L19 12L8 5Z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <div className="presentatie-video-body">
-        <h3 className="presentatie-video-title">{title}</h3>
-        <p className="presentatie-video-link">Bekijk op Avans MyMedia →</p>
-      </div>
-    </a>
-  );
-}
+import { Card, ExternalLink, FooterNav, PageHeader, Pdca, Table, VideoCard, ZoomImage } from "@/app/components/ContentBits";
 
 export default function Presenteren() {
   const [openImg, setOpenImg] = useState<string | null>(null);
-
-  const videos = [
-    {
-      title: "Uitgevoerde presentatie",
-      url: "https://mymedia.avans.nl/media/t/0_j83uisax",
-      thumbnail:
-        "https://cfvod.frp2.ovp.kaltura.com/p/10066/sp/1006600/thumbnail/entry_id/0_j83uisax/width/600/height/340",
-    },
-    {
-      title: "Oefen podiummoment",
-      url: "https://mymedia.avans.nl/media/Oefen+podiummoment/0_qbwufw44",
-      thumbnail:
-        "https://cfvod.frp2.ovp.kaltura.com/p/10066/sp/1006600/thumbnail/entry_id/0_qbwufw44/width/600/height/340",
-    },
-  ];
 
   return (
     <main>
       <ImageModal src={openImg} onClose={() => setOpenImg(null)} />
 
       <article className="content-page">
-        <div className="reveal">
-          <a href="/Afstuderen" className="post-back-link">
-            ← Terug naar Afstuderen
-          </a>
+        <PageHeader
+          badge="Afstuderen — Persoonlijk leerdoel"
+          title="Persoonlijk leerdoel 1: Presenteren"
+          lead="Uiterlijk op 19 oktober 2026 heb ik mijn presentatievaardigheden verbeterd door gedurende mijn afstudeerperiode gericht te oefenen met mijn spreektempo, meerdere oefen- en presentatiemomenten te benutten en ontvangen feedback zichtbaar toe te passen. Mijn doel is om tijdens presentaties mijn spreektempo beter te beheersen, zodat ik rustiger en prettiger overkom op mijn publiek."
+        />
 
-          <div className="badge post-badge">
-            <span className="badge-dot" />
-            Afstuderen — Persoonlijk leerdoel 1
-          </div>
-
-          <h1 className="post-h1">
-            <span className="g-text">
-              Persoonlijk leerdoel 1: Presenteren
-            </span>
-          </h1>
-
-          <div className="content-header-border">
-            <p className="content-text">
-              Uiterlijk op 10 juni 2026 heb ik mijn presentatievaardigheden
-              verbeterd door binnen mijn afstudeerperiode minimaal drie
-              presentaties te geven, feedback te ontvangen van minimaal drie
-              verschillende personen en deze feedback zichtbaar te verwerken in
-              mijn volgende presentatie.
-            </p>
-          </div>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Succescriterium</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
+        <Card title="Succescriterium">
           <p className="intro-divider">
-            Mijn leerdoel is behaald wanneer minimaal twee van de drie
-            feedbackgevers aangeven dat mijn presentatie duidelijk, logisch
-            opgebouwd en prettig te volgen is. Daarnaast laat ik zien dat ik mij
-            heb ontwikkeld in structuur, spreektempo en het overbrengen van mijn
-            kernboodschap.
+            Mijn leerdoel is behaald wanneer ik tijdens een presentatie mijn spreektempo bewust kan beheersen en niet meer als
+            te snel wordt beoordeeld. Dit blijkt uit feedback van verschillende personen, waarbij wordt aangegeven dat ik
+            rustig en prettig spreek. Dit helpt mij ook om als toekomstig accountmanager mijn verhaal duidelijk over te brengen
+            tijdens klantgesprekken en pitches.
           </p>
-        </div>
+        </Card>
 
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Toelichting</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
+        <Card title="1.1 Onderbouwing persoonlijk doel">
           <p className="intro-divider">
-            Ik let hierbij vooral op rustiger spreken, een duidelijke opbouw,
-            verstaanbaarheid en het maken van keuzes tussen hoofd- en bijzaken.
-            Zo toon ik aan dat ik niet alleen vaker heb gepresenteerd, maar ook
-            bewust ben gegroeid in mijn manier van presenteren.
-          </p>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">1.1 Onderbouwing persoonlijk doel</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            In situaties waarin ik moet presenteren, merk ik dat ik vaak
-            enthousiast ben om mijn verhaal te vertellen. Ik wil dan graag laten
-            zien dat ik mijn onderwerp goed begrijp en ik wil het zo volledig
-            mogelijk uitleggen. Juist daardoor loop ik er regelmatig tegenaan
-            dat ik veel te uitgebreid vertel. Ik vind het lastig om hoofd- en
-            bijzaken van elkaar te onderscheiden, omdat voor mijn gevoel veel
-            informatie belangrijk is. Hierdoor raak ik soms de kern van mijn
-            verhaal kwijt.
+            Mijn belangrijkste ontwikkelpunt bij presenteren is mijn spreektempo. Ik merk dat ik van nature relatief snel
+            spreek. Wanneer ik tijdens een presentatie spanning of enthousiasme ervaar, wordt dit versterkt. Ik wil dan graag
+            mijn verhaal goed vertellen en ga daardoor sneller spreken. Hierdoor neem ik minder rust tijdens het presenteren
+            dan ik zou willen.
           </p>
 
           <p className="intro-divider">
-            Daarnaast merk ik dat ik vaak sneller ga praten wanneer ik
-            presenteer. Dat komt niet doordat ik onzeker ben over de inhoud,
-            maar juist omdat ik veel wil vertellen in een te korte tijd. In mijn
-            hoofd zit dan al zoveel informatie dat ik bang ben iets te vergeten
-            of niet volledig genoeg te zijn. Daardoor ga ik sneller praten dan
-            eigenlijk prettig is voor mezelf en voor degene die luistert.
-            Achteraf heb ik dan soms het gevoel dat mijn verhaal minder
-            duidelijk is overgekomen dan ik had gewild, terwijl ik juist veel te
-            veel te vertellen had.
+            Om mijn startniveau in kaart te brengen, heb ik voorafgaand aan mijn afstudeerperiode twee verschillende
+            presentatietests uitgevoerd. De eerste test, van Mark Robinson, gaf mij een score van 8/10. Deze score geeft aan
+            dat ik goed op de hoogte ben van waar een presentatie aan moet voldoen om de aandacht van het publiek te trekken
+            (Mark Robinson, 8 juli 2025).
           </p>
 
           <p className="intro-divider">
-            Presenteren draait niet alleen om inhoudelijke kennis, maar ook om
-            structuur, rust en het vermogen om een boodschap helder over te
-            brengen (Carrièretijger, Z.D.). Juist het maken van keuzes in wat ik
-            wel en niet vertel, speelt daarin een rol. Ook het tempo van spreken
-            heeft invloed op hoe mijn presentatie zal worden ontvangen. Als ik
-            te snel blijf praten tijdens presentaties, zal mijn boodschap ook in
-            de toekomst minder goed over blijven komen.
-          </p>
-
-          <p className="intro-divider">
-            Daarom kies ik ervoor om tijdens mijn afstudeerperiode bewust te
-            werken aan mijn presentatievaardigheden. Ik wil leren om min verhaal
-            korter en krachtiger te maken, beter onderscheid te maken tussen
-            hoofd- en bijzaken en rustiger te spreken tijdens een presentatie.
-            Door hier actief mee te oefenen, wil ik ervoor zorgen dat mijn
-            presentaties niet alleen inhoudelijk sterk zijn, maar ook duidelijk,
-            rustig en prettig om naar te luisteren.
-          </p>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Presenteren</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Draagt bij aan mijn profilering doordat ik leer om mijn verhaal
-            korter, duidelijker en overtuigender over te brengen.
-          </p>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Voorafgaand</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Ik heb twee verschillende tests uitgevoerd om mijn
-            presentatievaardigheden in kaart te brengen. Het doel was om te
-            bepalen waar ik momenteel sta, beter te begrijpen wat er van een
-            goede presentatie wordt verwacht en inzicht te krijgen in welke
-            inhoud en aanpak het meest effectief zijn. Deze inzichten neem ik
-            mee in de voorbereiding op mijn podiummoment.
+            De tweede test was de Spreken met Impact Scan van Bea Kuijs (Bea Kuijs, Z.D.). Hier behaalde ik een score van
+            69%. Uit deze test bleek dat ik iets waardevols te vertellen heb, maar dat er nog groeiruimte was in mijn
+            presentatiekracht. Als belangrijkste ontwikkelpunten werden eenvoud, structuur en vertrouwen genoemd.
           </p>
 
           <div className="test-image-grid">
             <div className="test-image-card">
-              <div>
-                <p className="intro-divider">
-                  Test 1: 8/10
-                  <br />
-                  (Mark Robinson, 8 juli 2025).
-                </p>
-              </div>
-
-              <ZoomImage
-                src="/afstuderen/pl/test-1.webp"
-                alt="Test 1"
-                setOpenImg={setOpenImg}
-              />
+              <p className="intro-divider">
+                Test 1: 8/10
+                <br />
+                (Mark Robinson, 8 juli 2025)
+              </p>
+              <ZoomImage src="/afstuderen/pl/test-1.webp" alt="Test 1" setOpenImg={setOpenImg} />
             </div>
-
             <div className="test-image-card">
-              <div>
-                <p className="intro-divider">
-                  Test 2: 69%
-                  <br />
-                  (Bea Kuijs, Z.D.)
-                </p>
-              </div>
-
-              <ZoomImage
-                src="/afstuderen/pl/test-2.webp"
-                alt="Test 2"
-                setOpenImg={setOpenImg}
-              />
+              <p className="intro-divider">
+                Test 2: 69%
+                <br />
+                (Bea Kuijs, Z.D.)
+              </p>
+              <ZoomImage src="/afstuderen/pl/test-2.webp" alt="Test 2" setOpenImg={setOpenImg} />
             </div>
           </div>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">1.2 Actieplan presenteren</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
 
           <p className="intro-divider">
-            In dit actieplan beschrijf ik hoe ik mijn presentatievaardigheden
-            stap voor stap wil verbeteren. Per actie staat wat ik ga doen, welk
-            bewijs ik verzamel en welke feedback ik gebruik om verder te
-            groeien.
+            De twee tests heb ik gebruikt als nulmeting. Ze lieten mij zien dat ik bij de start al over een goede basis
+            beschikte, maar dat mijn presentatievaardigheden nog verder ontwikkeld konden worden. De tests gaven mij vooral
+            inzicht in mijn algemene niveau. Ze gaven nog geen specifiek antwoord op de vraag hoe mijn spreektempo tijdens een
+            daadwerkelijke presentatie was.
           </p>
-
-          <div className="table-wrap">
-            <table className="content-table">
-              <thead>
-                <tr>
-                  <th>Actie</th>
-                  <th>Uitvoering</th>
-                  <th>Bewijs</th>
-                  <th>Feedback</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Actie 1: nulmeting presentatie</td>
-                  <td>
-                    Ik neem een korte presentatie op over mijn
-                    afstudeeronderwerp of leerdoelen. Vooraf neem ik deze
-                    presentatie minimaal 3 keer door, waarbij ik let op
-                    structuur, tempo en kernboodschap.
-                  </td>
-                  <td>Video-opname of MyMedia-link, korte zelfreflectie.</td>
-                  <td>
-                    Feedback van medestudent, collega of docent op
-                    duidelijkheid, tempo en opbouw.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Actie 2: verbeterde presentatie geven</td>
-                  <td>
-                    Ik geef een oefenpresentatie voor mijn eindgesprek. Deze
-                    eindpresentatie neem ik minimaal 3 keer door, met extra
-                    aandacht voor rust, kern, timing en overtuiging.
-                  </td>
-                  <td>Definitieve slides, oefenversie en feedbackformulier</td>
-                  <td>
-                    Feedback van bedrijfsbegeleider en eventueel ook
-                    medestudent.
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Actie 3: eindpresentatie oefenen en aanscherpen</td>
-                  <td>
-                    Ik pas alle feedback toe en presenteer nog een keer op mijn
-                    afstudeerbedrijf (AllSens).
-                  </td>
-                  <td>Het eindresultaat voor het officiële moment.</td>
-                  <td>
-                    Feedback van minimaal twee personen, waaronder bij voorkeur
-                    bedrijfsbegeleider/docent.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">
-              1.3 Indicatoren voor groei en reflectievragen
-            </span>
-          </h2>
-
-          <div className="divider divider-mb20" />
 
           <p className="intro-divider">
-            De reflectievragen zijn terug te lezen in de bijlagen.
+            Dat werd duidelijk tijdens mijn eerste presentatie bij AllSens. Daar kreeg ik de concrete feedback dat mijn
+            spreektempo te hoog lag en dat ik rustiger mocht praten, omdat ik van nature snel spreek. Deze feedback maakte
+            duidelijk waar ik mij binnen mijn presentatievaardigheden specifiek op wilde ontwikkelen.
           </p>
 
-          <ZoomImage
-            src="/afstuderen/pl/reflectievragen.webp"
-            alt="Reflectievragen"
-            setOpenImg={setOpenImg}
+          <p className="intro-divider">
+            Mijn startniveau was daarom als volgt: ik beschikte over een goede basis in presenteren, maar had mijn spreektempo
+            tijdens een presentatie nog onvoldoende onder controle, vooral wanneer ik spanning ervaarde.
+          </p>
+
+          <p className="intro-divider">
+            Daarom heb ik ervoor gekozen om mijn ontwikkeldoel specifiek te richten op het leren beheersen van mijn
+            spreektempo. Ik wilde gedurende mijn afstudeerperiode ontdekken welke aanpak mij helpt om tijdens het presenteren
+            meer rust te bewaren.
+          </p>
+        </Card>
+
+        <Card title="1.2 Actieplan presenteren">
+          <p className="intro-divider">
+            Om mijn ontwikkeling gedurende de afstudeerperiode te volgen, heb ik verschillende presentatie- en oefenmomenten
+            gebruikt. Na ieder moment heb ik gekeken wat mijn spreektempo deed en welke feedback ik kreeg. Deze feedback
+            gebruikte ik om mijn aanpak bij een volgend moment aan te passen.
+          </p>
+
+          <Table
+            head={["Actie", "Uitvoering", "Bewijs", "Focus"]}
+            rows={[
+              [
+                "1. Startniveau bepalen",
+                "Twee presentaties uitvoeren en een eerste presentatie geven bij AllSens.",
+                "Testresultaten, presentatie (met opname) en ontvangen feedback.",
+                "Vaststellen van mijn uitgangsniveau en belangrijkste ontwikkelpunt.",
+              ],
+              [
+                "2. Oefenen en feedback verzamelen",
+                "Een presentatie oefenen met mijn docentbegeleider en studiegenoten.",
+                "Opname van het oefenmoment en ontvangen feedback.",
+                "Ervaren hoe mijn spreektempo verandert wanneer ik spanning ervaar.",
+              ],
+              [
+                "3. Feedback toepassen",
+                "Mijn manier van presenteren aanpassen en bewust rustiger spreken tijdens een volgend oefenmoment.",
+                "Nieuwe presentatie en feedback.",
+                "Meer controle krijgen over mijn spreektempo.",
+              ],
+              [
+                "4. Eindniveau bepalen",
+                "Een laatste presentatie geven bij AllSens en deze vergelijken met eerdere feedback.",
+                "Opname en feedback van het laatste moment.",
+                "Vaststellen of mijn spreektempo voldoende beheerst is.",
+              ],
+              [
+                "5. Eindconclusie",
+                "De allerlaatste presentatie bij het podiummoment.",
+                "Feedback en conclusie vanuit het beoordelingsformulier.",
+                "Vasthouden aan de doorgemaakte groei.",
+              ],
+            ]}
           />
-        </div>
+        </Card>
 
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">
-              1.4 Opname bedrijfspresentatie | 1e keer
-            </span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Voordat ik mijn eerste presentatie gaf op mijn stagebedrijf, merkte
-            ik dat ik dit best spannend vond. Tot nu toe had ik vooral veel
-            alleen aan mijn afstudeeronderzoek gewerkt en mijn ideeën besproken
-            in losse gesprekken, maar presenteren voor collega&apos;s voelde
-            toch anders. Ik vond het spannend, omdat ik niet altijd zo
-            zelfverzekerd ben in presenteren. Daarnaast voel ik mij niet altijd
-            volledig gehoord of gezien, waardoor het extra belangrijk voor mij
-            was om mijn verhaal duidelijk en met vertrouwen over te brengen.
-          </p>
-
-          <p className="intro-divider">
-            Juist daarom wilde ik deze presentatie gebruiken als een leermoment.
-            Ik wilde laten zien waar ik mee bezig ben, welke stappen ik al had
-            gezet en hoe mijn onderzoek bijdraagt aan AllSens. Door mijn
-            presentatie goed voor te bereiden, hoopte ik meer structuur en rust
-            in mijn verhaal te brengen. Deze eerste presentatie vormde daarom
-            een belangrijk moment binnen mijn persoonlijke ontwikkeling en mijn
-            afstudeerproces.
-          </p>
+        <Card title="1.3 Opname bedrijfspresentatie | 1e keer">
+          <p className="intro-divider">Eerste moment presenteren bij AllSens.</p>
 
           <p className="intro-divider">Uitgevoerde presentatie:</p>
-
-          <div className="external-link-btn-wrap">
-            <a
-              href="https://canva.link/7oma1usp8rdq2w2"
-              target="_blank"
-              rel="noreferrer"
-              className="external-link-btn"
-            >
-              <span>Bekijk presentatie (Canva)</span>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
+          <ExternalLink href="https://canva.link/7oma1usp8rdq2w2">Bekijk presentatie (Canva)</ExternalLink>
 
           <p className="intro-divider">Opname presentatie:</p>
+          <VideoCard title="Uitgevoerde presentatie" entryId="0_j83uisax" url="https://mymedia.avans.nl/media/t/0_j83uisax" />
 
-          <div className="presentatie-videos-grid">
-            <VideoCard
-              title={videos[0].title}
-              url={videos[0].url}
-              thumbnail={videos[0].thumbnail}
-            />
-          </div>
+          <Pdca
+            plan={[
+              "Voor mijn eerste presentatie bij AllSens wilde ik vooral ervaren hoe ik zou presenteren voor een groep collega’s. Ik vond dit spannend, omdat ik niet altijd volledig zelfverzekerd ben tijdens het presenteren. Omdat ik van nature snel spreek, wilde ik proberen om mijn presentatie rustig te brengen en mijn spreektempo onder controle te houden.",
+              "Ik heb de presentatie vooraf meerdere keren geoefend. Hiermee wilde ik mijzelf voldoende zekerheid geven over mijn verhaal, zodat ik tijdens het presenteren meer rust zou ervaren.",
+            ]}
+            doo={[
+              "Ik heb mijn eerste bedrijfspresentatie gegeven aan collega’s van AllSens (Emma, Yazan, Simon, Minke, Caroline en Mellanie). Tijdens de presentatie merkte ik dat ik spanning ervaarde. Ondanks mijn voorbereiding begon ik hierdoor relatief snel te spreken.",
+            ]}
+            check={[
+              "Na afloop kreeg ik feedback op mijn presentatie. Voor mijn persoonlijke leerdoel was vooral de feedback over mijn spreektempo relevant. Er werd aangegeven dat mijn spreektempo te hoog lag en dat ik rustiger mocht praten, omdat ik van nature snel spreek.",
+              "Deze feedback maakte duidelijk dat mijn voorbereiding alleen niet voldoende was om mijn spreektempo onder controle te houden. Zodra ik voor een groep stond en spanning ervaarde, viel ik terug in mijn natuurlijke hoge spreektempo.",
+              "Voor mij was dit het belangrijkste inzicht uit deze eerste presentatie. Ik wist vooraf dat ik snel spreek, maar ontdekte nu dat ik mijn tempo tijdens een daadwerkelijke presentatie bewuster moest leren reguleren.",
+            ]}
+            act={[
+              "Voor een volgend oefenmoment wilde ik daarom niet alleen opnieuw oefenen met mijn presentatie, maar mijn spreektempo bewust als apart aandachtspunt meenemen. Ik wilde tijdens het spreken meer rust nemen en mezelf eraan herinneren om niet automatisch mijn natuurlijke tempo te volgen.",
+            ]}
+          />
+        </Card>
 
-          <p className="intro-divider">Feedback:</p>
-
-          <ul className="feedback-list">
-            <li>Spreektempo lag te hoog.</li>
-            <li>Rustiger praten, omdat ik van nature snel spreek.</li>
-            <li>Sommige onderdelen waren lastig te volgen zonder voorkennis.</li>
-            <li>Slides bevatten soms te veel tekst.</li>
-            <li>Luisteraars moesten tegelijk lezen en luisteren.</li>
-            <li>
-              Bij afbeeldingen en tekstblokken is meer mondelinge uitleg nodig.
-            </li>
-            <li>
-              Uitleg moet beter aansluiten bij mensen die blanco in het
-              onderwerp staan.
-            </li>
-          </ul>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">
-              1.5 PDCA-cyclus | 1e keer | Actie 1
-            </span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <h3 className="h3-sub">Plan</h3>
+        <Card title="1.4 Actie 2: Oefenmoment met docentbegeleider en studiegenoten">
           <p className="intro-divider">
-            Voor mijn eerste presentatie wilde ik mijn afstudeeronderzoek
-            duidelijk en professioneel presenteren. Mijn doel was om structuur
-            aan te brengen in mijn verhaal, mijn kernboodschap helder over te
-            brengen en zelfverzekerder te presenteren. Vooraf heb ik de
-            presentatie meerdere keren geoefend om mijn tempo, inhoud en opbouw
-            te verbeteren.
-          </p>
-
-          <h3 className="h3-sub">Do</h3>
-          <p className="intro-divider">
-            Ik heb mijn eerste presentatie gegeven aan collega’s van AllSens en
-            feedback ontvangen op mijn manier van presenteren, de inhoud van mijn
-            slides en de duidelijkheid van mijn verhaal. Tijdens de presentatie
-            heb ik mijn onderzoek stap voor stap uitgelegd en geprobeerd zoveel
-            mogelijk relevante informatie mee te nemen.
-          </p>
-
-          <h3 className="h3-sub">Check</h3>
-          <p className="intro-divider">
-            Uit de feedback bleek dat mijn presentatie inhoudelijk sterk en
-            compleet was. Er werd aangegeven dat het zichtbaar was dat ik
-            dagelijks met het onderwerp bezig ben en dat ik veel werk had
-            verricht. Ook waren de slides visueel goed opgebouwd en professioneel
-            vormgegeven.
-          </p>
-
-          <p className="intro-divider">
-            Daarnaast kreeg ik meerdere verbeterpunten terug. Mijn spreektempo
-            lag vrij hoog, waardoor sommige onderdelen lastig te volgen waren
-            voor luisteraars die niet bekend zijn met mijn onderzoek. Er werd
-            benoemd dat ik rustiger mag praten, omdat ik van nature snel spreek.
-            Ook waren sommige slides erg vol met tekst. Hierdoor moesten
-            luisteraars tegelijkertijd lezen en luisteren, wat zorgde voor veel
-            informatie in één keer. Bij enkele afbeeldingen en tekstblokken mocht
-            ik meer mondelinge uitleg geven, zodat alles beter te volgen is voor
-            mensen die volledig blanco in het onderwerp staan.
-          </p>
-
-          <h3 className="h3-sub">Act</h3>
-          <p className="intro-divider">
-            Voor mijn volgende presentatie wil ik bewuster letten op mijn
-            spreektempo en meer rust nemen tijdens het presenteren. Daarnaast wil
-            ik mijn slides versimpelen door minder tekst te gebruiken en
-            informatie beter te verdelen over meerdere slides. Ook ga ik extra
-            aandacht besteden aan het uitleggen van afbeeldingen en begrippen,
-            zodat mijn presentatie duidelijk blijft voor een publiek dat mijn
-            onderzoek nog niet kent. Op basis van deze feedback wil ik mijn
-            volgende presentatie overzichtelijker, rustiger en toegankelijker
-            maken.
-          </p>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">
-              1.6 Actie 2: Oefenmoment met docentbegeleider en studiegenoten
-            </span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Vandaag had ik de kans om mijn podiummoment te oefenen. Dat liep
-            niet helemaal zoals ik had gehoopt. Omdat ik het toch spannend vond,
-            begon ik weer te snel te praten en raakte ik op een gegeven moment
-            zelfs volledig de draad kwijt. Gelukkig wist Ben mij gerust te
-            stellen. Hij gaf aan dat ik praktisch gezien nog de tijd heb,
-            voordat ik de presentatie daadwerkelijk moet geven.
-          </p>
-
-          <p className="intro-divider">
-            Als ik eerlijk ben, ligt mijn focus op dit moment vooral bij de
-            deadlines van maandag 15 juni. Vandaag is het 8 juni en mijn
-            podiummoment vindt pas plaats op 30 juni. Dat besef gaf me ook wat
-            meer rust.
-          </p>
-
-          <p className="intro-divider">
-            Na vandaag heb ik besloten om mijn ouders mee te nemen op de dag van
-            de presentatie. Niet in de zaal zelf, maar wel op de gang of beneden
-            in het gebouw. Het idee dat zij in de buurt zijn, geeft me extra
-            steun en vertrouwen dat ik ga slagen.
-          </p>
-
-          <p className="intro-divider">
-            Ik ga de komende weken alles op alles zetten om de laatste loodjes
-            succesvol af te ronden en mijn presentatie verder aan te scherpen.
-            Tijdens het oefenen merkte ik namelijk ook dat ik vastliep, omdat ik
-            niet meer volledig achter bepaalde onderdelen van mijn presentatie
-            stond. Sommige stukken voelden omslachtig aan en daardoor werd het
-            lastiger om mijn verhaal vloeiend te vertellen. De komende tijd wil
-            ik daarom kritisch kijken naar de inhoud, zodat de presentatie beter
-            aansluit bij mijn eigen verhaal en een stuk sterker staat wanneer ik
-            deze op 30 juni presenteer.
+            Ik kreeg de kans om eenmalig te oefenen met mijn docentbegeleider en studiegenoten uit mijn afstudeerkring.
           </p>
 
           <p className="intro-divider">Gegeven presentatie:</p>
-
-          <div className="external-link-btn-wrap">
-            <a
-              href="https://canva.link/w7voxz5gpo8njmd"
-              target="_blank"
-              rel="noreferrer"
-              className="external-link-btn"
-            >
-              <span>Bekijk presentatie (Canva)</span>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
+          <ExternalLink href="https://canva.link/w7voxz5gpo8njmd">Bekijk presentatie (Canva)</ExternalLink>
 
           <p className="intro-divider">Link naar de presentatie:</p>
+          <VideoCard
+            title="Oefen podiummoment"
+            entryId="0_qbwufw44"
+            url="https://mymedia.avans.nl/media/Oefen+podiummoment/0_qbwufw44"
+          />
 
-          <div className="presentatie-videos-grid">
-            <VideoCard
-              title={videos[1].title}
-              url={videos[1].url}
-              thumbnail={videos[1].thumbnail}
-            />
-          </div>
+          <Pdca
+            plan={[
+              "Na mijn eerste presentatie wilde ik controleren of ik mijn spreektempo tijdens een nieuw presentatiemoment beter kon beheersen. Ik wilde vooral ontdekken of ik mijn tempo ook onder spanning kon verlagen.",
+              "Op 8 juni heb ik daarom mijn presentatie geoefend met mijn docentbegeleider Ben Embregts en enkele studiegenoten (Xander en Ayoub). Mijn doel was om mijn manier van presenteren opnieuw te oefenen en feedback te krijgen op mijn ontwikkeling.",
+            ]}
+            doo={[
+              "Tijdens het oefenmoment presenteerde ik mijn verhaal zoals ik dit tijdens mijn uiteindelijke podiummoment wilde vertellen. Ondanks mijn voorbereiding merkte ik opnieuw spanning. Ik begon hierdoor weer snel te praten en raakte op een bepaald moment zelfs de draad van mijn verhaal kwijt (vanwege een presentatie waar ik niet achterstond).",
+            ]}
+            check={[
+              "Dit oefenmoment liet zien dat mijn spreektempo nog niet volledig onder controle was. Ondanks mijn eerdere feedback en voorbereiding had spanning opnieuw invloed op mijn manier van spreken.",
+              "Voor mij was dit een belangrijk inzicht. Ik merkte dat het probleem niet alleen was dat ik van nature snel spreek. Spanning versterkt mijn neiging om sneller te praten. Wanneer ik onzeker word of mijn verhaal even kwijt ben, gaat mijn tempo omhoog.",
+              "De feedback van mijn docent en studiegenoten bevestigde daarnaast dat mijn verhaal in de basis goed te volgen was. Voor mijn persoonlijke leerdoel was vooral belangrijk dat ik nu beter begreep wanneer mijn spreektempo omhooggaat en waardoor dit gebeurt.",
+            ]}
+            act={[
+              "Ik besloot mijn aanpak verder aan te passen. Ik wilde niet alleen vooraf oefenen, maar tijdens het presenteren actief mijn spreektempo controleren. Wanneer ik merkte dat ik sneller ging praten, wilde ik bewust vertragen en een korte pauze nemen.",
+              "Daarnaast wilde ik meer houvast creëren tijdens het presenteren, zodat ik minder afhankelijk was van het uit mijn hoofd kennen van mijn verhaal. Dit moest ervoor zorgen dat ik minder snel mijn draad zou kwijtraken en daardoor ook minder spanning zou ervaren.",
+            ]}
+          />
+        </Card>
 
-          <p className="intro-divider">Ontvangen feedback op de presentatie:</p>
-
-          <ul className="feedback-list">
-            <li>
-              Je hebt al een goede draad in je verhaal – Xander van Leeuwen.
-            </li>
-            <li>
-              Het was te veel ‘en toen en toen en toen’ – Ben Embregts.
-            </li>
-            <li>
-              Je kan jezelf helpen door een paar woorden tekst op de dia’s te
-              zetten in plaats van alle tekst uit je hoofd leren (houvast) – Ben
-              Embregts.
-            </li>
-            <li>
-              Je verhaal kwam niet helemaal over, terwijl ik wel zie dat de lijn
-              er wel in zit – Ben Embregts.
-            </li>
-            <li>
-              ‘’Doorzettingsvermogen blinkt er wel in uit, maar je wil denk ik
-              niet dat ik muizen onthoud’’ – Ben Embregts.
-            </li>
-            <li>
-              Stage jaar 3 leek in Spanje, dus dat was niet handig verwoord –
-              Ben Embregts.
-            </li>
-            <li>
-              Al zijn het 3 woorden op je presentatie, die de kernboodschap
-              weergeven, geen hele zinnen (want dan heb je het risico op
-              voorlezen) – Ben Embregts.
-            </li>
-            <li>
-              Onderzoek benoemen, door dat niet te doen, doe je jezelf te kort –
-              Ben Embregts.
-            </li>
-            <li>
-              Het benoemen van het doorzettingsvermogen, is zeker de moeite
-              waard om te benoemen – Ben Embregts.
-            </li>
-          </ul>
-        </div>
-
-        <div className="reveal glow-card intro-card mb40">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">1.7 PDCA-cyclus | Actie 2</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <h3 className="h3-sub">Plan</h3>
-          <p className="intro-divider">
-            Voor mijn persoonlijke ontwikkeling wilde ik werken aan mijn
-            presentatievaardigheden en het verminderen van mijn spanning tijdens
-            het spreken voor een groep. In aanloop naar mijn podiummoment op 30
-            juni heb ik daarom een oefenpresentatie gegeven aan mijn
-            docentbegeleider en studiegenoten. Mijn doel was om feedback te
-            verzamelen, inzicht te krijgen in verbeterpunten en meer vertrouwen
-            op te bouwen voor de definitieve presentatie.
-          </p>
-
-          <h3 className="h3-sub">Do</h3>
-          <p className="intro-divider">
-            Op 8 juni heb ik mijn presentatie geoefend tijdens een oefenmoment
-            met mijn docentbegeleider Ben Embregts en enkele studiegenoten.
-            Tijdens deze oefening presenteerde ik mijn verhaal zoals ik dat op
-            het podiummoment wilde doen. Ondanks mijn voorbereiding merkte ik dat
-            ik door zenuwen weer te snel begon te praten. Hierdoor verloor ik op
-            een bepaald moment de draad van mijn verhaal.
-          </p>
-
-          <p className="intro-divider">
-            Na afloop ontving ik uitgebreide feedback van Ben, met een
-            aanvullende opmerking van Xander. Zij gaven aan dat er al een
-            duidelijke lijn in mijn verhaal zat, maar dat sommige onderdelen nog
-            niet goed overkwamen. Daarnaast kreeg ik tips om meer houvast te
-            creëren door kernwoorden op de dia&apos;s te plaatsen in plaats van alles
-            uit het hoofd te leren.
-          </p>
-
-          <h3 className="h3-sub">Check</h3>
-          <p className="intro-divider">
-            Het oefenmoment heeft mij waardevolle inzichten gegeven. Ik
-            realiseerde me dat mijn spanning nog steeds invloed heeft op mijn
-            manier van presenteren. Door het snelle praten en het kwijtraken van
-            de draad kwam mijn verhaal minder sterk over dan de inhoud
-            daadwerkelijk was.
-          </p>
-
-          <p className="intro-divider">
-            Tegelijkertijd bleek uit de feedback dat de basis van mijn
-            presentatie goed staat. Xander gaf aan dat er al een goede rode
-            draad aanwezig is. Ben wees mij erop dat ik mezelf tekortdoe door
-            bepaalde onderdelen, zoals mijn onderzoek en mijn doorzettingsvermogen,
-            onvoldoende te benoemen. Ook gaf hij aan dat sommige formuleringen
-            onduidelijk waren, waardoor bijvoorbeeld de indruk ontstond dat mijn
-            derdejaars stage in Spanje had plaatsgevonden.
-          </p>
-
-          <p className="intro-divider">
-            Daarnaast merkte ik tijdens het presenteren dat ik zelf niet meer
-            volledig achter bepaalde onderdelen van mijn presentatie stond.
-            Hierdoor werd het lastiger om mijn verhaal natuurlijk en overtuigend
-            te vertellen. Dit was een belangrijk inzicht, omdat het verklaarde
-            waarom ik op sommige momenten vastliep.
-          </p>
-
-          <h3 className="h3-sub">Act</h3>
-          <p className="intro-divider">
-            Op basis van de ontvangen feedback ga ik mijn presentatie de komende
-            weken verder verbeteren. Ik wil kritisch kijken naar de inhoud en
-            onderdelen herschrijven die niet meer goed aansluiten bij mijn eigen
-            verhaal. Daarnaast ga ik kernwoorden toevoegen aan mijn dia&apos;s, zodat
-            ik tijdens het presenteren meer houvast heb zonder volledige teksten
-            voor te lezen.
-          </p>
-
-          <p className="intro-divider">
-            Ook wil ik extra aandacht besteden aan het benoemen van mijn
-            onderzoek en mijn doorzettingsvermogen, omdat dit volgens de feedback
-            belangrijke onderdelen van mijn ontwikkeling laten zien. Verder blijf
-            ik oefenen om rustiger te spreken en meer vertrouwen te krijgen in
-            mijn presentatie.
-          </p>
-
-          <p className="intro-divider">
-            Om mezelf extra steun te geven tijdens het daadwerkelijke
-            podiummoment heb ik besloten mijn ouders mee te nemen naar Avans.
-            Hoewel zij niet in de zaal aanwezig zullen zijn, geeft het mij rust
-            om te weten dat zij in de buurt zijn. Met deze verbeterpunten en
-            extra voorbereiding verwacht ik mijn presentatie op 30 juni met meer
-            zelfvertrouwen en overtuiging te kunnen geven.
-          </p>
-        </div>
-
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">1.8 Actie 3: Afsluiting presentatie AllSens</span>
-          </h2>
-
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Vandaag had ik mijn laatste oefenmoment voor mijn podiummoment bij AllSens. Ik heb ervoor gekozen om vooral te vertellen wat er uit de interviews is gekomen. Ik besefte mij namelijk dat het voor AllSens minder relevant is om uitgebreid stil te staan bij mijn voortgang vanaf jaar 1. De bevindingen uit de interviews sluiten beter aan bij de praktijk en geven AllSens meer inzicht in de kansen rondom schoonmaakbedrijven.
-          </p>
-
-          <p className="intro-divider">
-            Voor dit oefenmoment had ik één belangrijk doel: mijn spreektempo verlagen. Dit blijft voor mij de grootste uitdaging tijdens presenteren. Wanneer ik spanning ervaar, merk ik dat ik sneller ga praten. Daardoor kan mijn verhaal minder rustig overkomen en bestaat de kans dat belangrijke informatie minder duidelijk wordt overgebracht.
-          </p>
-
-          <p className="intro-divider">
-            Met dit oefenmoment wilde ik daarom bewust oefenen met rustiger spreken. Ik wilde mijn verhaal duidelijk en begrijpelijk vertellen, zodat de inzichten uit de interviews goed overkomen en ik met meer vertrouwen richting mijn uiteindelijke podiummoment kan werken.
-          </p>
+        <Card title="1.5 Actie 3: Afsluiting presentatie AllSens">
+          <p className="intro-divider">Ter afsluiting van mijn stageperiode heb ik de resultaten uit mijn onderzoek gepresenteerd.</p>
 
           <p className="intro-divider">Gegeven presentatie:</p>
-
-          <div className="external-link-btn-wrap">
-            <a
-              href="https://canva.link/ezf8mnyi7ms6ca0"
-              target="_blank"
-              rel="noreferrer"
-              className="external-link-btn"
-            >
-              <span>Bekijk presentatie (Canva)</span>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
+          <ExternalLink href="https://canva.link/ezf8mnyi7ms6ca0">Bekijk presentatie (Canva)</ExternalLink>
 
           <p className="intro-divider">Link naar de presentatie:</p>
+          <VideoCard
+            title="Einde stageperiode presentatie"
+            entryId="0_q4dbbe1y"
+            url="https://mymedia.avans.nl/media/Einde+stageperiode+presentatie/0_q4dbbe1y"
+          />
 
-          <div className="presentatie-videos-grid">
-            <VideoCard
-              title="Einde stageperiode presentatie"
-              url="https://mymedia.avans.nl/media/Einde+stageperiode+presentatie/0_q4dbbe1y"
-              thumbnail="https://cfvod.frp2.ovp.kaltura.com/p/10066/sp/1006600/thumbnail/entry_id/0_q4dbbe1y/width/600/height/340"
-            />
-          </div>
+          <Pdca
+            plan={[
+              "Voor mijn laatste oefenmoment wilde ik controleren of mijn aangepaste aanpak effect had gehad. Mijn belangrijkste doel was om mijn spreektempo beter te beheersen en rustiger over te komen tijdens het presenteren.",
+              "Omdat ik inmiddels had ontdekt dat spanning mijn spreektempo verhoogt, wilde ik hier tijdens het presenteren bewust rekening mee houden. Ik wilde mijn tempo actief vertragen, voldoende pauzes nemen en mezelf de tijd geven om mijn verhaal rustig te vertellen.",
+            ]}
+            doo={[
+              "Tijdens het laatste oefenmoment bij AllSens heb ik mijn presentatie opnieuw gegeven. Tijdens het presenteren heb ik bewust gelet op mijn spreektempo. Ik probeerde rustiger te spreken en korte pauzes te nemen wanneer dat nodig was.",
+              "Op twee momenten moest ik even nadenken over wat ik wilde zeggen. In plaats van hierdoor gehaast verder te gaan, nam ik de tijd om mijn gedachten weer op een rij te zetten en mijn verhaal vervolgens voort te zetten.",
+            ]}
+            check={[
+              "De feedback op dit oefenmoment liet zien dat mijn belangrijkste ontwikkelpunt was verbeterd. Er werd aangegeven dat ik niet te snel sprak, rustig overkwam en dat mijn presentatie duidelijk was.",
+              "Ook werd aangegeven dat het niet storend was dat ik op twee momenten even moest nadenken. Dit liet mij zien dat ik niet voortdurend snel hoef te spreken om een presentatie vloeiend te laten verlopen. Juist door rust te nemen wanneer dat nodig is, bleef mijn presentatie rustig.",
+              "Dit was een duidelijk verschil met mijn eerste presentaties. Toen kreeg ik expliciet terug dat mijn spreektempo te hoog lag. Tijdens dit laatste moment werd juist aangegeven dat mijn tempo goed was en dat ik rustig overkwam.",
+            ]}
+            act={[
+              "Omdat deze aanpak voor mij werkte, wil ik deze blijven gebruiken bij toekomstige presentaties. Ik weet nu dat ik vooraf goed moet oefenen, maar vooral dat ik tijdens het presenteren bewust mijn tempo moet blijven controleren.",
+              "Wanneer ik spanning ervaar, wil ik mezelf eraan herinneren om niet sneller te gaan praten, maar juist rust te nemen. Daarmee heb ik een concrete manier gevonden om mijn natuurlijke hoge spreektempo te beheersen.",
+            ]}
+          />
+        </Card>
 
-          <p className="intro-divider">Ontvangen feedback op de presentatie:</p>
+        <Card title="1.6 Actie 4: Het podiummoment">
+          <p className="intro-divider">Dit betreft mijn presentatie tijdens mijn 1e afstudeerzitting.</p>
 
-          <ul className="feedback-list">
-            <li>Ik praatte niet te snel.</li>
-            <li>Ik kwam rustig over.</li>
-            <li>De presentatie was duidelijk.</li>
-            <li>Ik moest op twee momenten even nadenken, maar dat is normaal.</li>
-            <li>Over het algemeen ging de presentatie goed.</li>
-          </ul>
-        </div>
+          <p className="intro-divider">Gegeven presentatie:</p>
+          <ExternalLink href="https://canva.link/js69vm97hw6j3fy">Bekijk presentatie (Canva)</ExternalLink>
 
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">1.9 PDCA-cyclus | Actie 3</span>
-          </h2>
+          <Pdca
+            plan={[
+              "Tijdens het laatste podiummoment wilde ik mijn ontwikkeling in spreektempo laten zien. Mijn belangrijkste aandachtspunt was om niet terug te vallen in mijn natuurlijke neiging om snel te praten wanneer ik spanning ervaar. Ik wilde bewust rustiger spreken en voldoende pauzes nemen, zodat mijn presentatie prettig te volgen bleef.",
+            ]}
+            doo={[
+              "Op 30 juni gaf ik mijn uiteindelijke podiumpresentatie. Tijdens het presenteren lette ik bewust op mijn spreektempo en probeerde ik rust te bewaren. Door mijn eerdere oefenmomenten wist ik beter waar ik tijdens het presenteren op moest letten.",
+            ]}
+            check={[
+              "De feedback van mijn docentbegeleiders was positief. Zij gaven aan dat ik mijn ontwikkeling goed presenteerde en mezelf op een unieke manier neerzette. Voor mijn leerdoel is vooral belangrijk dat mijn spreektempo tijdens dit moment geen aandachtspunt meer was. Dit laat zien dat ik het tempo beter onder controle had dan aan het begin van mijn ontwikkeling.",
+              "Waar tijdens mijn eerste presentatie werd aangegeven dat ik te snel sprak, was dit tijdens het podiummoment geen terugkerende opmerking. Daarmee heb ik mijn belangrijkste ontwikkelpunt zichtbaar verbeterd.",
+            ]}
+            act={[
+              "Ik wil de manier waarop ik mijn spreektempo tijdens het oefenen en presenteren bewust heb gemonitord blijven toepassen. Ik weet dat spanning ervoor kan zorgen dat ik sneller ga praten. Door hier vooraf en tijdens een presentatie bewust op te letten, kan ik mijn tempo beter blijven controleren.",
+            ]}
+          />
+        </Card>
 
-          <div className="divider divider-mb20" />
+        <Card title="1.7 Evaluatie van mijn ontwikkeling">
+          <Table
+            head={["Presentatiemoment", "Wat gebeurde er?", "Feedback / ontwikkeling"]}
+            rows={[
+              [
+                "1. Eerste presentatie AllSens",
+                "Ik sprak snel, mede door spanning.",
+                "Mijn spreektempo werd als te hoog beoordeeld. Dit werd mijn belangrijkste ontwikkelpunt.",
+              ],
+              [
+                "2. Oefenmoment 8 juni",
+                "Door spanning sprak ik opnieuw snel en raakte ik kort de draad kwijt.",
+                "Ik ontdekte dat spanning invloed heeft op mijn spreektempo. Ik wilde daarom bewuster rust nemen en langzamer spreken.",
+              ],
+              [
+                "3. Afsluiting AllSens",
+                "Ik lette bewust op mijn tempo en probeerde rustiger te spreken.",
+                "Ik kreeg terug dat ik niet te snel sprak en rustig overkwam. Dit liet zien dat mijn aanpak werkte.",
+              ],
+              [
+                "4. Podiummoment 30 juni",
+                "Ik paste mijn eerdere leerpunten toe en hield mijn tempo bewust in de gaten.",
+                "Mijn spreektempo werd niet meer als aandachtspunt benoemd. Hiermee heb ik mijn ontwikkeling zichtbaar gemaakt.",
+              ],
+            ]}
+          />
+        </Card>
 
-          <h3 className="h3-sub">Plan</h3>
+        <Card title="1.8 Eindniveau en conclusie" last>
           <p className="intro-divider">
-            Voor mijn laatste oefenmoment bij AllSens wilde ik de resultaten van mijn onderzoek op een duidelijke en professionele manier presenteren. Ik had ervoor gekozen om de focus te leggen op de bevindingen uit de interviews met schoonmaakbedrijven, omdat deze inzichten het meest relevant zijn voor AllSens. Mijn belangrijkste persoonlijke leerdoel tijdens deze presentatie was het verlagen van mijn spreektempo. Tijdens eerdere presentaties merkte ik namelijk dat ik door spanning vaak te snel praatte, waardoor mijn verhaal minder rustig overkwam.
+            Aan het einde van mijn afstudeerperiode is mijn presentatievaardigheid verbeterd, met name in het beheersen van
+            mijn spreektempo. Waar ik tijdens mijn eerste presentatie nog te snel sprak, kreeg ik tijdens mijn laatste twee
+            presentaties terug dat ik niet te snel sprak en rustig overkwam. Mijn eindniveau is daarmee dat ik mijn
+            spreektempo beter kan aanpassen aan de situatie en meer controle heb over mijn tempo wanneer ik spanning ervaar.
           </p>
 
-          <h3 className="h3-sub">Do</h3>
           <p className="intro-divider">
-            Tijdens het oefenmoment presenteerde ik de belangrijkste resultaten van mijn onderzoek. Ik vertelde hoe ik mijn doelgroep had geselecteerd, welke inzichten uit de interviews naar voren kwamen en welk advies hieruit voortkwam voor AllSens. Daarbij probeerde ik bewust rustiger te spreken en regelmatig korte pauzes in te lassen.
+            Door meerdere keren te oefenen, feedback toe te passen en bewust te letten op rustiger spreken en pauzeren, heb ik
+            geleerd mijn spreektempo beter te controleren. Mijn leerdoel is hiermee behaald. Ik zal waarschijnlijk altijd van
+            nature een relatief vlotte spreker blijven, maar ik weet nu hoe ik mijn tempo bewust kan aanpassen wanneer de
+            situatie daarom vraagt.
           </p>
+        </Card>
 
-          <p className="intro-divider">
-            Tijdens de presentatie merkte ik dat ik meer controle had over mijn spreektempo dan bij eerdere presentaties. Op enkele momenten moest ik even nadenken over wat ik wilde zeggen, maar ik wist mijn verhaal vervolgens weer op te pakken. Na afloop ontving ik feedback op mijn presentatie.
-          </p>
-
-          <h3 className="h3-sub">Check</h3>
-          <p className="intro-divider">
-            Uit de ontvangen feedback bleek dat mijn belangrijkste leerdoel grotendeels was behaald. Er werd aangegeven dat ik niet te snel sprak en dat ik rustig overkwam tijdens het presenteren. Daarnaast werd benoemd dat mijn presentatie duidelijk was en dat de rode lijn van het verhaal goed te volgen was.
-          </p>
-
-          <p className="intro-divider">
-            Hoewel ik op twee momenten even moest nadenken, werd aangegeven dat dit normaal is en niet storend was voor de presentatie. Deze feedback gaf mij vertrouwen, omdat mijn grootste aandachtspunt juist het spreektempo was. Vergeleken met eerdere presentatiemomenten heb ik hierin duidelijk vooruitgang geboekt.
-          </p>
-
-          <h3 className="h3-sub">Act</h3>
-          <p className="intro-divider">
-            Op basis van dit oefenmoment wil ik mijn huidige aanpak vasthouden richting het definitieve podiummoment. Het bewust letten op mijn spreektempo heeft een positief effect gehad en ik wil deze werkwijze blijven toepassen tijdens toekomstige presentaties.
-          </p>
-
-          <p className="intro-divider">
-            Daarnaast wil ik mijn presentatie nog enkele keren oefenen, zodat ik nog meer vertrouwd raak met de inhoud. Hierdoor verwacht ik minder momenten te hebben waarop ik moet nadenken over de volgende stap in mijn verhaal. Met deze voorbereiding wil ik mijn presentatie op het podiummoment met vertrouwen, rust en duidelijkheid kunnen geven.
-          </p>
-        </div>
-
-        <div className="post-footer-nav">
-          <a href="/Afstuderen" className="btn-ghost btn-sm">
-            ← Terug naar Afstuderen
-          </a>
-        </div>
-
+        <FooterNav
+          prev={["/Afstuderen/feedback-stakeholders", "Stakeholders"]}
+          next={["/Afstuderen/vakdoel-ai-zoekgedrag", "Vakdoel: AI-gedreven zoekgedrag"]}
+        />
       </article>
     </main>
   );

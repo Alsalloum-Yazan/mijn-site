@@ -1,6 +1,8 @@
-﻿"use client";
+"use client";
+
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
+import { Card, ExternalLink, FooterNav, PageHeader, ZoomImage } from "@/app/components/ContentBits";
 
 export default function Profileringskit() {
   const [openImg, setOpenImg] = useState<string | null>(null);
@@ -10,128 +12,82 @@ export default function Profileringskit() {
       <ImageModal src={openImg} onClose={() => setOpenImg(null)} />
 
       <article className="content-page">
-        <div className="reveal">
-          <a href="/Afstuderen" className="post-back-link">
-            ← Terug naar Afstuderen
-          </a>
-          <div className="badge post-badge">
-            <span className="badge-dot" />
-            Afstuderen — Profiel
-          </div>
-          <h1 className="post-h1">
-            <span className="g-text">Profileringskit</span>
-          </h1>
-          <div className="content-header-border">
-            <p className="content-text">
-              Voor mijn afstuderen heb ik deze profileringskit samengesteld als een compleet beeld van wie ik ben, wat mij motiveert en waar mijn kwaliteiten liggen. In de verschillende onderdelen laat ik niet alleen zien wat ik heb gedaan, maar ook hoe ik mezelf presenteer en onderscheid richting mijn toekomstige werkveld.
-            </p>
-          </div>
-        </div>
+        <PageHeader
+          badge="Afstuderen — Profiel"
+          title="Profileringskit"
+          lead="Onderstaand volledig ingericht de profileringskit: bestaande uit CV, motivatiebrief, LinkedIn-profiel, logo, pitch en motto."
+        />
 
-        {/* CV */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg"><span className="g-text">CV</span></h2>
-          <div className="divider divider-mb20" />
+        <Card title="1. CV">
+          <p className="intro-divider">CV als overzicht van opleiding, werkervaring en relevante vaardigheden.</p>
+          <ZoomImage src="/afstuderen/pl/herkansing-cv.webp" alt="CV Dian van Noort" setOpenImg={setOpenImg} />
+        </Card>
+
+        <Card title="2. Motivatiebrief">
           <p className="intro-divider">
-            In mijn cv beschrijf ik mijn stages, wat ik daar precies heb gedaan en welke bijbaantjes ik tot nu toe heb gehad. Zo is goed te zien welke praktische ervaring ik al heb opgebouwd.
+            Motivatiebrief als korte toelichting op motivatie, ambities en aansluiting bij de functie.
           </p>
-          <div onClick={() => setOpenImg("/afstuderen/Profileringskit/cv.png")} className="zoom-img-wrap">
-            <img loading="lazy" decoding="async" src="/afstuderen/Profileringskit/cv.png" alt="CV" className="zoom-img" />
-            <div
-              className="zoom-overlay"
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "0"; }}
-            >
-              <div className="zoom-icon">Vergroot afbeelding</div>
-            </div>
-          </div>
-          <p className="zoom-hint">Klik om te vergroten</p>
-        </div>
 
-        {/* MOTIVATIEBRIEF */}
-        <div className="reveal glow-card intro-card mb40">
-          <h2 className="h2-sub-lg"><span className="g-text">Motivatiebrief</span></h2>
-          <div className="divider divider-mb20" />
+          <h3 className="h3-sub">Sollicitatie Junior Accountmanager Retail &amp; FMCG</h3>
+
+          <p className="intro-divider">Geachte heer/mevrouw,</p>
+
           <p className="intro-divider">
-            Mijn motivatiebrief laat zien waarom ik enthousiast ben om terug te gaan naar LVNG en wat ik kan toevoegen.
+            Een supermarkt is voor mij meer dan alleen een plek waar je boodschappen doet. Ik vind het juist interessant om te
+            kijken waarom iemand voor het ene product kiest en niet voor het andere. Waar staat het product in het schap? Hoe
+            wordt het gepresenteerd? En welke keuzes worden eigenlijk onbewust beïnvloed? De afgelopen periode ben ik mij
+            steeds meer gaan verdiepen in gedragseconomie, waardoor ik hier met een andere blik naar ben gaan kijken.
           </p>
-          <div onClick={() => setOpenImg("/afstuderen/Profileringskit/motivatie.png")} className="zoom-img-wrap">
-            <img loading="lazy" decoding="async" src="/afstuderen/Profileringskit/motivatie.png" alt="Motivatiebrief" className="zoom-img" />
-            <div
-              className="zoom-overlay"
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "0"; }}
-            >
-              <div className="zoom-icon">Vergroot afbeelding</div>
-            </div>
-          </div>
-          <p className="zoom-hint">Klik om te vergroten</p>
-        </div>
 
-        {/* LINKEDIN-PROFIEL */}
-        <div className="reveal glow-card intro-card mb40">
-          <h2 className="h2-sub-lg"><span className="g-text">LinkedIn-profiel</span></h2>
-          <div className="divider divider-mb20" />
           <p className="intro-divider">
-            Het LinkedIn-profiel als aanvulling op het professionele profiel. Mijn connecties zijn met 49 gestegen in vergelijking met het vorige semester.
+            Na mijn opleiding Commerciële Economie ben ik op zoek naar een functie als junior accountmanager binnen retail en
+            FMCG. De combinatie van commercie, veel contact met mensen en het werken met producten die dagelijks bij
+            consumenten over de vloer komen, spreekt mij erg aan.
           </p>
-          <div onClick={() => setOpenImg("/afstuderen/pl/profileringskit-linkedin.webp")} className="zoom-img-wrap">
-            <img loading="lazy" decoding="async" src="/afstuderen/pl/profileringskit-linkedin.webp" alt="LinkedIn-profiel" className="zoom-img" />
-            <div
-              className="zoom-overlay"
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "0"; }}
-            >
-              <div className="zoom-icon">Vergroot afbeelding</div>
-            </div>
-          </div>
-          <p className="zoom-hint">Klik om te vergroten</p>
-        </div>
 
-        {/* LOGO */}
-        <div className="reveal glow-card intro-card mb40">
-          <h2 className="h2-sub-lg"><span className="g-text">Logo</span></h2>
-          <div className="divider divider-mb20" />
           <p className="intro-divider">
-            Logo ter visuele weergave van het basic chique design, dat ik wil uitstralen.
+            Ik ben iemand die makkelijk contact maakt en energie krijgt van gesprekken met verschillende mensen. Ik vind het
+            leuk om relaties op te bouwen, maar ben daarnaast ook zelfstandig en neem graag verantwoordelijkheid. Ik ben
+            nieuwsgierig, zie snel kansen en vind het interessant om te begrijpen wat er bij een klant of consument speelt.
           </p>
-          <div onClick={() => setOpenImg("/afstuderen/pl/profileringskit-logo.webp")} className="zoom-img-wrap">
-            <img loading="lazy" decoding="async" src="/afstuderen/pl/profileringskit-logo.webp" alt="Logo" className="zoom-img" />
-            <div
-              className="zoom-overlay"
-              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0.4)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "1"; }}
-              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.background = "rgba(124,58,237,0)"; const icon = e.currentTarget.querySelector(".zoom-icon") as HTMLElement; if (icon) icon.style.opacity = "0"; }}
-            >
-              <div className="zoom-icon">Vergroot afbeelding</div>
-            </div>
-          </div>
-          <p className="zoom-hint">Klik om te vergroten</p>
-        </div>
 
-        {/* PITCH */}
-        <div className="reveal glow-card intro-card mb40">
-          <h2 className="h2-sub-lg"><span className="g-text">Pitch</span></h2>
-          <div className="divider divider-mb20" />
           <p className="intro-divider">
-            Mijn persoonlijke pitch waarin ik mezelf kort en krachtig presenteer.
+            Ik zou mijn enthousiasme en commerciële opleiding graag inzetten binnen uw organisatie en mij verder ontwikkelen in
+            accountmanagement. Ik maak graag persoonlijk kennis om te bespreken wat ik voor uw organisatie kan betekenen.
           </p>
-          <a
-            href="https://mymedia.avans.nl/media/Persoonlijke+pitch/0_tiga4qf8"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="external-link-btn"
-          >
-            Bekijk persoonlijke pitch op MyMedia →
-          </a>
-        </div>
 
-        <div className="post-footer-nav">
-          <a href="/Afstuderen" className="btn-ghost btn-sm">← Terug naar Afstuderen</a>
-          <a href="/Afstuderen/eindreflectie" className="btn btn-sm">Eindreflectie →</a>
-        </div>
+          <p className="intro-divider">
+            Met vriendelijke groet,
+            <br />
+            Dian van Noort
+          </p>
+        </Card>
 
+        <Card title="3. LinkedIn-profiel">
+          <p className="intro-divider">
+            Het LinkedIn-profiel als aanvulling op het professionele profiel. Mijn connecties zijn met 50 gestegen in
+            vergelijking met het vorige semester.
+          </p>
+          <ZoomImage src="/afstuderen/pl/herkansing-linkedin.webp" alt="LinkedIn-profiel" setOpenImg={setOpenImg} />
+        </Card>
+
+        <Card title="4. Logo">
+          <p className="intro-divider">Logo ter visuele weergave van het basic chique design, dat ik wil uitstralen.</p>
+          <ZoomImage src="/afstuderen/pl/profileringskit-logo.webp" alt="Logo" setOpenImg={setOpenImg} />
+        </Card>
+
+        <Card title="5. Pitch" last>
+          <p className="intro-divider">Mijn persoonlijke pitch waarin ik mezelf kort en krachtig presenteer.</p>
+          <ExternalLink href="https://mymedia.avans.nl/media/Persoonlijke+pitch/0_tiga4qf8">
+            Bekijk persoonlijke pitch op MyMedia
+          </ExternalLink>
+        </Card>
+
+        <FooterNav
+          prev={["/Afstuderen/marktbewerkingsplan", "Marktbewerkingsplan"]}
+          next={["/Afstuderen/feedback-stakeholders", "Stakeholders"]}
+        />
       </article>
     </main>
   );
 }
-

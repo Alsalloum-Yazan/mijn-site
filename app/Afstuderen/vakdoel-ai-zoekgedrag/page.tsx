@@ -1,6 +1,8 @@
 "use client";
+
 import { useState } from "react";
 import ImageModal from "@/app/components/ImageModal";
+import { Card, ExternalLink, FooterNav, PageHeader, Pdca, Table } from "@/app/components/ContentBits";
 
 export default function VakdoelAIZoekgedrag() {
   const [imgOpen, setImgOpen] = useState<string | null>(null);
@@ -10,283 +12,300 @@ export default function VakdoelAIZoekgedrag() {
       <ImageModal src={imgOpen} onClose={() => setImgOpen(null)} />
 
       <article className="content-page">
-        {/* HEADER */}
-        <div className="reveal">
-          <a href="/Afstuderen" className="back-link-sm">
-            ← Terug naar Afstuderen
-          </a>
-          <div className="badge badge-mb20">
-            <span className="badge-dot" />
-            Vakinhoudelijk leerdoel
-          </div>
-          <h1 className="page-h1-medium">
-            Vakdoel: <span className="g-text">AI-gedreven zoekgedrag</span>
-          </h1>
-          <div className="divider divider-center divider-mb40" />
-        </div>
+        <PageHeader
+          badge="Vakinhoudelijk doel"
+          title="Vakdoel: AI-gedreven zoekgedrag"
+          lead="Uiterlijk op 19 oktober 2026 kan ik zelfstandig marketingcontent schrijven, analyseren en optimaliseren volgens de belangrijkste principes van Generative Engine Optimization (GEO). Ik wil hierbij niet alleen weten wat GEO inhoudt, maar de principes ook kunnen herkennen, uitleggen en toepassen in mijn eigen marketingteksten."
+        />
 
-        {/* 3.1 ONDERBOUWING */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">Vakinhoudelijk doel</span>
-          </h2>
-          <div className="divider divider-mb20" />
+        <Card title="Succescriterium">
+          <p className="intro-divider">Mijn leerdoel is behaald wanneer ik:</p>
+          <ul className="content-list">
+            <li>De belangrijkste principes van GEO in mijn eigen woorden kan uitleggen.</li>
+            <li>Kan uitleggen wat het verschil is tussen traditioneel SEO en GEO.</li>
+            <li>Zelfstandig kan beoordelen of een marketingtekst aansluit op AI-gedreven zoekgedrag.</li>
+            <li>Minimaal vier marketingteksten heb geanalyseerd en geoptimaliseerd.</li>
+            <li>Bij minimaal drie van de vier teksten een duidelijke verbetering kan aantonen.</li>
+            <li>Mijn keuzes bij het optimaliseren kan onderbouwen vanuit de theorie en mijn onderzoek.</li>
+          </ul>
           <p className="intro-divider">
-            Uiterlijk op 10 juni 2026 heb ik minimaal vier marketingteksten geschreven en geoptimaliseerd volgens de principes van mijn eigen AI tool gericht op AI-gedreven zoekgedrag.
+            De kwaliteit van mijn teksten beoordeel ik aan de hand van vijf vaste GEO-principes: kernboodschap, zoekintentie,
+            structuur, directheid en betrouwbaarheid. Hierdoor is mijn succescriterium niet alleen gebaseerd op mijn eigen
+            gevoel, maar op vooraf bepaalde beoordelingspunten.
+          </p>
+        </Card>
+
+        <Card title="3.1 Onderbouwing vakinhoudelijk doel">
+          <p className="intro-divider">
+            Binnen marketing merk ik dat online vindbaarheid steeds verder verandert. Waar ik voorheen vooral dacht aan SEO en
+            zoekwoorden, worden mensen steeds vaker direct geholpen door AI-tools zoals ChatGPT en andere AI-zoekmachines.
+            Hierdoor verandert ook de manier waarop marketingcontent geschreven moet worden.
+          </p>
+          <p className="intro-divider">
+            Ik vind dit interessant omdat het direct aansluit bij mijn opleiding Commerciële Economie en mijn ontwikkeling als
+            marketingprofessional. Ik wilde daarom niet alleen weten wat GEO betekent, maar vooral begrijpen hoe ik deze
+            ontwikkeling kan vertalen naar het schrijven van marketingcontent.
+          </p>
+        </Card>
+
+        <Card title="3.2 Mijn startniveau">
+          <p className="intro-divider">
+            Aan het begin van mijn afstudeerperiode had ik basiskennis van SEO en online content, maar nog weinig specifieke
+            kennis over GEO. Ik wist dat teksten duidelijk, relevant en goed vindbaar moesten zijn, maar ik kon nog niet
+            zelfstandig uitleggen welke aanpassingen nodig waren om een tekst specifiek geschikt te maken voor AI-gedreven
+            zoekgedrag.
+          </p>
+          <p className="intro-divider">
+            Ook had ik nog geen vaste methode om een tekst op GEO te beoordelen. Mijn manier van schrijven was vooral gericht
+            op de lezer en traditionele online vindbaarheid. Ik keek nog niet bewust naar onderdelen zoals direct antwoord
+            geven op een zoekvraag, het duidelijk maken van expertise en het zo structureren van informatie dat deze gemakkelijk
+            door AI-systemen kan worden begrepen en gebruikt.
           </p>
 
-          <h3 className="h3-sub">Succescriterium</h3>
-          <p className="intro-divider">
-            Minimaal 3 van de 4 teksten worden beoordeeld als inhoudelijk sterk, gestructureerd en passend bij AI-zoekgedrag.
-          </p>
-
-          <h3 className="h3-sub">Toelichting</h3>
-          <p className="intro-divider">
-            Dit betekent dat de teksten niet alleen inhoudelijk sterk zijn, maar ook zijn afgestemd op hoe mensen tegenwoordig zoeken via AI, bijvoorbeeld door duidelijke structuur, vraaggerichte formuleringen en relevante zoekintentie.
-          </p>
-        </div>
-
-        {/* 3.1 ONDERBOUWING VAKINHOUDELIJK DOEL */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.1 Onderbouwing vakinhoudelijk doel</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Binnen marketing merk ik dat online vindbaarheid niet meer alleen draait om traditionele zoekmachines, maar steeds om de manier waarop mensen vragen stellen aan AI-tools en zoekmachines met AI-functies.
-          </p>
-
-          <p className="intro-divider">
-            Daarbij gaat het niet alleen om goede inhoud, maar ook om de manier waarop informatie is gestructureerd. Ik merk dat teksten sterker zijn wanneer ze direct duidelijk antwoord geven op de gestelde vraag, logisch zijn opgebouwd en goed aansluiten op de zoekintentie van de gebruiker (Sander Geijtenbeek, 19 maart 2026). Juist omdat mensen via AI steeds vaker complete vragen stellen in plaats van losse zoekwoorden te gebruiken, vraagt dit om een andere manier van schrijven dan alleen volgens SEO.
-          </p>
-
-          <p className="intro-divider">
-            Ik vind dit doel interessant, omdat online schrijven de laatste jaren duidelijk is veranderd. Het is niet meer genoeg om alleen een informatieve tekst te schrijven. Een tekst moet duidelijk zijn opgebouwd, snel tot de kern komen en goed aansluiten op de vragen die mensen daadwerkelijk hebben. Binnen marketing wordt dit steeds belangrijker, omdat mensen informatie op een andere manier zoeken dan voorheen. Zo blijkt dat goede online content tegenwoordig vooral draait om het begrijpen van de zoekintentie en het volledig beantwoorden van de vraag van de gebruiker, waarbij structuur en duidelijkheid een grote rol spelen (SEO Zwolle, 16 maart 2026). Het lijkt mij waardevol om hier nu alvast mee bezig te zijn, met oog op de toekomst waar AI steeds meer de overhand neemt.
-          </p>
-
-          <p className="intro-divider">
-            <strong>AI-gedreven zoekgedrag versterkt mijn profilering als marketingprofessional, omdat ik inspeel op actuele ontwikkelingen binnen online marketing.</strong>
-          </p>
-        </div>
-
-        {/* 3.2 ACTIEPLAN */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.2 Actieplan</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            In dit actieplan beschrijf ik hoe ik mijn kennis van AI-gedreven zoekgedrag stap voor stap wil uitbreiden en toepassen. Per actie staat wat ik ga doen, welk bewijs ik verzamel en welke feedback ik gebruik om te groeien.
-          </p>
-
-          <div className="table-wrap">
-            <table className="content-table">
-              <thead>
-                <tr>
-                  <th>Actie</th>
-                  <th>Uitvoering</th>
-                  <th>Bewijs</th>
-                  <th>Feedback</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Actie 1: verdieping in AI-zoekgedrag en GEO</td>
-                  <td>Ik lees minimaal twee bronnen over GEO en AI-zoekgedrag. Ik noteer per bron de belangrijkste inzichten en schrijfprincipes die ik wil toepassen in mijn eigen teksten.</td>
-                  <td>Samenvatting van gelezen bronnen met kernprincipes, opgenomen in het portfolio.</td>
-                  <td>Feedback van bedrijfsbegeleider op de relevantie van de gevonden principes voor AllSens.</td>
-                </tr>
-                <tr>
-                  <td>Actie 2: schrijven en optimaliseren van marketingteksten</td>
-                  <td>Ik schrijf minimaal vier marketingteksten voor AllSens, waarbij ik bewust rekening houd met vraaggerichte structuur, heldere kernboodschap en aansluiting op zoekintentie. Elke tekst werk ik minstens één keer bij na ontvangen feedback door een zelf ontworpen flow.</td>
-                  <td>De vier geschreven en bijgewerkte teksten, inclusief de voor- en naversie, opgeslagen in het portfolio.</td>
-                  <td>Feedback van bedrijfsbegeleider of collega op helderheid, structuur en vraaggerichtheid van de teksten.</td>
-                </tr>
-                <tr>
-                  <td>Actie 3: reflectie en vergelijking oude vs. nieuwe aanpak</td>
-                  <td>Ik vergelijk één van mijn eerdere teksten met een nieuwe versie en beschrijf per punt wat ik heb veranderd en waarom. Dit doe ik aan de hand van de schrijfprincipes die ik heb geleerd over AI-zoekgedrag.</td>
-                  <td>Vergelijkingsdocument met voor- en naversie en schriftelijke toelichting op de aangebrachte wijzigingen.</td>
-                  <td>Feedback van docent of beoordelaar op de diepgang van de reflectie en de koppeling met theorie.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* 3.3 INDICATOREN */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.3 Indicatoren voor groei en reflectievragen</span>
-          </h2>
-          <div className="divider divider-mb20" />
-          <p className="intro-divider">
-            De reflectievragen zijn terug te lezen in de bijlagen.
-          </p>
-          <img loading="lazy" decoding="async"             src="/afstuderen/pl/reflectievragen.webp"
-            alt="Infographic GEO AllSens"
-            className="content-image-lg"
-          />
-        </div>
-
-        {/* 3.4 ACTIE 1: INLEZEN EN SAMENVATTEN */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.4 Actie 1: Inlezen en samenvatten</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Voor deze opdracht heb ik onderzocht hoe bedrijven zichtbaar kunnen blijven in een tijd waarin steeds meer mensen informatie zoeken via AI-tools zoals ChatGPT, Gemini en Copilot. Tijdens mijn onderzoek kwam ik erachter dat traditionele SEO niet langer voldoende is. Naast goed vindbaar zijn in zoekmachines wordt het ook steeds belangrijker dat content wordt opgenomen in de antwoorden die AI-systemen genereren. Dit wordt ook wel Generative Engine Optimization (GEO) genoemd.
-          </p>
-
-          <p className="intro-divider">
-            Aan de hand van artikelen van Frankwatching en Hostnet Academy heb ik de belangrijkste inzichten verzameld over GEO en de gevolgen hiervan voor contentmarketing (Traffic Builders, 19 juni 2025) (Romy Veul, 28 november 2025). Vervolgens heb ik deze inzichten vertaald naar de situatie van AllSens. In onderstaande infographic laat ik zien welke principes volgens mij het meest relevant zijn voor AllSens en hoe deze kunnen bijdragen aan een grotere online zichtbaarheid. Daarbij heb ik ook de feedback van mijn bedrijfsbegeleider meegenomen om de praktische toepasbaarheid binnen de organisatie te beoordelen.
-          </p>
-
-          <img loading="lazy" decoding="async"             src="/afstuderen/pl/infographic-geo-allsens.webp"
-            alt="Infographic GEO AllSens"
-            className="content-image-lg"
+          <Table
+            head={["Onderdeel", "Beginniveau", "Eindniveau"]}
+            rows={[
+              ["Kennis van GEO", "Basis/oriënterend", "Kan GEO uitleggen en toepassen"],
+              ["Verschil GEO en SEO", "Beperkt", "Kan het verschil vloeiend uitleggen"],
+              ["Zoekintentie", "Vooral vanuit traditionele SEO", "Bewust vanuit de vraag van de gebruiker"],
+              ["GEO-analyse", "Geen vaste methode", "Zelfstandig analyseren met vaste criteria"],
+              ["GEO toepassen", "Niet bewust toegepast", "Zelfstandig toegepast in marketingteksten"],
+            ]}
           />
 
           <p className="intro-divider">
-            Uit dit onderzoek concludeer ik dat het belangrijk is om niet alleen voor zoekmachines te schrijven, maar ook voor AI-tools. Ik heb geleerd dat duidelijke antwoorden, een logische opbouw en content die aansluit bij de vragen van gebruikers steeds belangrijker worden. Voor AllSens biedt dit kansen om online beter zichtbaar te zijn. Deze inzichten neem ik mee in de verdere uitwerking van mijn project.
+            Deze nulmeting laat zien dat mijn grootste ontwikkelpunt niet het leren schrijven zelf was, maar het bewust leren
+            schrijven vanuit AI-gedreven zoekgedrag.
           </p>
-        </div>
+        </Card>
 
-        {/* 3.5 PDCA ACTIE 1 */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.5 PDCA-cyclus actie 1</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
-          <h3 className="h3-sub">Plan</h3>
+        <Card title="3.3 Verdere verdieping">
           <p className="intro-divider">
-            Tijdens mijn afstudeerperiode wilde ik onderzoeken hoe AllSens in de toekomst online zichtbaar kan blijven in een tijd waarin steeds meer mensen informatie zoeken via AI-tools zoals ChatGPT, Gemini en Copilot. Mijn doel was om inzicht te krijgen in de ontwikkeling van traditionele SEO naar Generative Engine Optimization (GEO) en te bepalen welke kansen dit biedt voor AllSens. Hiervoor heb ik relevante artikelen bestudeerd van Frankwatching en Hostnet Academy en wilde ik de belangrijkste inzichten vertalen naar praktische toepassingen binnen de organisatie (Traffic Builders, 19 juni 2025) (Romy Veul, 28 november 2025). Daarnaast wilde ik de resultaten visueel samenvatten in een infographic en toetsen aan de praktijk door feedback te vragen aan mijn bedrijfsbegeleider.
+            Omdat ik merkte dat mijn startkennis nog beperkt was, wilde ik mij eerst inhoudelijk verdiepen voordat ik zelf een
+            methode zou ontwikkelen. In mijn eerste versie had ik hiervoor slechts twee online artikelen gebruikt. Daarom heb
+            ik mijn onderzoek uitgebreid. Ik heb het boek GEO: SEO in de tijd van AI gelezen.
           </p>
-
-          <h3 className="h3-sub mb16">Do</h3>
           <p className="intro-divider">
-            Om dit doel te bereiken heb ik verschillende bronnen onderzocht over GEO en de invloed van AI op online vindbaarheid. Tijdens het lezen van deze artikelen heb ik de belangrijkste inzichten verzameld en geanalyseerd. Vervolgens heb ik gekeken hoe deze ontwikkelingen aansluiten bij de huidige contentstrategie van AllSens.
+            Door het boek als extra bron toe te voegen, kreeg ik een breder beeld van het onderwerp. Ik keek hierdoor niet
+            meer alleen naar losse schrijftips, maar naar GEO als ontwikkeling binnen online marketing en naar de manier
+            waarop content door AI-systemen wordt gevonden, geïnterpreteerd en gebruikt.
           </p>
-
           <p className="intro-divider">
-            Op basis van mijn bevindingen heb ik een infographic ontwikkeld waarin ik de belangrijkste principes van GEO heb samengevat. Hierin heb ik onder andere aandacht besteed aan het beantwoorden van concrete gebruikersvragen, het gebruik van duidelijke tussenkoppen, het tonen van expertise en het consistent aanbieden van betrouwbare informatie. Vervolgens heb ik de infographic besproken met mijn bedrijfsbegeleider om de toepasbaarheid binnen AllSens te beoordelen en aanvullende feedback te verzamelen.
+            GEO was tijdens mijn eerdere opleidingen nog geen vast onderdeel van mijn kennis. Ik startte in 2019 met mijn
+            mbo-opleiding en begon in 2022 aan mijn AD-opleiding, rond de periode waarin generatieve AI sterk in opkomst kwam.
+            Tijdens mijn opleidingen leerde ik wel over online marketing en SEO, maar nog niet over de invloed van AI op
+            zoekgedrag. Daarom heb ik GEO tijdens mijn afstudeerperiode bewust opgepakt als aanvulling op mijn bestaande
+            marketingkennis.
           </p>
+        </Card>
 
-          <h3 className="h3-sub mb16">Check</h3>
+        <Card title="3.4 Actieplan">
           <p className="intro-divider">
-            Uit mijn onderzoek bleek dat AI-systemen steeds vaker functioneren als informatiebron en antwoorden direct genereren op basis van online content. Hierdoor wordt het niet langer voldoende om alleen goed vindbaar te zijn in zoekmachines. Content moet ook zo worden geschreven dat AI-systemen deze kunnen herkennen, begrijpen en gebruiken in hun antwoorden.
+            In dit actieplan beschrijf ik hoe ik mijn kennis van AI-gedreven zoekgedrag stap voor stap wil uitbreiden en
+            toepassen. Per actie staat wat ik ga doen, welk bewijs ik verzamel en welke feedback ik gebruik om te groeien.
           </p>
+          <Table
+            head={["Actie", "Uitvoering", "Bewijs", "Focus"]}
+            rows={[
+              [
+                "1. Verdiepen in GEO en AI-gedreven zoekgedrag",
+                "Het boek GEO: SEO in de tijd van AI lezen en aanvullende bronnen bestuderen over GEO en AI-gedreven zoekgedrag.",
+                "Boek, samenvatting en gebruikte bronnen.",
+                "Mijn vakkennis over GEO vergroten.",
+              ],
+              [
+                "2. GEO-analysetool ontwikkelen",
+                "Een eigen tool ontwikkelen waarmee marketingteksten beoordeeld kunnen worden op verschillende GEO-principes.",
+                "GEO-analysetool en ontwikkelproces.",
+                "Theorie vertalen naar een praktische methode.",
+              ],
+              [
+                "3. GEO-analysetool testen en verbeteren",
+                "De tool door verschillende testers laten beoordelen en de feedback verwerken.",
+                "Testresultaten, enquête en aangepaste tool.",
+                "Controleren of de tool bruikbaar en volledig is.",
+              ],
+              [
+                "4. Marketingteksten schrijven en optimaliseren",
+                "Vier marketingteksten schrijven, analyseren met de tool en verbeteren op basis van de resultaten.",
+                "Voor- en naversies en analyses.",
+                "GEO zelfstandig toepassen in marketingcontent.",
+              ],
+              [
+                "5. Ontwikkeling evalueren",
+                "Mijn oude en nieuwe manier van schrijven vergelijken en mijn ontwikkeling beoordelen.",
+                "Vergelijking en reflectie.",
+                "Vaststellen van mijn eindniveau.",
+              ],
+            ]}
+          />
+        </Card>
 
+        <Card title="3.4 Actie 1: Inlezen en samenvatten">
           <p className="intro-divider">
-            De feedback van mijn bedrijfsbegeleider bevestigde dat deze ontwikkeling ook relevant is voor AllSens. Daarbij werd aangegeven dat klanten steeds vaker specifieke vragen stellen over onderwerpen zoals geurbeleving, geurmarketing en geurneutralisatie. De GEO-principes die ik heb onderzocht sluiten goed aan bij de bestaande contentstrategie van AllSens, waarin kennisdeling en informatieve blogs al een belangrijke rol spelen.
+            Voor deze opdracht heb ik onderzocht hoe bedrijven zichtbaar kunnen blijven in een tijd waarin steeds meer mensen
+            informatie zoeken via AI-tools zoals ChatGPT, Gemini en Copilot. Tijdens mijn onderzoek kwam ik erachter dat
+            traditionele SEO niet langer voldoende is. Naast goed vindbaar zijn in zoekmachines wordt het ook steeds
+            belangrijker dat content wordt opgenomen in de antwoorden die AI-systemen genereren. Dit wordt ook wel Generative
+            Engine Optimization (GEO) genoemd.
           </p>
-
           <p className="intro-divider">
-            Ik heb mijn doel behaald doordat ik niet alleen theoretische kennis heb opgedaan over GEO, maar deze kennis ook heb vertaald naar een praktische situatie binnen AllSens. De infographic biedt een overzichtelijk hulpmiddel om deze inzichten intern te communiceren.
+            Aan de hand van artikelen van Frankwatching en Hostnet Academy en het boek GEO: SEO in de tijd van AI heb ik de
+            belangrijkste inzichten verzameld over GEO en de gevolgen hiervan voor contentmarketing (Traffic Builders, 19 juni
+            2025) (Romy Veul, 28 november 2025). Vervolgens heb ik deze inzichten vertaald naar de situatie van AllSens. In
+            onderstaande infographic laat ik zien welke principes volgens mij het meest relevant zijn voor AllSens en hoe deze
+            kunnen bijdragen aan een grotere online zichtbaarheid. Daarbij heb ik ook de feedback van mijn bedrijfsbegeleider
+            meegenomen om de praktische toepasbaarheid binnen de organisatie te beoordelen.
           </p>
-
-          <h3 className="h3-sub mb16">Act</h3>
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/afstuderen/pl/infographic-geo-allsens.webp"
+            alt="Infographic GEO AllSens"
+            className="content-image-lg"
+            onClick={() => setImgOpen("/afstuderen/pl/infographic-geo-allsens.webp")}
+          />
           <p className="intro-divider">
-            Op basis van dit onderzoek zou een volgende stap zijn om de GEO-principes daadwerkelijk toe te passen binnen de content van AllSens. Hierbij kan worden gekeken naar het optimaliseren van bestaande blogs en webpagina&apos;s door vaker concrete klantvragen te beantwoorden, FAQ-secties toe te voegen en expertise duidelijker naar voren te laten komen.
+            Uit dit onderzoek concludeer ik dat het belangrijk is om niet alleen voor zoekmachines te schrijven, maar ook voor
+            AI-tools. Ik heb geleerd dat duidelijke antwoorden, een logische opbouw en content die aansluit bij de vragen van
+            gebruikers steeds belangrijker worden. Voor AllSens biedt dit kansen om online beter zichtbaar te zijn. Deze
+            inzichten neem ik mee in de verdere uitwerking van mijn project.
           </p>
+        </Card>
 
+        <Card title="3.5 PDCA-cyclus actie 1">
+          <Pdca
+            plan={[
+              "Mijn eerste stap was om mijn kennis over GEO te vergroten. Ik wilde voorkomen dat ik direct een tool zou ontwikkelen zonder voldoende inhoudelijke kennis. Daarom wilde ik mij eerst verdiepen in GEO, AI-gedreven zoekgedrag en de verschillen met traditionele SEO.",
+              "Ik wilde minimaal het niveau bereiken waarop ik de belangrijkste GEO-principes in mijn eigen woorden kon uitleggen en kon aangeven waarom deze belangrijk zijn voor marketingcontent.",
+            ]}
+            doo={[
+              "Ik heb het boek GEO: SEO in de tijd van AI gelezen en daarnaast aanvullende online bronnen geraadpleegd. Ook heb ik de eerder gebruikte artikelen van Frankwatching en Hostnet Academy opnieuw meegenomen in mijn verdieping. Ik heb de belangrijkste inzichten samengevat en met elkaar vergeleken, zie bijlage: Bewijslast samenvatting van het boek.",
+              "Hierdoor leerde ik onder andere dat content niet alleen duidelijk moet zijn voor een menselijke lezer, maar ook zo moet worden opgebouwd dat AI-systemen de informatie gemakkelijk kunnen herkennen en gebruiken. Vooral de combinatie van zoekintentie, duidelijke structuur, directe antwoorden, expertise en betrouwbaarheid werd belangrijk voor mijn verdere onderzoek.",
+            ]}
+            check={[
+              "Door deze verdieping merkte ik dat mijn kennis aan het begin vooral bestond uit algemene kennis over SEO en online content. Ik kon nog niet goed uitleggen waarom een bepaalde tekst wel of niet geschikt was voor AI-gedreven zoekgedrag.",
+              "Na het lezen van het boek en de aanvullende bronnen kon ik de belangrijkste GEO-principes wel benoemen en uitleggen. Ook kon ik beter onderbouwen waarom een directe kernboodschap, duidelijke structuur en aansluiting op de zoekvraag belangrijk zijn.",
+              "De feedback op mijn eerdere portfolio bevestigde voor mij dat deze verdieping nodig was. Ik had in mijn eerste versie te weinig diepgang laten zien doordat ik mij vooral had gebaseerd op twee korte online artikelen. Door een boek als extra bron te gebruiken, heb ik mijn theoretische basis verbreed.",
+            ]}
+            act={[
+              "Op basis van mijn verdieping heb ik de theorie vertaald naar vijf criteria die ik praktisch wilde kunnen toepassen: kernboodschap, zoekintentie, structuur, directheid en betrouwbaarheid. Deze criteria vormden de basis voor mijn volgende actie: het ontwikkelen van een eigen GEO-analysetool.",
+            ]}
+          />
           <p className="intro-divider">
-            Daarnaast wil ik toekomstige ontwikkelingen rondom AI-zoekmachines en GEO blijven volgen. Omdat dit vakgebied zich snel ontwikkelt, is het belangrijk om contentstrategieën regelmatig te evalueren en waar nodig aan te passen. Op deze manier kan AllSens niet alleen zichtbaar blijven in traditionele zoekmachines, maar ook beter vertegenwoordigd worden in de antwoorden die AI-systemen genereren.
+            <a href="/Afstuderen/bijlagen#geo-boek" className="text-link">
+              Bekijk de samenvatting van het boek (bijlage) →
+            </a>
           </p>
-        </div>
+        </Card>
 
-        {/* 3.6 ACTIE 2: FLOW OPZETTEN */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.6 Actie 2: Flow opzetten</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
+        <Card title="3.6 Actie 2: Flow opzetten">
           <p className="intro-divider">
-            Ik heb met Claude een GEO-analysetool opgezet, die automatisch controleert of mijn marketingteksten aansluiten op AI-gedreven zoekgedrag. Wanneer ik een tekst invoer, stuurt de tool deze naar de Claude API, die de tekst beoordeelt op vijf GEO-principes: kernboodschap, zoekintentie, structuur, directheid en betrouwbaarheid. Per criterium geeft Claude een score van 1 tot 10 met een concrete verbeter suggestie.
+            Ik heb met Claude een GEO-analysetool opgezet, die automatisch controleert of mijn marketingteksten aansluiten op
+            AI-gedreven zoekgedrag. Wanneer ik een tekst invoer, stuurt de tool deze naar de Claude API, die de tekst
+            beoordeelt op vijf GEO-principes: kernboodschap, zoekintentie, structuur, directheid en betrouwbaarheid. Per
+            criterium geeft Claude een score van 1 tot 10 met een concrete verbetersuggestie.
           </p>
-
           <p className="intro-divider">
-            De tool laat precies zien waar een tekst sterk is en waar nog winst te behalen valt. Zo leer ik niet alleen schrijven voor traditionele zoekmachines, maar ook voor AI-tools zoals Google SGE en ChatGPT, die steeds vaker complete antwoorden geven op zoekvragen in plaats van een lijst met links. Dit sluit direct aan op mijn vakinhoudelijke leerdoel, waarbij ik minimaal vier marketingteksten schrijf en optimaliseer volgens de principes van GEO.
+            De tool laat precies zien waar een tekst sterk is en waar nog winst te behalen valt. Zo leer ik niet alleen
+            schrijven voor traditionele zoekmachines, maar ook voor AI-tools zoals Google SGE en ChatGPT, die steeds vaker
+            complete antwoorden geven op zoekvragen in plaats van een lijst met links. Dit sluit direct aan op mijn
+            vakinhoudelijke leerdoel, waarbij ik minimaal vier marketingteksten schrijf en optimaliseer volgens de principes van
+            GEO.
           </p>
-
-          <img loading="lazy" decoding="async"             src="/afstuderen/pl/claude-tool-flow.webp"
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/afstuderen/pl/claude-tool-flow.webp"
             alt="Claude Tool Flow"
             className="content-image-lg"
+            onClick={() => setImgOpen("/afstuderen/pl/claude-tool-flow.webp")}
           />
-
           <ol className="content-list">
-            <li>Ik vroeg Claude om een tool te maken</li>
-            <li>Een GEO tekstanalyse-tool voor marketingteksten.</li>
+            <li>Ik vroeg Claude om een tool te maken: een GEO tekstanalyse-tool voor marketingteksten.</li>
             <li>Claude bouwde een interface met titel, stappenbalk, tekstvak en analyseknop.</li>
             <li>De tool is gemaakt als React-component, dus met losse onderdelen zoals titel, tabs, tekstruimte en button.</li>
-            <li>De stappenbalk laat het proces zien: tekst invoeren, Claude analyseert, GEO-scores en verbeterpunten.</li>
+            <li>De stappenbalk laat het proces zien: tekst invoeren → Claude analyseert → GEO-scores → verbeterpunten.</li>
             <li>Het tekstvak is bedoeld voor de marketingtekst. Daar plak je bijvoorbeeld tekst over Zaluti of Pure by Zaluti.</li>
             <li>Na klikken op de knop analyseert Claude de tekst op GEO-principes zoals duidelijkheid, structuur, zoekintentie en AI-vindbaarheid.</li>
             <li>Daarna toont de tool scores en verbeterpunten, zodat je de tekst sterker kunt maken voor generatieve zoekmachines.</li>
           </ol>
-        </div>
+        </Card>
 
-        {/* 3.7 ACTIE 3: UITTESTEN TOOL */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.7 Actie 3: Uittesten tool | ontvangen feedback</span>
-          </h2>
-          <div className="divider divider-mb20" />
+        <Card title="3.7 PDCA-cyclus: GEO-tool ontwikkelen">
+          <Pdca
+            plan={[
+              "Na mijn theoretische verdieping wilde ik een manier ontwikkelen waarmee ik GEO-principes praktisch kon toepassen. Mijn doel was om niet alleen te weten waar een goede GEO-tekst aan moet voldoen, maar dit ook op een vaste manier te kunnen beoordelen.",
+              "Daarom wilde ik een eigen GEO-analysetool ontwikkelen die marketingteksten beoordeelt aan de hand van de vijf criteria die ik uit mijn onderzoek had gehaald.",
+            ]}
+            doo={[
+              "Met Claude heb ik een GEO-analysetool ontwikkeld. De tool beoordeelt een ingevoerde marketingtekst op kernboodschap, zoekintentie, structuur, directheid en betrouwbaarheid. Per onderdeel geeft de tool een score van 1 tot 10 en een concrete verbetersuggestie.",
+              "Hiermee heb ik mijn theoretische kennis vertaald naar een praktische methode. De tool gaf mij niet alleen een totaalscore, maar liet ook zien op welke onderdelen een tekst verbeterd kon worden.",
+            ]}
+            check={[
+              "Tijdens het ontwikkelen merkte ik dat het vertalen van theorie naar beoordelingscriteria moeilijker was dan alleen het lezen van informatie over GEO. Ik moest steeds bepalen hoe een abstract begrip zoals 'goede zoekintentie' praktisch beoordeeld kon worden.",
+              "Door de criteria concreet te maken, kreeg ik zelf ook een beter begrip van GEO. Ik kon bijvoorbeeld beter herkennen wanneer een tekst wel over een onderwerp ging, maar nog niet direct antwoord gaf op de vraag van de gebruiker.",
+            ]}
+            act={[
+              "Na het ontwikkelen van de eerste versie wilde ik niet alleen aannemen dat mijn tool goed werkte. Ik wilde deze laten beoordelen door andere mensen. Daarom heb ik de tool in de volgende actie getest en de ontvangen feedback gebruikt om de tool verder te verbeteren.",
+            ]}
+          />
+        </Card>
 
+        <Card title="3.8 Actie 3: Uittesten tool | ontvangen feedback">
           <ul className="content-list">
-            <li>Ik heb expres gekozen voor de onderstaande testers, omdat mijn GEO-tool niet alleen bedoeld is voor marketeers, maar ook voor mensen die content willen beoordelen op duidelijkheid, zoekintentie en boodschap.</li>
+            <li>
+              Ik heb expres gekozen voor de onderstaande testers, omdat mijn GEO-tool niet alleen bedoeld is voor marketeers,
+              maar ook voor mensen die content willen beoordelen op duidelijkheid, zoekintentie en boodschap.
+            </li>
             <li>Marketingteksten moeten niet alleen commercieel sterk zijn, maar ook begrijpelijk voor verschillende doelgroepen.</li>
             <li>Door testers uit verschillende werkvelden te vragen, kreeg ik een breder beeld van de toepasbaarheid van mijn tool.</li>
           </ul>
-
-          <img loading="lazy" decoding="async"             src="/afstuderen/pl/testers-claude-tool.webp"
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/afstuderen/pl/testers-claude-tool.webp"
             alt="Testers Claude Tool"
             className="content-image-lg"
+            onClick={() => setImgOpen("/afstuderen/pl/testers-claude-tool.webp")}
           />
-
           <p className="intro-divider">Onderstaand de enquête:</p>
+          <ExternalLink href="https://docs.google.com/forms/d/e/1FAIpQLSc9cWK8JuOqnL-m9qX2CFfP7AyQF6DMsCa386lZottst6WalQ/viewform?usp=sharing&ouid=118370528379486787285">
+            Bekijk de enquête
+          </ExternalLink>
+          <p className="intro-divider">Opvallend kozen alle vier de respondenten voor het toevoegen van &apos;betrouwbaarheid&apos;.</p>
+        </Card>
 
-          <div className="external-link-btn-wrap">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSc9cWK8JuOqnL-m9qX2CFfP7AyQF6DMsCa386lZottst6WalQ/viewform?usp=sharing&ouid=118370528379486787285"
-              target="_blank"
-              rel="noreferrer"
-              className="external-link-btn"
-            >
-              <span>Bekijk de enquête</span>
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h6"></path>
-                <polyline points="15 3 21 3 21 9"></polyline>
-                <line x1="10" y1="14" x2="21" y2="3"></line>
-              </svg>
-            </a>
-          </div>
+        <Card title="3.9 PDCA-cyclus: GEO-analysetool testen en verbeteren">
+          <Pdca
+            plan={[
+              "Mijn doel bij deze actie was om te controleren of mijn tool volledig en begrijpelijk genoeg was. Omdat ik de tool zelf had ontwikkeld, wilde ik voorkomen dat ik alleen vanuit mijn eigen perspectief zou beoordelen of deze goed werkte.",
+              "Daarom heb ik verschillende testers gevraagd om de tool te beoordelen op bruikbaarheid en volledigheid.",
+            ]}
+            doo={[
+              "Ik heb vier respondenten met verschillende achtergronden de tool laten testen. Ik heb bewust niet alleen marketeers gekozen, omdat marketingteksten uiteindelijk ook begrijpelijk moeten zijn voor mensen die niet dagelijks met marketing bezig zijn.",
+              "De testers hebben de tool beoordeeld en aangegeven welke onderdelen volgens hen nog ontbraken. Een opvallend resultaat was dat alle vier de respondenten aangaven dat betrouwbaarheid als apart onderdeel moest worden toegevoegd.",
+            ]}
+            check={[
+              "De feedback liet mij zien dat mijn eerste versie van de tool nog niet volledig was. Ik keek eerder vooral naar de inhoud, structuur en directheid van een tekst. De testers maakten mij duidelijk dat ook de betrouwbaarheid van informatie een belangrijk onderdeel is.",
+              "Hierdoor kreeg ik feedback die niet alleen vanuit AI kwam, maar vanuit echte gebruikers van mijn methode. Dit maakte mijn beoordelingsmodel sterker.",
+            ]}
+            act={[
+              "Op basis van de feedback heb ik betrouwbaarheid als vijfde criterium toegevoegd aan de tool. Hierdoor beoordeelde mijn tool uiteindelijk vijf onderdelen: kernboodschap, zoekintentie, structuur, directheid en betrouwbaarheid.",
+              "Deze aangepaste versie heb ik vervolgens gebruikt bij mijn vier marketingteksten.",
+            ]}
+          />
+        </Card>
 
-          <p className="intro-divider">
-            Opvallend kozen alle vier de respondenten voor het toevoegen van &apos;betrouwbaarheid&apos;.
-          </p>
-        </div>
-
-        {/* 3.8 TEKSTEN ANALYSEREN */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.8 Actie 4: Teksten analyseren</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
+        <Card title="3.10 Actie 4: Teksten analyseren">
           <p className="intro-divider">
             Er is naar aanleiding van de testers een nieuw onderdeel toegevoegd aan de test: betrouwbaarheid.
           </p>
-
           <p className="intro-divider">
-            Onderstaand volgen vier door mij geschreven teksten. Deze heb ik steeds geanalyseerd met mijn eigen opgezette tool. Vervolgens heb ik deze steeds verbeterd tot een hogere score.
+            Onderstaand volgen vier door mij geschreven teksten. Deze heb ik steeds geanalyseerd met mijn eigen opgezette tool.
+            Vervolgens heb ik deze steeds verbeterd tot een hogere score.
           </p>
-        </div>
+        </Card>
 
         {/* TEKST 1 */}
         <div className="reveal glow-card intro-card mb24">
@@ -666,137 +685,100 @@ export default function VakdoelAIZoekgedrag() {
           />
         </div>
 
-        {/* 3.9 PDCA ACTIE 2 T/M 4 */}
-        <div className="reveal glow-card intro-card mb24">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.9 PDCA-cyclus actie 2 t/m 4</span>
-          </h2>
-          <div className="divider divider-mb20" />
+        <Card title="3.11 PDCA-cyclus: Marketingteksten schrijven en optimaliseren">
+          <Pdca
+            plan={[
+              "Na het ontwikkelen en testen van mijn tool wilde ik mijn kennis daadwerkelijk toepassen. Mijn doel was om vier marketingteksten te schrijven, deze eerst in de oorspronkelijke vorm te analyseren en daarna te verbeteren volgens de GEO-principes.",
+              "Ik wilde hierbij niet alleen kijken naar de score van de tool, maar ook zelf begrijpen waarom een tekst verbeterd moest worden.",
+            ]}
+            doo={[
+              "Ik heb vier marketingteksten geschreven die aansloten bij mijn werkzaamheden voor AllSens, onder andere rondom geurneutralisatie en samenwerkingen met schoonmaakbedrijven.",
+              "Elke tekst heb ik eerst door mijn GEO-tool laten analyseren. Vervolgens heb ik de teksten aangepast. Ik heb bijvoorbeeld de kernboodschap eerder in de tekst geplaatst, antwoorden directer geformuleerd, de structuur duidelijker gemaakt en call-to-actions concreter gemaakt.",
+              "Naast de feedback uit de tool heb ik hierbij de menselijke feedback uit de testfase meegenomen. Vooral het toevoegen van betrouwbaarheid heb ik verwerkt in mijn manier van beoordelen.",
+            ]}
+            check={[
+              "De eerste analyses lieten zien dat de teksten gemiddeld tussen de 4,8 en 6,6 scoorden. Vooral de kernboodschap, structuur en directheid konden worden verbeterd.",
+              "Na het optimaliseren scoorden de aangepaste teksten tussen de 7,8 en 8,2. Vooral bij kernboodschap, structuur en directheid waren duidelijke verbeteringen zichtbaar.",
+              "Deze resultaten laten zien dat ik mijn kennis niet alleen theoretisch heb opgedaan, maar deze ook daadwerkelijk kon toepassen. Ik begreep steeds beter welke aanpassingen nodig waren en waarom deze aanpassingen de tekst sterker maakten.",
+            ]}
+            act={[
+              "Op basis van deze resultaten wil ik de GEO-analysetool blijven gebruiken als hulpmiddel bij toekomstige marketingcontent. Tegelijkertijd wil ik niet volledig afhankelijk worden van de tool. Mijn doel is juist dat ik de principes steeds meer zelfstandig herken voordat ik een tekst analyseer.",
+              "Daarom gebruik ik de tool als controle- en hulpmiddel, maar blijf ik mijn eigen vakkennis gebruiken om de uiteindelijke keuzes te maken.",
+            ]}
+          />
+        </Card>
 
-          <h3 className="h3-sub">Plan</h3>
+        <Card title="3.12 Ontwikkeling evalueren a.d.h.v. PDCA">
+          <Pdca
+            plan={[
+              "Als laatste actie wilde ik niet alleen kijken naar de resultaten van mijn vier teksten, maar onderzoeken wat er daadwerkelijk in mijn manier van schrijven was veranderd. Het uitvoeren van de acties betekent namelijk niet automatisch dat mijn vakinhoudelijke niveau is verbeterd.",
+              "Daarom heb ik een eerdere tekst vergeleken met een nieuwe tekst die ik bewust volgens GEO-principes heb geschreven.",
+            ]}
+            doo={[
+              "In mijn oude teksten lag de nadruk vooral op het beschrijven van een onderwerp. Ik gebruikte langere tekstblokken en gaf niet altijd direct antwoord op een concrete vraag.",
+              "In mijn nieuwe teksten begin ik sneller met de kern van het onderwerp. Ik gebruik duidelijkere tussenkoppen, kortere tekstblokken en meer vraaggerichte formuleringen. Ook let ik bewuster op het tonen van expertise en het geven van concrete informatie.",
+            ]}
+            check={[
+              "Door de vergelijking zag ik dat mijn manier van schrijven daadwerkelijk veranderd is. Het grootste verschil is dat ik niet meer alleen denk vanuit de vraag: “Wat wil ik vertellen?”, maar steeds vaker vanuit: “Welke vraag heeft de gebruiker en hoe kan ik daar zo duidelijk mogelijk antwoord op geven?”",
+              "Ook kan ik nu beter uitleggen waarom ik een bepaalde keuze maak. Voorheen veranderde ik bijvoorbeeld een tekst omdat deze volgens mij duidelijker kon. Nu kan ik aangeven dat ik een kernboodschap naar voren haal omdat de gebruiker en een AI-systeem hierdoor sneller kunnen begrijpen waar de tekst over gaat.",
+            ]}
+            act={[
+              "Mijn volgende stap is om GEO niet als een los onderdeel van mijn werk te blijven zien, maar het mee te nemen wanneer ik nieuwe marketingcontent schrijf. De tool kan mij hierbij blijven helpen, maar mijn uiteindelijke doel is dat ik de belangrijkste principes steeds meer automatisch toepas.",
+              "Omdat GEO een vakgebied is dat zich snel blijft ontwikkelen, zal ik mij de komende tijd hierin blijven verdiepen.",
+            ]}
+          />
+        </Card>
+
+        <Card title="3.13 Begin- en eindmeting | eindconclusie" last>
           <p className="intro-divider">
-            Tijdens mijn afstudeerperiode wilde ik onderzoeken hoe ik marketingteksten beter kon laten aansluiten op de manier waarop AI-systemen zoals ChatGPT, Gemini en Google SGE informatie verwerken en presenteren. Mijn doel was om een eigen GEO-analysetool op te zetten waarmee ik teksten automatisch kon laten beoordelen op belangrijke GEO-principes, zoals kernboodschap, zoekintentie, structuur, directheid, waarna feedback betrouwbaarheid aan werd toegevoegd. Vervolgens wilde ik minimaal vier zelfgeschreven marketingteksten analyseren, optimaliseren en opnieuw toetsen om te bepalen of de kwaliteit en GEO-score verbeterden. Hiervoor heb ik een workflow ontwikkeld waarbij teksten via de Claude API automatisch werden geanalyseerd en voorzien van concrete verbetersuggesties.
+            Om mijn ontwikkeling per leerdoel inzichtelijk te maken, heb ik per doel een beginmeting en eindmeting opgesteld.
+            Hiermee laat ik kort zien waar ik aan het begin stond, welke stappen ik heb gezet en in hoeverre het doel aan het
+            einde van de afstudeerperiode is behaald.
           </p>
 
-          <h3 className="h3-sub">Do</h3>
-          <p className="intro-divider">
-            Om dit doel te bereiken heb ik eerst een GEO-analysetool opgezet. Deze tool beoordeelt ingevoerde marketingteksten automatisch op vijf GEO-principes en geeft per onderdeel een score van 1 tot 10, aangevuld met concrete verbeterpunten vanuit de testers. Vervolgens heb ik vier verschillende teksten geschreven die relevant waren voor mijn onderzoek naar samenwerkingen met schoonmaakbedrijven en geurneutralisatie.
-          </p>
+          <Table
+            head={["Onderdeel", "Beginmeting", "Eindmeting"]}
+            rows={[
+              [
+                "Kennis van GEO",
+                "Ik kende het begrip beperkt en had vooral algemene kennis over SEO.",
+                "Ik kan uitleggen wat GEO inhoudt en welke rol het speelt binnen AI-gedreven zoekgedrag.",
+              ],
+              [
+                "SEO versus GEO",
+                "Ik dacht voornamelijk vanuit traditionele SEO en zoekwoorden.",
+                "Ik kan het verschil uitleggen en bewust vanuit beide vormen van vindbaarheid denken.",
+              ],
+              [
+                "Zoekintentie",
+                "Ik hield rekening met de doelgroep, maar niet structureel met de specifieke vraag die iemand aan een AI-systeem kan stellen.",
+                "Ik kan een tekst beoordelen en aanpassen vanuit de zoekintentie van de gebruiker.",
+              ],
+              [
+                "GEO-analyse",
+                "Ik had geen vaste methode om een tekst op GEO te beoordelen.",
+                "Ik kan een tekst beoordelen aan de hand van vijf vaste GEO-principes.",
+              ],
+              [
+                "GEO toepassen",
+                "Ik paste GEO niet bewust toe in mijn teksten.",
+                "Ik kan GEO-principes zelfstandig toepassen en mijn keuzes onderbouwen.",
+              ],
+            ]}
+          />
 
           <p className="intro-divider">
-            Elke tekst heb ik eerst in de oorspronkelijke vorm geanalyseerd. Op basis van de ontvangen feedback heb ik de teksten aangepast door onder andere de kernboodschap eerder in de tekst te plaatsen, antwoorden directer te formuleren, de structuur overzichtelijker te maken en duidelijkere call-to-actions toe te voegen. Daarna heb ik dezelfde teksten opnieuw door de tool laten analyseren om te beoordelen of de aanpassingen daadwerkelijk zorgden voor een hogere GEO-score.
+            De vier geanalyseerde teksten ondersteunen deze ontwikkeling. De eerste versies scoorden tussen 4,8 en 6,6,
+            terwijl de verbeterde versies tussen 7,8 en 8,2 scoorden. Naast deze meetbare verbetering heb ik geleerd om mijn
+            keuzes tijdens het optimaliseren te onderbouwen vanuit de GEO-principes. Daarmee laat de begin- en eindmeting zien
+            dat ik niet alleen meer kennis heb opgedaan, maar GEO ook daadwerkelijk kan toepassen.
           </p>
+        </Card>
 
-          <h3 className="h3-sub">Check</h3>
-          <p className="intro-divider">
-            Uit de analyses bleek dat de oorspronkelijke teksten vaak te voorzichtig geformuleerd waren, waardoor de belangrijkste boodschap niet direct zichtbaar was voor zowel lezers als AI-systemen. Daarnaast ontbraken regelmatig concrete feiten, duidelijke call-to-actions of een logische opbouw. Hierdoor scoorden de eerste versies gemiddeld tussen de 4,8 en 6,6 op GEO.
-          </p>
-
-          <p className="intro-divider">
-            Na het doorvoeren van de verbeteringen stegen de scores aanzienlijk. De aangepaste teksten scoorden tussen de 7,8 en 8,2. Vooral op de onderdelen kernboodschap, structuur en directheid werden duidelijke verbeteringen zichtbaar. De analyses lieten zien dat teksten beter presteren wanneer zij direct antwoord geven op een zoekvraag, gebruikmaken van een heldere opbouw en concrete informatie bevatten. Daarnaast bleek dat AI-systemen sterke voorkeur hebben voor duidelijke en stellige formuleringen boven algemene of voorzichtige bewoordingen.
-          </p>
-
-          <p className="intro-divider">
-            Ik heb mijn doel behaald doordat ik niet alleen een werkende GEO-analysetool heb ontwikkeld, maar deze ook succesvol heb toegepast op vier verschillende marketingteksten. De resultaten tonen aan dat de tool effectief inzicht geeft in verbeterpunten en helpt bij het schrijven van content die beter aansluit op AI-gedreven zoekgedrag.
-          </p>
-
-
-
-          <h3 className="h3-sub">Act</h3>
-          <p className="intro-divider">
-            Op basis van deze resultaten wil ik de GEO-analysetool blijven gebruiken bij het ontwikkelen van nieuwe content. Hierdoor kunnen teksten al tijdens het schrijfproces worden gecontroleerd en geoptimaliseerd voordat ze gepubliceerd worden. Ook kan de tool worden ingezet voor het analyseren van bestaande webpagina&apos;s, blogs en landingspagina&apos;s om de online zichtbaarheid verder te verbeteren.
-          </p>
-
-          <p className="intro-divider">
-            Daarnaast zou een volgende stap zijn om de beoordelingscriteria verder uit te breiden met extra factoren, zoals bronvermelding, FAQ-structuren en sectorspecifieke zoekvragen. Op die manier kan de tool nog beter aansluiten bij toekomstige ontwikkelingen binnen GEO en AI-zoekmachines. Hierdoor blijft de organisatie inspelen op veranderend zoekgedrag en kunnen marketingteksten effectiever worden afgestemd op zowel gebruikers als AI-systemen.
-          </p>
-        </div>
-
-        {/* 3.10 ACTIE 3: REFLECTIE */}
-        <div className="reveal glow-card intro-card mb40">
-          <h2 className="h2-sub-lg">
-            <span className="g-text">3.10 Actie 3: reflectie en vergelijking oude vs. nieuwe aanpak</span>
-          </h2>
-          <div className="divider divider-mb20" />
-
-          <p className="intro-divider">
-            Na het onderzoek naar Generative Engine Optimization (GEO) wilde ik bekijken hoe deze inzichten mijn manier van schrijven hebben beïnvloed. Daarom heb ik een eerdere tekst van AllSens vergeleken met een nieuwe versie die ik heb aangepast op basis van de GEO-principes uit mijn onderzoek.
-          </p>
-
-          <h3 className="h3-sub">Oude aanpak</h3>
-          <p className="intro-divider">
-            In mijn eerdere teksten lag de focus vooral op het beschrijven van een onderwerp. De informatie was vaak informatief, maar gaf niet altijd direct antwoord op een concrete vraag van de lezer. Daarnaast gebruikte ik regelmatig langere alinea&apos;s en beschrijvende tussenkoppen. Deze aanpak was geschikt voor traditionele SEO, waarbij vooral zoekwoorden en algemene informatie een belangrijke rol spelen.
-          </p>
-
-          <h3 className="h3-sub">Nieuwe aanpak</h3>
-          <p className="intro-divider">
-            Na mijn onderzoek naar GEO ben ik teksten anders gaan opbouwen. Ik probeer nu sneller antwoord te geven op de centrale vraag van de gebruiker. Daarnaast gebruik ik duidelijkere tussenkoppen, meer vraaggerichte formuleringen en een logische structuur. Ook besteed ik meer aandacht aan het tonen van expertise en het geven van concrete voorbeelden. Hierdoor wordt de informatie niet alleen beter leesbaar voor bezoekers, maar ook eenvoudiger te begrijpen voor AI-systemen zoals ChatGPT, Gemini en Copilot.
-          </p>
-
-          <h3 className="h3-sub">Vergelijking van de belangrijkste veranderingen</h3>
-
-          <div className="table-wrap">
-            <table className="content-table">
-              <thead>
-                <tr>
-                  <th>Onderdeel</th>
-                  <th>Oude aanpak</th>
-                  <th>Nieuwe aanpak</th>
-                  <th>Waarom aangepast?</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Introductie</td>
-                  <td>Algemene introductie van het onderwerp</td>
-                  <td>Direct antwoord op de centrale vraag binnen de eerste alinea</td>
-                  <td>AI-systemen geven de voorkeur aan duidelijke en directe antwoorden.</td>
-                </tr>
-                <tr>
-                  <td>Structuur</td>
-                  <td>Lange tekstblokken</td>
-                  <td>Kortere alinea&apos;s met duidelijke tussenkoppen</td>
-                  <td>Verbetert leesbaarheid voor gebruikers en AI.</td>
-                </tr>
-                <tr>
-                  <td>Vraaggericht schrijven</td>
-                  <td>Onderwerp centraal</td>
-                  <td>Klantvraag centraal</td>
-                  <td>Sluit beter aan op zoekgedrag van gebruikers.</td>
-                </tr>
-                <tr>
-                  <td>Expertise tonen</td>
-                  <td>Algemene informatie</td>
-                  <td>Gebruik van praktijkvoorbeelden en vakkennis</td>
-                  <td>Vergroot betrouwbaarheid en autoriteit.</td>
-                </tr>
-                <tr>
-                  <td>Vindbaarheid in AI</td>
-                  <td>Niet specifiek op gericht</td>
-                  <td>Bewust geschreven volgens GEO-principes</td>
-                  <td>Vergroot de kans op opname in AI-antwoorden.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3 className="h3-sub">Reflectie</h3>
-          <p className="intro-divider">
-            Door deze vergelijking realiseer ik mij dat online content niet meer uitsluitend voor zoekmachines wordt geschreven. Gebruikers krijgen steeds vaker direct antwoord via AI-tools. Daardoor is het belangrijk geworden om informatie duidelijk, gestructureerd en vraaggericht aan te bieden. Het onderzoek naar GEO heeft mijn kijk op contentmarketing veranderd. Waar ik voorheen vooral dacht vanuit zoekwoorden en algemene informatievoorziening, denk ik nu meer vanuit de vraag die een gebruiker daadwerkelijk stelt.
-          </p>
-
-          <h3 className="h3-sub">Conclusie</h3>
-          <p className="intro-divider">
-            Deze actie heeft mij geholpen om de theorie uit mijn onderzoek direct toe te passen in de praktijk. Door mijn oude en nieuwe aanpak te vergelijken heb ik inzicht gekregen in hoe GEO-principes invloed hebben op de kwaliteit en vindbaarheid van content. Deze kennis neem ik mee in toekomstige blogs, webpagina&apos;s en andere content die ik voor AllSens ontwikkel.
-          </p>
-        </div>
-
-        {/* FOOTER NAV */}
-        <div className="footer-nav-mt80">
-          <a href="/Afstuderen" className="btn-ghost btn-sm-pad24">← Terug naar Afstuderen</a>
-          <a href="/Afstuderen/conclusie-vakdoelen" className="btn btn-sm-pad24">Volgende →</a>
-        </div>
-
+        <FooterNav
+          prev={["/Afstuderen/leerdoel-1-presenteren", "Leerdoel: Presenteren"]}
+          next={["/Afstuderen/vakdoel-gedragseconomie", "Vakdoel: Gedragseconomie"]}
+        />
       </article>
     </main>
   );
