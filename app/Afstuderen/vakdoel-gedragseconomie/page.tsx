@@ -297,7 +297,7 @@ export default function VakdoelGedragseconomie() {
             rows={[
               ["1", "Ik dacht eerst aan biefstuk van ongeveer 200 gram waarvan ik ongeveer weet wat het kost.", "Mijn eerste inschatting: €8,50"],
               ["2", "Ik schreef deze eerste prijs op voordat ik naar een andere prijs keek.", "Eerste schatting: €8,50"],
-              ["3", "Daarna keek ik naar een veel hoger referentiebedrag van een vergelijkbaar koffieproduct.", "Het anker dat ik zag: €14,99"],
+              ["3", "Daarna keek ik naar een veel hoger referentiebedrag van een vergelijkbaar vleesproduct.", "Het anker dat ik zag: €14,99"],
               ["4", "Ik maakte opnieuw een inschatting van de prijs.", "Tweede schatting: €11,50"],
               ["5", "Ik vergeleek beide bedragen.", "Verschil: €3,-"],
             ]}
